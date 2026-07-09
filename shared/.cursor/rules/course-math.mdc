@@ -1,0 +1,27 @@
+---
+description: Compute course math with code instead of hand calculation
+alwaysApply: true
+---
+
+# Compute with code
+
+When answering **math questions for this course** (lectures, assignments, problem sets, exam prep), prefer **running code** over mental arithmetic or symbolic manipulation in the model.
+
+## Default: compute
+
+Run Python for anything beyond trivial steps. Use **NumPy**, **SciPy**, and **SymPy** as appropriate. Execute the code and base the answer on the output.
+
+## When reasoning alone is fine
+
+Skip code only when the task is clearly simple, e.g.:
+
+- Small integer arithmetic
+- Obvious sign or stability arguments with no numbers
+- Conceptual explanations with no precise values requested
+
+If unsure whether a step is "simple enough," run the code.
+
+## Do not
+
+- Guess numeric results, decimals, or long expressions from memory
+- Present unverified hand-derived numbers as final answers

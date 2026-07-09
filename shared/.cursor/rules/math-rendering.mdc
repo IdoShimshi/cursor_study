@@ -1,0 +1,21 @@
+---
+description: LaTeX math rendering — use \( \) and \[ \] delimiters, never $ or $$
+alwaysApply: true
+---
+
+# Math Rendering in Chat
+
+The chat UI does **not** render `$...$` or `$$...$$`. Always use:
+
+- Inline math: `\(...\)` — e.g. `\(x^2 + y^2\)`
+- Block/display math: `\[...\]` — e.g. `\[ \dot{x} = y \]`
+
+❌ BAD — will show as raw text:
+```
+The eigenvalue $\lambda$ satisfies $\lambda^2 - \mu\lambda + 1 = 0$.
+```
+
+✅ GOOD — renders correctly:
+```
+The eigenvalue \(\lambda\) satisfies \(\lambda^2 - \mu\lambda + 1 = 0\).
+```

@@ -1,0 +1,5 @@
+{
+  "python.defaultInterpreterPath": "${workspaceFolder}/scripts/.venv-lectures/bin/python",
+  "python.analysis.venvPath": "scripts",
+  "python.analysis.venv": ".venv-lectures"
+}

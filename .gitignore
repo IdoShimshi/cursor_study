@@ -1,0 +1,9 @@
+.env
+scripts/.venv-lectures/
+courses/**/.venv/
+courses/**/materials/
+courses/**/onenote_export_config.json
+courses/**/*.code-workspace
+shared/.cursor/rules/dynamical-systems.mdc
+__pycache__/
+*.py[cod]

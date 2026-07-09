@@ -1,0 +1,21 @@
+---
+description: Read PDFs with the Read tool first; use code only as fallback
+alwaysApply: true
+---
+
+# Reading PDFs
+
+For text PDFs in this repo (assignments, syllabus, solutions, exported lecture PDFs), **read the file directly** with the Read tool:
+
+```
+Read path/to/file.pdf
+```
+
+Do **not** reach for Python (`pymupdf`/`fitz`), `pdftotext`, or shell extraction unless:
+
+- Read fails or returns empty/garbled text
+- The PDF is image-only or scanned and needs OCR
+
+If Read works, use its output — do not install packages or run scripts just to re-extract the same text.
+
+**Handwritten lecture pages:** follow the lecture-notes skill (`page-XX.ocr.md`, then `page-XX.png`). That workflow is separate from reading typed PDFs like assignments.
