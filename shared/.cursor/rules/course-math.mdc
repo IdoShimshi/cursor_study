@@ -9,7 +9,20 @@ When answering **math questions for this course** (lectures, assignments, proble
 
 ## Default: compute
 
-Run Python for anything beyond trivial steps. Use **NumPy**, **SciPy**, and **SymPy** as appropriate. Execute the code and base the answer on the output.
+Run Python for anything beyond trivial steps. Use **NumPy**, **SciPy**, and **SymPy** as appropriate.
+
+### Execution Environment
+
+Always use the shared virtual environment:
+- **Path:** `/home/ido/code/msc/cursor_study/shared/.venv`
+- **Activation:** `source /home/ido/code/msc/cursor_study/shared/.venv/bin/activate`
+
+**Example:**
+```bash
+source /home/ido/code/msc/cursor_study/shared/.venv/bin/activate && python3 script.py
+```
+
+Execute the code and base the answer on the output.
 
 ## When reasoning alone is fine
 
