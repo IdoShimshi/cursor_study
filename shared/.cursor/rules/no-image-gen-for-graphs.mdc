@@ -1,0 +1,18 @@
+---
+description: Guidance on visualizing mathematical graphs, phase portraits, and data.
+alwaysApply: true
+---
+
+# Mathematical Visualizations
+
+Do NOT use the `GenerateImage` tool to create mathematical graphs, phase portraits, or data visualizations unless the user explicitly uses the phrase "generate using the model" or "DALL-E style".
+
+Instead, follow these priorities:
+1. **Compute and Plot**: Use Python (Matplotlib, Seaborn) to generate a precise, high-quality image file.
+2. **Web Search**: Search for existing high-quality educational diagrams or interactive tools.
+3. **Markdown/Mermaid**: Use Mermaid diagrams for simple flowcharts or architectural diagrams.
+
+When plotting phase portraits:
+- Use `streamplot` or `quiver` for vector fields.
+- Ensure axes are labeled and the scale is appropriate.
+- Save the result to the `assets/` folder and embed it in the response.

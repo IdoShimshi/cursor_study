@@ -10,6 +10,28 @@ The chat UI does **not** render `$...$` or `$$...$$`. Always use:
 - Inline math: `\(...\)` — e.g. `\(x^2 + y^2\)`
 - Block/display math: `\[...\]` — e.g. `\[ \dot{x} = y \]`
 
+## Markdown Files (.md)
+
+In contrast to the chat, markdown files in the workspace should use standard LaTeX delimiters for maximum compatibility with editors and viewers:
+
+- Inline math: `$...$` — e.g. `$x^2 + y^2$`
+- Block/display math: `$$...$$` — e.g.
+  ```markdown
+  $$
+  \dot{x} = y
+  $$
+  ```
+
+❌ BAD in files (hard to read raw):
+```markdown
+The eigenvalue \[ \lambda \] satisfies \( \lambda^2 = 0 \).
+```
+
+✅ GOOD in files:
+```markdown
+The eigenvalue $\lambda$ satisfies $\lambda^2 = 0$.
+```
+
 ❌ BAD — will show as raw text:
 ```
 The eigenvalue $\lambda$ satisfies $\lambda^2 - \mu\lambda + 1 = 0$.

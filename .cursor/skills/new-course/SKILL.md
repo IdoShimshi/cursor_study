@@ -33,6 +33,7 @@ This lists all open OneNote notebooks and sections without exporting anything. T
 
 ```bash
 mkdir -p courses/<id>/materials/{lectures,assignments,syllabus}
+mkdir -p courses/<id>/.cursor/rules
 ```
 
 ## Step 3 — Create `courses/<id>/onenote_export_config.json`
@@ -71,11 +72,11 @@ Create `courses/<id>/<id>.code-workspace`:
 }
 ```
 
-## Step 5 — Add the course-specific Cursor rule
+## Step 5 — Add course-specific AI guidance
 
-Create `shared/.cursor/rules/<id>.mdc`:
+Create `courses/<id>/.cursor/rules/<id>.mdc`:
 
-```
+```markdown
 ---
 description: Context for the <display name> course
 globs: materials/**
@@ -88,6 +89,8 @@ alwaysApply: false
 
 The lecture-notes skill (`shared/.cursor/skills/lecture-notes/SKILL.md`) has the full workflow for reading handwritten lecture notes.
 ```
+
+If the course requires unique study workflows (e.g. no handwritten notes), create a course-specific skill in `courses/<id>/.cursor/skills/<id>/SKILL.md` and reference it in the rule.
 
 ## Step 6 — Verify
 
