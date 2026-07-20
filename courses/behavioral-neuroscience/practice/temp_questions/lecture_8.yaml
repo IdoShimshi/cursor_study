@@ -1,0 +1,161 @@
+lecture_name: "Lecture 8: Animal Navigation II"
+questions:
+  - id: 1
+    difficulty: "Easy"
+    type: "MCQ"
+    question: "According to the functional summary of the 'brain's navigation circuit,' which cell type is primarily responsible for representing the animal's current position ('Where am I?')?"
+    options:
+      A: "Grid cells"
+      B: "Place cells"
+      C: "Head-direction cells"
+      D: "Border cells"
+    correct_answer: "B"
+    reference: "Lecture 8, Slide 81"
+    reasoning: "Slide 81 explicitly maps Place cells to 'Position (where am I)', while Grid cells act as a 'ruler' for distance, and Head-direction cells provide 'Direction'."
+
+  - id: 2
+    difficulty: "Medium"
+    type: "MCQ"
+    question: "In the study of London taxi drivers, what was the primary difference observed in the posterior hippocampus compared to bus drivers and controls?"
+    options:
+      A: "The posterior hippocampus was larger in bus drivers due to their fixed routes."
+      B: "The posterior hippocampus was smaller in taxi drivers due to the high navigational load."
+      C: "The posterior hippocampus was larger in taxi drivers and correlated with their years of experience."
+      D: "No significant difference was found between taxi drivers and bus drivers."
+    correct_answer: "C"
+    reference: "Lecture 8, Slide 16"
+    reasoning: "Maguire et al. (2000, 2006) found that the posterior hippocampus (analogous to the dorsal hippocampus in rats) was larger in taxi drivers and that this size correlated with their experience, whereas no such correlation was found in bus drivers."
+
+  - id: 3
+    difficulty: "Hard"
+    type: "MCQ"
+    question: "Analyze the diagrams on Slide 55 showing Global order, Disorder, and Local order. Based on the findings for 3D grid cells in bats, which description best characterizes their spatial organization?"
+    options:
+      A: "They exhibit a perfect global hexagonal lattice similar to 2D grid cells in rats."
+      B: "They show completely random firing with no discernible spatial structure (Disorder)."
+      C: "They exhibit 'Fixed Local Distances' but lack a global lattice structure (Local order)."
+      D: "They form a global cubic lattice that uniformly tiles the 3D volume."
+    correct_answer: "C"
+    reference: "Lecture 8, Slide 55"
+    reasoning: "Slide 55 concludes that 3D grid cells exhibit 'Fixed Local Distances – but No global lattice,' which is categorized as 'Local order' in the provided comparison."
+
+  - id: 4
+    difficulty: "Medium"
+    type: "MCQ"
+    question: "What did the outdoor study on Latham Island demonstrate regarding the stability of head-direction cells in fruit bats?"
+    options:
+      A: "The compass was only stable when the moon and stars were visible."
+      B: "The directional tuning remained stable across geographical space and despite moon movements."
+      C: "Head-direction cells became unstable during overcast nights when visual cues were absent."
+      D: "The cells only functioned correctly when the bats were within a 1-km radius of their roost."
+    correct_answer: "B"
+    reference: "Lecture 8, Slide 75"
+    reasoning: "The Latham Island study confirmed two major requirements for a neural compass: stability over geographical space and stability despite the movement of the moon and stars, even on overcast nights."
+
+  - id: 5
+    difficulty: "Easy"
+    type: "MCQ"
+    question: "Which brain area is specifically associated with 'beaconing' or a 'response strategy,' such as always turning left at a junction?"
+    options:
+      A: "Hippocampus"
+      B: "Prefrontal cortex"
+      C: "Striatum"
+      D: "Parietal cortex"
+    correct_answer: "C"
+    reference: "Lecture 8, Slide 78"
+    reasoning: "Slide 78 distinguishes between the hippocampus (needed for absolute location) and the striatum, which is involved in 'beaconing / response strategy'."
+
+  - id: 6
+    difficulty: "Hard"
+    type: "MCQ"
+    question: "On Slide 42, several examples of hippocampal CA1 cells recorded in a 200-meter tunnel are shown. What is a key property of this spatial code in large environments that differs from typical laboratory recordings?"
+    options:
+      A: "The cells have only one small, highly specific place field."
+      B: "The code is 'multi-scale,' with cells having fields of varying sizes."
+      C: "The cells stop firing entirely in environments larger than 10 meters."
+      D: "The spatial resolution is uniform across the entire 200-meter range."
+    correct_answer: "B"
+    reference: "Lecture 8, Slide 42"
+    reasoning: "Slide 42 highlights that in large-scale environments, the code is 'multi-scale' and features multiple fields, which is better for minimizing decoding errors in large spaces."
+
+  - id: 7
+    difficulty: "Medium"
+    type: "MCQ"
+    question: "Which of the following is a characteristic of 'goal-direction cells' discovered in the bat hippocampus (CA1)?"
+    options:
+      A: "They only fire when the bat is physically located at the goal."
+      B: "They represent the direction to a goal even when the goal is occluded (memory-based)."
+      C: "They are found exclusively in the medial entorhinal cortex."
+      D: "They only encode the distance to the goal, not the direction."
+    correct_answer: "B"
+    reference: "Lecture 8, Slide 84"
+    reasoning: "Slide 84 states that goal-direction cells represented direction to occluded goals, implying a memory-based representation, and often encoded distance-to-goal as well (egocentric vectorial coding)."
+
+  - id: 8
+    difficulty: "Easy"
+    type: "MCQ"
+    question: "In the 'brain navigation circuit,' grid cells are often metaphorically described as which of the following?"
+    options:
+      A: "The Compass"
+      B: "The Map"
+      C: "The Ruler"
+      D: "The Beacon"
+    correct_answer: "C"
+    reference: "Lecture 8, Slide 81"
+    reasoning: "Slide 81 summarizes grid cells as providing 'Distance (ruler)' for navigation."
+
+  - id: 9
+    difficulty: "Medium"
+    type: "Open"
+    question: "Explain the 'hen and egg' problem discussed in relation to the hippocampal volume of London taxi drivers. Why is it difficult to determine causality from the initial findings?"
+    correct_answer: "The 'hen and egg' problem refers to whether a large posterior hippocampus is a result of years of navigational experience (plasticity) or whether individuals with a naturally larger hippocampus are more likely to succeed and remain in the taxi-driving profession. While the correlation with time spent as a taxi driver (Slide 16) suggests experience-dependent plasticity, it doesn't definitively rule out self-selection bias without longitudinal data."
+    reference: "Lecture 8, Slide 16"
+    reasoning: "The question asks for a synthesis of the interpretive challenge mentioned on Slide 16 regarding structural changes in the brain vs. innate ability."
+
+  - id: 10
+    difficulty: "Hard"
+    type: "Open"
+    question: "Based on the comparisons on Slide 11, how does the concept of a 'Mosaic Map' in birds relate to the navigation strategy of rats in a watermaze? What is the common underlying mechanism?"
+    correct_answer: "Both strategies are thought to involve 'self-triangulation' based on distal landmarks. In the 'Mosaic Map' concept for birds and the watermaze task for rats, the animal does not necessarily follow a single path or beacon but uses the relative positions of multiple distant cues to determine its current location and the location of a hidden target (allocentric navigation)."
+    reference: "Lecture 8, Slide 11"
+    reasoning: "The student must analyze the visual comparison on Slide 11 and identify the shared conceptual strategy (self-triangulation/allocentric navigation) described in the text."
+
+  - id: 11
+    difficulty: "Medium"
+    type: "Open"
+    question: "Why is the finding that 3D place fields in bats are 'isotropic' (spherical) significant for our understanding of how space is represented in three dimensions?"
+    correct_answer: "Isotropic resolution means the spatial representation is the same in all directions (X, Y, and Z). This suggests that for animals that navigate freely in 3D (like bats), the brain treats the vertical dimension with the same neural resolution as the horizontal dimensions, creating a uniform volumetric tiling of space rather than a biased or 'flattened' representation."
+    reference: "Lecture 8, Slide 30"
+    reasoning: "Slide 30 emphasizes that 3D place fields are spherical and isotropic, tiling space uniformly, which is a key conceptual point about 3D spatial coding."
+
+  - id: 12
+    difficulty: "Hard"
+    type: "Open"
+    question: "Discuss the implications of the finding (Slide 55) that 3D grid cells in bats exhibit 'Local order' but 'No global lattice.' How does this challenge standard functional models of grid cells?"
+    correct_answer: "Standard models of grid cells (like the Path Integration model) rely on the existence of a global, periodic hexagonal lattice to provide a universal coordinate system or 'ruler.' If the lattice is only local and lacks global order, as found in 3D bats, then these mechanistic models cannot easily explain how the brain maintains a stable spatial metric over large distances. It suggests that the 'grid-like' property may be more about local distancing than a global geometric scaffold."
+    reference: "Lecture 8, Slide 55"
+    reasoning: "This requires synthesis of the experimental result on Slide 55 with the theoretical role of grid cells mentioned on Slides 56-57."
+
+  - id: 13
+    difficulty: "Medium"
+    type: "Open"
+    question: "Identify the two major requirements for a 'Neural Compass' and describe how the Latham Island study (Slide 75) addressed the 'conundrum' posed by laboratory experiments regarding celestial cues."
+    correct_answer: "The two requirements are (1) stability of the compass over geographical space and (2) stability despite the movement of celestial cues like the moon and stars. Laboratory experiments often suggested the compass might drift with moving visual cues, but the Latham Island study showed that the bats' head-direction cells remained stable even as the moon moved across the sky and even on cloudy nights without celestial cues, proving the compass is robust during real-world navigation."
+    reference: "Lecture 8, Slide 69, 75"
+    reasoning: "This requires synthesizing the requirements from Slide 69 with the conclusions presented on Slide 75."
+
+  - id: 14
+    difficulty: "Hard"
+    type: "Open"
+    question: "Analyze the flight trajectories of hippocampus-lesioned homing pigeons shown on Slide 17. What specifically was impaired in these birds, and how does this support the interpretation that the 'Map' is not stored in the hippocampus?"
+    correct_answer: "The hippocampus-lesioned pigeons were still able to home (find their way back), which suggests they still possessed the 'Map' of the environment. However, they were impaired in 're-orientation' (specifically shown in the clock-shifted condition) and exhibited unusual behaviors like long flights over the sea, which normal birds avoid. This suggests the hippocampus is involved in using the map for orientation or flexible navigation, rather than being the storage site for the map itself."
+    reference: "Lecture 8, Slides 17, 18"
+    reasoning: "The student must interpret the flight paths on Slide 17 and the provided interpretation on Slide 18 to understand the specific role attributed to the bird hippocampus."
+
+  - id: 15
+    difficulty: "Medium"
+    type: "Open"
+    question: "Contrast the roles of the Parietal cortex and the Retrosplenial cortex in the context of navigational transformations, as outlined in the lecture."
+    correct_answer: "The Parietal cortex is hypothesized to be involved in the transformation from an organism-based (egocentric) coordinate frame to an absolute-space-based (allocentric) coordinate frame. The Retrosplenial cortex is hypothesized to handle the reverse or follow-up transformation: from the allocentric coordinate frame back to the motor actions required for navigation."
+    reference: "Lecture 8, Slide 78"
+    reasoning: "Slide 78 explicitly lists these hypothesized functions for 'higher' brain areas involved in navigation."

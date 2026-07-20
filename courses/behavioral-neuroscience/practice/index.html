@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Behavioral Neuroscience Practice Exam</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #34495e;
+            --accent-color: #3498db;
+            --success-color: #27ae60;
+            --bg-color: #f4f7f6;
+            --card-bg: #ffffff;
+            --text-color: #333;
+            --border-color: #ddd;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .container {
+            display: flex;
+            flex: 1;
+            overflow: hidden;
+        }
+
+        aside {
+            width: 300px;
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 1.5rem;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        main {
+            flex: 1;
+            padding: 2rem;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .filter-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        select, button {
+            padding: 0.6rem;
+            border-radius: 4px;
+            border: 1px solid var(--border-color);
+            font-size: 1rem;
+        }
+
+        button {
+            cursor: pointer;
+            background-color: var(--accent-color);
+            color: white;
+            border: none;
+            transition: background 0.3s;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+        }
+
+        .reset-btn {
+            background-color: #e74c3c;
+            margin-top: auto;
+        }
+
+        .reset-btn:hover {
+            background-color: #c0392b;
+        }
+
+        .stats {
+            background: rgba(255,255,255,0.1);
+            padding: 1rem;
+            border-radius: 8px;
+            font-size: 0.9rem;
+        }
+
+        .question-card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            border-left: 5px solid var(--accent-color);
+            position: relative;
+        }
+
+        .question-card[data-difficulty="Easy"] { border-left-color: #2ecc71; }
+        .question-card[data-difficulty="Medium"] { border-left-color: #f1c40f; }
+        .question-card[data-difficulty="Hard"] { border-left-color: #e67e22; }
+
+        .meta {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.8rem;
+            color: #666;
+            margin-bottom: 1rem;
+        }
+
+        .question-text {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            line-height: 1.4;
+        }
+
+        .options-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .option-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 0.8rem;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .option-item:hover {
+            background-color: #f9f9f9;
+        }
+
+        .option-item.selected {
+            border-color: var(--accent-color);
+            background-color: #ebf5fb;
+        }
+
+        .open-answer {
+            width: 100%;
+            min-height: 120px;
+            padding: 1rem;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            font-family: inherit;
+            font-size: 1rem;
+            margin-bottom: 1.5rem;
+            resize: vertical;
+        }
+
+        .actions {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .slide-container {
+            margin-top: 1.5rem;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            overflow: hidden;
+            display: none;
+        }
+
+        .slide-container img {
+            width: 100%;
+            display: block;
+        }
+
+        .feedback {
+            margin-top: 1.5rem;
+            padding: 1.5rem;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            display: none;
+            border-top: 2px solid var(--success-color);
+        }
+
+        .feedback h4 { margin-top: 0; color: var(--success-color); }
+
+        .reasoning {
+            font-style: italic;
+            color: #555;
+            margin-top: 1rem;
+            font-size: 0.95rem;
+        }
+
+        #loading {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .hidden { display: none; }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Behavioral Neuroscience Prep</h1>
+    <div id="progress-bar-text">Answered: 0/0 (0%)</div>
+</header>
+
+<div class="container">
+    <aside>
+        <div class="filter-group">
+            <label for="lecture-filter">Lecture</label>
+            <select id="lecture-filter">
+                <option value="all">All Lectures</option>
+            </select>
+        </div>
+
+        <div class="filter-group">
+            <label for="difficulty-filter">Difficulty</label>
+            <select id="difficulty-filter">
+                <option value="all">All Difficulties</option>
+                <option value="Easy">Easy</option>
+                <option value="Medium">Medium</option>
+                <option value="Hard">Hard</option>
+            </select>
+        </div>
+
+        <div class="filter-group">
+            <label for="type-filter">Type</label>
+            <select id="type-filter">
+                <option value="all">All Types</option>
+                <option value="MCQ">Multiple Choice</option>
+                <option value="Open">Open Ended</option>
+            </select>
+        </div>
+
+        <div class="filter-group">
+            <label for="status-filter">Status</label>
+            <select id="status-filter">
+                <option value="all">All Questions</option>
+                <option value="answered">Answered</option>
+                <option value="unanswered">Unanswered</option>
+            </select>
+        </div>
+
+        <div class="filter-group">
+            <label for="order-by">Order By</label>
+            <select id="order-by">
+                <option value="normal">Normal (Lecture)</option>
+                <option value="difficulty">Difficulty</option>
+                <option value="type">Type</option>
+                <option value="shuffle">Shuffle</option>
+            </select>
+        </div>
+
+        <div class="stats" id="stats-panel">
+            Loading data...
+        </div>
+
+        <button class="reset-btn" onclick="resetAll()">Reset All Progress</button>
+    </aside>
+
+    <main id="question-list">
+        <div id="loading">Loading Exam Questions...</div>
+    </main>
+</div>
+
+<script src="exam_data.js"></script>
+<script>
+    let examData = EXAM_DATA;
+    let userAnswers = {};
+    let currentShuffledOrder = [];
+    let lastFilterKey = "";
+
+    async function init() {
+        try {
+            // Load saved answers
+            const saved = localStorage.getItem('bn_exam_answers');
+            if (saved) {
+                userAnswers = JSON.parse(saved);
+            }
+
+            setupFilters();
+            renderQuestions();
+            updateStats();
+        } catch (error) {
+            document.getElementById('loading').textContent = 'Error loading exam data. Make sure exam_data.json exists.';
+            console.error(error);
+        }
+    }
+
+    function setupFilters() {
+        const lectureFilter = document.getElementById('lecture-filter');
+        const lectures = [...new Set(examData.map(q => q.lecture))].sort((a, b) => {
+            const numA = parseInt(a.match(/\d+/));
+            const numB = parseInt(b.match(/\d+/));
+            return numA - numB;
+        });
+
+        lectures.forEach(l => {
+            const opt = document.createElement('option');
+            opt.value = l;
+            opt.textContent = l;
+            lectureFilter.appendChild(opt);
+        });
+
+        [lectureFilter, document.getElementById('difficulty-filter'), document.getElementById('type-filter'), document.getElementById('status-filter'), document.getElementById('order-by')]
+            .forEach(el => el.addEventListener('change', renderQuestions));
+    }
+
+    function shuffleArray(array) {
+        for (let i = array.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [array[i], array[array[j]]] = [array[j], array[i]];
+        }
+        return array;
+    }
+
+    const difficultyOrder = { 'Easy': 1, 'Medium': 2, 'Hard': 3 };
+
+    function renderQuestions() {
+        const lFilter = document.getElementById('lecture-filter').value;
+        const dFilter = document.getElementById('difficulty-filter').value;
+        const tFilter = document.getElementById('type-filter').value;
+        const sFilter = document.getElementById('status-filter').value;
+        const orderBy = document.getElementById('order-by').value;
+
+        // Create a key to detect if filters changed
+        const currentFilterKey = `${lFilter}-${dFilter}-${tFilter}-${sFilter}-${orderBy}`;
+        const filtersChanged = currentFilterKey !== lastFilterKey;
+
+        let filtered = examData.filter(q => {
+            const hasAnswer = userAnswers[q.id] && userAnswers[q.id].trim() !== "";
+            const matchesStatus = sFilter === 'all' || 
+                                (sFilter === 'answered' && hasAnswer) || 
+                                (sFilter === 'unanswered' && !hasAnswer);
+
+            return (lFilter === 'all' || q.lecture === lFilter) &&
+                   (dFilter === 'all' || q.difficulty === dFilter) &&
+                   (tFilter === 'all' || q.type === tFilter) &&
+                   matchesStatus;
+        });
+
+        // Handle Ordering
+        if (orderBy === 'shuffle') {
+            if (filtersChanged) {
+                // Only shuffle if filters or mode actually changed
+                currentShuffledOrder = [...filtered];
+                for (let i = currentShuffledOrder.length - 1; i > 0; i--) {
+                    const j = Math.floor(Math.random() * (i + 1));
+                    [currentShuffledOrder[i], currentShuffledOrder[j]] = [currentShuffledOrder[j], currentShuffledOrder[i]];
+                }
+            }
+            filtered = currentShuffledOrder;
+        } else {
+            currentShuffledOrder = []; // Clear shuffle
+            if (orderBy === 'difficulty') {
+                filtered.sort((a, b) => difficultyOrder[a.difficulty] - difficultyOrder[b.difficulty]);
+            } else if (orderBy === 'type') {
+                filtered.sort((a, b) => a.type.localeCompare(b.type));
+            } else {
+                filtered.sort((a, b) => {
+                    if (a.lecture_num !== b.lecture_num) return a.lecture_num - b.lecture_num;
+                    return a.id.localeCompare(b.id);
+                });
+            }
+        }
+        
+        lastFilterKey = currentFilterKey;
+
+        const list = document.getElementById('question-list');
+        list.innerHTML = '';
+
+        if (filtered.length === 0) {
+            list.innerHTML = '<div>No questions match your filters.</div>';
+            return;
+        }
+
+        filtered.forEach(q => {
+            const card = document.createElement('div');
+            card.className = 'question-card';
+            card.dataset.difficulty = q.difficulty;
+            card.id = `card-${q.id}`;
+
+            let inputHtml = '';
+            if (q.type === 'MCQ') {
+                inputHtml = `<div class="options-list">`;
+                Object.entries(q.options).forEach(([key, val]) => {
+                    const isSelected = userAnswers[q.id] === key;
+                    inputHtml += `
+                        <div class="option-item ${isSelected ? 'selected' : ''}" onclick="selectOption('${q.id}', '${key}')">
+                            <strong>${key}.</strong> ${val}
+                        </div>
+                    `;
+                });
+                inputHtml += `</div>`;
+            } else {
+                inputHtml = `
+                    <textarea class="open-answer" placeholder="Type your answer here..." 
+                        oninput="saveOpenAnswer('${q.id}', this.value)">${userAnswers[q.id] || ''}</textarea>
+                `;
+            }
+
+            card.innerHTML = `
+                <div class="meta">
+                    <span><strong>${q.difficulty}</strong></span>
+                </div>
+                <div class="question-text">${q.question}</div>
+                ${inputHtml}
+                <div class="actions">
+                    <button onclick="toggleSlide('${q.id}')">Show/Hide Slide</button>
+                    <button onclick="toggleFeedback('${q.id}')">Check Answer</button>
+                </div>
+                <div class="slide-container" id="slide-${q.id}">
+                    <div style="padding: 0.5rem; background: #eee; font-size: 0.8rem; border-bottom: 1px solid #ddd;">
+                        <strong>Source:</strong> ${q.lecture} | ${q.reference}
+                    </div>
+                    ${q.image_path ? `<img src="${q.image_path}" alt="Lecture Slide" title="Source: ${q.image_path}">` : '<div style="padding:1rem">No slide available.</div>'}
+                </div>
+                <div class="feedback" id="feedback-${q.id}">
+                    <h4>Correct Answer / Rubric:</h4>
+                    <p>${q.correct_answer}</p>
+                    <div class="reasoning">
+                        <strong>Reasoning:</strong> ${q.reasoning}
+                    </div>
+                </div>
+            `;
+            list.appendChild(card);
+        });
+    }
+
+    function selectOption(qId, key) {
+        userAnswers[qId] = key;
+        saveState();
+        renderQuestions(); // Re-render to update UI (lazy way, but effective for this scale)
+        updateStats();
+    }
+
+    function saveOpenAnswer(qId, value) {
+        userAnswers[qId] = value;
+        saveState();
+        updateStats();
+    }
+
+    function saveState() {
+        localStorage.setItem('bn_exam_answers', JSON.stringify(userAnswers));
+    }
+
+    function toggleSlide(qId) {
+        const el = document.getElementById(`slide-${qId}`);
+        el.style.display = el.style.display === 'block' ? 'none' : 'block';
+    }
+
+    function toggleFeedback(qId) {
+        const q = examData.find(item => item.id === qId);
+        const el = document.getElementById(`feedback-${qId}`);
+        
+        // Update color based on correctness for MCQs
+        if (q.type === 'MCQ') {
+            const isCorrect = userAnswers[qId] === q.correct_answer;
+            el.style.borderTopColor = isCorrect ? 'var(--success-color)' : '#e74c3c';
+            const title = el.querySelector('h4');
+            if (title) {
+                title.style.color = isCorrect ? 'var(--success-color)' : '#e74c3c';
+                title.textContent = isCorrect ? 'Correct!' : 'Incorrect';
+            }
+        } else {
+            el.style.borderTopColor = 'var(--success-color)';
+            const title = el.querySelector('h4');
+            if (title) {
+                title.style.color = 'var(--success-color)';
+                title.textContent = 'Correct Answer / Rubric:';
+            }
+        }
+
+        el.style.display = el.style.display === 'block' ? 'none' : 'block';
+    }
+
+    function updateStats() {
+        const total = examData.length;
+        const answered = Object.values(userAnswers).filter(val => val && val.trim() !== '').length;
+        const percent = total > 0 ? Math.round((answered / total) * 100) : 0;
+
+        document.getElementById('progress-bar-text').textContent = `Answered: ${answered}/${total} (${percent}%)`;
+        
+        const statsPanel = document.getElementById('stats-panel');
+        statsPanel.innerHTML = `
+            <div>Total Questions: ${total}</div>
+            <div>Answered: ${answered}</div>
+            <div>Remaining: ${total - answered}</div>
+        `;
+    }
+
+    function resetAll() {
+        if (confirm('Are you sure you want to clear all your answers? This cannot be undone.')) {
+            userAnswers = {};
+            localStorage.removeItem('bn_exam_answers');
+            renderQuestions();
+            updateStats();
+        }
+    }
+
+    init();
+</script>
+
+</body>
+</html>

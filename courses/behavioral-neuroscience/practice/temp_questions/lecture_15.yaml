@@ -1,0 +1,161 @@
+lecture_name: "Lecture 15: Social Neuroscience"
+questions:
+  - id: 1
+    difficulty: "Medium"
+    type: "MCQ"
+    question: "In the study of social identity in humans, 'Jennifer Aniston cells' or 'Halle Berry cells' were identified. In which brain structure were these highly specific neurons found?"
+    options:
+      A: "Amygdala"
+      B: "Hippocampus"
+      C: "Prefrontal Cortex"
+      D: "Hypothalamus"
+    correct_answer: "B"
+    reference: "Lecture 15, Slide 7-8"
+    reasoning: "Research by Fried and colleagues identified neurons in the human hippocampus that respond selectively to the identity of specific individuals, regardless of the format (picture or written name)."
+
+  - id: 2
+    difficulty: "Hard"
+    type: "Open"
+    question: "Contrast the functional roles of the ventral CA1 (vCA1) and dorsal CA1 (dCA1) regions of the hippocampus in social processing as discussed in the lecture."
+    correct_answer: "The vCA1 is primarily involved in social memory and identity; for example, the number of neurons representing a familiar mouse increases in this region over time. In contrast, the dCA1 is involved in social-spatial representation, such as tracking the locations of others and representing place-social interactions (as shown in studies by Ulanovsky and colleagues)."
+    reference: "Lecture 15, Slide 10-16"
+    reasoning: "The lecture distinguishes between the 'memory' aspect of identity in vCA1 and the 'spatial' tracking aspect of social behavior in dCA1."
+
+  - id: 3
+    difficulty: "Medium"
+    type: "MCQ"
+    question: "Based on the results of the tube test shown on Slide 21, what is the effect of optogenetically activating neurons in the medial prefrontal cortex (mPFC) of a lower-ranked mouse?"
+    options:
+      A: "The mouse becomes more submissive and loses rank."
+      B: "The mouse shows increased aggression but no change in rank."
+      C: "The mouse shows increased dominance and increases its rank."
+      D: "There is no observable change in behavior."
+    correct_answer: "C"
+    reference: "Lecture 15, Slide 21"
+    reasoning: "Slide 21 illustrates that activating mPFC neurons increases dominance/rank, while inhibiting them reduces rank in the tube test."
+
+  - id: 4
+    difficulty: "Medium"
+    type: "Open"
+    question: "Explain the transition in male mouse behavior toward pups that occurs approximately three weeks after mating, and why this timing is biologically significant."
+    correct_answer: "Male mice are normally infanticidal towards pups. However, about three weeks after mating, they switch to parental behavior. This timing is significant because three weeks is the gestation period for mice; the switch ensures the male does not kill his own offspring."
+    reference: "Lecture 15, Slide 31"
+    reasoning: "Slide 31 explicitly mentions that the behavior switch aligns with the mouse gestation period to protect the male's own pups."
+
+  - id: 5
+    difficulty: "Easy"
+    type: "MCQ"
+    question: "Which specific nucleus within the hypothalamus is primarily associated with the control of aggression, as demonstrated by optogenetic activation studies?"
+    options:
+      A: "Medial Preoptic Area (MPOA)"
+      B: "Ventromedial Hypothalamus (VMH)"
+      C: "Paraventricular Nucleus (PVN)"
+      D: "Suprachiasmatic Nucleus (SCN)"
+    correct_answer: "B"
+    reference: "Lecture 15, Slide 25-28"
+    reasoning: "The ventromedial nucleus of the hypothalamus (VMH) is highlighted as the key region where activation causes aggression."
+
+  - id: 6
+    difficulty: "Hard"
+    type: "Open"
+    question: "Describe how Galanin-expressing (Gal+) neurons in the medial preoptic area (MPOA) 'deconstruct' parenting into distinct behavioral components. Specify at least two projection targets and their associated behaviors."
+    correct_answer: "The MPOA Gal+ neurons project to different areas to control specific aspects of parenting: 1) Projections to the Periaqueductal Gray (PAG) control pup grooming. 2) Projections to the Medial Amygdala (MeA) are involved in sniffing and retrieving pups. 3) Projections to the Ventral Tegmental Area (VTA) influence the motivation to reach the pups."
+    reference: "Lecture 15, Slide 39-48"
+    reasoning: "Dulac and colleagues showed that different circuits stemming from MPOA Gal+ neurons mediate distinct parental sub-behaviors."
+
+  - id: 7
+    difficulty: "Medium"
+    type: "MCQ"
+    question: "According to the experimental data on Slide 47, what is the behavioral outcome when MPOA Gal+ neurons projecting to the Ventral Tegmental Area (VTA) are activated?"
+    options:
+      A: "Increased grooming of pups."
+      B: "Increased frequency of pup retrieval."
+      C: "Increased motivation to cross a physical barrier to reach pups."
+      D: "Immediate cessation of all parental behaviors."
+    correct_answer: "C"
+    reference: "Lecture 15, Slide 47"
+    reasoning: "Activation of VTA-projecting Gal+ neurons increased barrier crossing (motivation), although it did not necessarily make the mice overall 'parental' (they might still kill the pups once reached)."
+
+  - id: 8
+    difficulty: "Medium"
+    type: "Open"
+    question: "Discuss the role of oxytocin in the 'observational learning' of pup retrieval by virgin female mice."
+    correct_answer: "Virgin female mice can learn to retrieve pups by observing an experienced mother. This learning is mediated by oxytocin; oxytocin neurons in the virgin female increase firing during observation. If oxytocin receptors are knocked out, the virgin mice fail to learn the retrieval behavior through observation."
+    reference: "Lecture 15, Slide 52-54"
+    reasoning: "Froemke and colleagues demonstrated that oxytocin is essential for this form of social/observational learning in mice."
+
+  - id: 9
+    difficulty: "Easy"
+    type: "MCQ"
+    question: "Which brain region is primarily involved in allogrooming, a prosocial behavior where a mouse comforts a stressed partner?"
+    options:
+      A: "Medial Amygdala (MeA)"
+      B: "Ventral CA1 (vCA1)"
+      C: "Anterior Cingulate Cortex (ACC)"
+      D: "Dorsal CA1 (dCA1)"
+    correct_answer: "A"
+    reference: "Lecture 15, Slide 58-59"
+    reasoning: "The Medial Amygdala (MeA) is identified as the region responsible for allogrooming/comforting behavior toward both stressed and unresponsive partners."
+
+  - id: 10
+    difficulty: "Medium"
+    type: "Open"
+    question: "Examine the circuit diagram on Slide 49. Describe the pathway through which MPOA Gal+ neurons influence the hormonal regulation of parenting via oxytocin."
+    correct_answer: "MPOA Gal+ neurons project (either directly or indirectly) to the Paraventricular Nucleus (PVN) of the hypothalamus. Specifically, they project to oxytocin-expressing (OXT+) neurons within the PVN, thereby modulating oxytocin release which is critical for parental behaviors."
+    reference: "Lecture 15, Slide 49"
+    reasoning: "The slide illustrates the connection between MPOA Gal+ neurons and PVN OXT+ neurons."
+
+  - id: 11
+    difficulty: "Hard"
+    type: "MCQ"
+    question: "In the context of social hierarchy, how does the firing rate of medial prefrontal cortex (mPFC) neurons change during a 'pushing' or 'resisting' event in the tube test?"
+    options:
+      A: "The firing rate significantly decreases."
+      B: "The firing rate significantly increases."
+      C: "The firing rate remains unchanged but synchronization increases."
+      D: "The firing rate only increases during submissive retreats."
+    correct_answer: "B"
+    reference: "Lecture 15, Slide 20"
+    reasoning: "Neural recordings showed that neurons in the mPFC increased their firing rate specifically during dominant behaviors like pushing or resisting an opponent in the tube test."
+
+  - id: 12
+    difficulty: "Hard"
+    type: "Open"
+    question: "Explain the experimental finding regarding the 'targets' of aggression when the ventromedial hypothalamus (VMH) is optogenetically activated in mice."
+    correct_answer: "When VMH neurons are activated, the mouse becomes non-specifically aggressive. An interesting and key finding was that they would attack moving objects, including inanimate ones like a glove or a moving toy, rather than just other mice."
+    reference: "Lecture 15, Slide 29"
+    reasoning: "Anderson and colleagues found that VMH activation triggers an aggressive state that can be directed at moving objects in the environment."
+
+  - id: 13
+    difficulty: "Medium"
+    type: "MCQ"
+    question: "Based on the graphs on Slide 12, how does the representation of a familiar mouse in the vCA1 change as the duration of familiarity increases from 2 hours to 3 days?"
+    options:
+      A: "The number of neurons representing the familiar mouse decreases."
+      B: "The number of neurons representing the familiar mouse remains constant."
+      C: "The number of neurons representing the familiar mouse increases."
+      D: "The neurons shift from vCA1 to dCA1."
+    correct_answer: "C"
+    reference: "Lecture 15, Slide 12"
+    reasoning: "The data from Tonegawa and colleagues show that more neurons in vCA1 become dedicated to representing a familiar individual as the period of exposure increases."
+
+  - id: 14
+    difficulty: "Hard"
+    type: "Open"
+    question: "How does the Anterior Cingulate Cortex (ACC) contribute to social behavior in mice, and how does its role differ from the mPFC's role in hierarchy?"
+    correct_answer: "While the mPFC is primarily linked to social hierarchy and dominance (tube test), the Anterior Cingulate Cortex (ACC) is involved in cooperative behavior. Neural responses in the ACC are specific to tasks requiring cooperation between mice, representing the strategy or action of the partner."
+    reference: "Lecture 15, Slide 21, 64"
+    reasoning: "The lecture distinguishes between mPFC for hierarchy (dominance) and ACC for prosocial/cooperative strategies."
+
+  - id: 15
+    difficulty: "Easy"
+    type: "MCQ"
+    question: "Which hippocampal subregion is specifically noted for its critical role in social memory and the ability to distinguish between familiar and novel individuals in mice?"
+    options:
+      A: "CA1"
+      B: "CA2"
+      C: "CA3"
+      D: "Dentate Gyrus"
+    correct_answer: "B"
+    reference: "Lecture 15, Slide 9"
+    reasoning: "Slide 9 identifies the CA2 region of the hippocampus as being essential for social memory, based on research by Siegelbaum and colleagues."

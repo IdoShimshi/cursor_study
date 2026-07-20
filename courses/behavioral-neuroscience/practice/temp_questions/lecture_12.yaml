@@ -1,0 +1,169 @@
+lecture_name: "Lecture 12: Decision Making"
+questions:
+  - id: 1
+    difficulty: "Easy"
+    type: "MCQ"
+    question: "Which cortical area is primarily responsible for supplying the sensory evidence of motion in the random dot task?"
+    options:
+      A: "LIP (Lateral Intraparietal area)"
+      B: "FEF (Frontal Eye Fields)"
+      C: "MT (Middle Temporal area / V5)"
+      D: "S1 (Primary Somatosensory cortex)"
+    correct_answer: "C"
+    reference: "Lecture 12, Slide 7"
+    reasoning: "Slide 7 discusses MT (v5) as the source of motion-sensitive neurons that supply sensory evidence."
+
+  - id: 2
+    difficulty: "Medium"
+    type: "Open"
+    question: "Explain the three experimental approaches used by Newsome and colleagues to demonstrate that Area MT neurons carry the signals used for perceptual judgments of motion."
+    correct_answer: "The three approaches are: 1) Chemical lesions: showing that performance is impaired when MT is damaged. 2) Sensitivity comparison: demonstrating that individual MT neurons are sufficiently sensitive to account for the animal's psychophysical performance. 3) Electrical micro-stimulation: showing that stimulating MT neurons can bias the animal's perceptual judgments toward the neurons' preferred direction."
+    reference: "Lecture 12, Slide 7"
+    reasoning: "These three points are explicitly listed on Slide 7 as the evidence for MT supplying the signal."
+
+  - id: 3
+    difficulty: "Hard"
+    type: "MCQ"
+    question: "Analyze the diagram on Slide 12 regarding Signal Detection Theory. If an observer adopts a more conservative criterion (shifting β to the right), what is the expected effect on their performance?"
+    options:
+      A: "Both Hits and False Alarms will increase."
+      B: "Both Hits and False Alarms will decrease."
+      C: "Hits will increase, but False Alarms will decrease."
+      D: "Hits will decrease, but False Alarms will increase."
+    correct_answer: "B"
+    reference: "Lecture 12, Slide 12"
+    question_requires_diagram: true
+    reasoning: "Shifting the criterion to the right reduces the area under both the signal+noise and noise-only distributions that falls above the threshold, thus decreasing both the hit rate and the false alarm rate."
+
+  - id: 4
+    difficulty: "Medium"
+    type: "MCQ"
+    question: "In the context of the Sequential Probability Ratio Test (SPRT), what does the 'Decision Variable' (DV) represent?"
+    options:
+      A: "The instantaneous sensory evidence from a single observation."
+      B: "The total number of trials completed."
+      C: "The running sum of the log likelihood ratios of the evidence."
+      D: "The physical speed of the dots in the random dot task."
+    correct_answer: "C"
+    reference: "Lecture 12, Slide 21"
+    reasoning: "Slide 21 states that the DV is the running sum (accumulation) of the weights, where weights are log likelihood ratios."
+
+  - id: 5
+    difficulty: "Hard"
+    type: "Open"
+    question: "Describe how Alan Turing's work on the 'Enigma' machine relates to the conceptual framework of modern decision-making models discussed in class."
+    correct_answer: "Alan Turing developed the Enigma-breaking procedure based on accumulating evidence over time to distinguish between two hypotheses (e.g., whether two messages were encoded by the same machine). This 'Sequential Analysis' (SA) framework involves defining evidence for hypotheses, updating that evidence with new information (where log-likelihoods are additive), and forming a decision rule based on a threshold of sufficient evidence."
+    reference: "Lecture 12, Slide 19"
+    reasoning: "Slide 19 and 20 link Turing's Enigma work to the Sequential Analysis framework used in neurobiology."
+
+  - id: 6
+    difficulty: "Medium"
+    type: "MCQ"
+    question: "How did researchers manipulate the speed-accuracy tradeoff in monkeys performing the random dot task?"
+    options:
+      A: "By increasing the number of dots on the screen."
+      B: "By rewarding correct responses immediately for speed, and delaying reward for accuracy."
+      C: "By punishing incorrect responses with an electrical shock."
+      D: "By changing the color of the dots based on the speed of the decision."
+    correct_answer: "B"
+    reference: "Lecture 12, Slide 24"
+    reasoning: "Slide 24 explains that immediate rewards encouraged speed, while delayed rewards encouraged accuracy."
+
+  - id: 7
+    difficulty: "Medium"
+    type: "Open"
+    question: "What is the 'Drift-Diffusion Model' (DDM), and what do the 'drift rate' and the 'bounds' represent in this model?"
+    correct_answer: "The DDM is a model of evidence accumulation over time. The 'drift rate' represents the quality or strength of the sensory evidence (the rate at which evidence accumulates toward a decision), and the 'bounds' (or thresholds) represent the amount of evidence required to commit to a specific choice. Moving the bounds further apart increases accuracy but also increases reaction time."
+    reference: "Lecture 12, Slide 22"
+    reasoning: "Slide 22 and 21 discuss the random walk/DDM and the relationship between bounds and error rates/samples needed."
+
+  - id: 8
+    difficulty: "Easy"
+    type: "MCQ"
+    question: "Which brain area's neurons are observed to 'accumulate' evidence over time until a threshold is reached for a saccadic movement?"
+    options:
+      A: "MT (Middle Temporal area)"
+      B: "LIP (Lateral Intraparietal area)"
+      C: "Primary Visual Cortex (V1)"
+      D: "Primary Motor Cortex (M1)"
+    correct_answer: "B"
+    reference: "Lecture 12, Slide 26"
+    reasoning: "Slide 26 and 27 show LIP neurons in a reaction time task reaching a threshold before the decision."
+
+  - id: 9
+    difficulty: "Medium"
+    type: "Open"
+    question: "In the post-decision wagering paradigm, how is 'certainty' or 'confidence' measured, and what was the main finding regarding LIP activity during these trials?"
+    correct_answer: "Certainty is measured by offering a 'sure option' (with a smaller but guaranteed reward) alongside the standard movement choices. Monkeys choose the sure option more often when evidence is weak (low coherence) or when they have had less time to accumulate evidence. LIP activity was found to predict both the choice and the post-decision wager; trials where the monkey waived the choice for the sure option showed intermediate LIP activity that failed to reach the decision threshold."
+    reference: "Lecture 12, Slide 29"
+    reasoning: "Slides 29 and 30 discuss post-decision wagering and its correlation with LIP activity."
+
+  - id: 10
+    difficulty: "Medium"
+    type: "MCQ"
+    question: "Look at the graph on Slide 9 comparing neuronal and psychophysical performance. What is the significance of the finding that the two curves are closely aligned?"
+    options:
+      A: "It proves that the monkey is not using its brain to make the decision."
+      B: "It suggests that the signals from a small number of MT neurons are sufficient to account for the animal's sensory sensitivity."
+      C: "It shows that neurons in MT are much more sensitive than the animal's behavior."
+      D: "It indicates that the animal is guessing on most trials."
+    correct_answer: "B"
+    reference: "Lecture 12, Slide 9"
+    question_requires_diagram: true
+    reasoning: "Slide 9 shows that neuronal sensitivity in MT matches psychophysical performance, supporting the idea that MT provides the relevant evidence."
+
+  - id: 11
+    difficulty: "Hard"
+    type: "Open"
+    question: "Summarize the recent debate (Slide 32-33) regarding whether LIP neurons truly serve as the 'evidence accumulator' or 'integrator' for the decision."
+    correct_answer: "While the classic view (Shadlen et al.) holds that LIP integrates sensory evidence until a threshold, more recent studies (e.g., Huk, Pillow labs) have challenged this. Some arguments suggest that LIP activity might reflect the decision variable but not necessarily be the primary site of integration, or that the 'ramping' activity observed in populations might look different in single-trial spike trains (e.g., discrete steps vs. continuous integration)."
+    reference: "Lecture 12, Slide 32"
+    reasoning: "Slides 32 and 33 mention the debate and work by Katz, Yates, Pillow, and Huk."
+
+  - id: 12
+    difficulty: "Easy"
+    type: "MCQ"
+    question: "What is a key difference between the Random Dot Motion task and the Vibrotactile Frequency Discrimination (VTF) task mentioned in the lecture?"
+    options:
+      A: "VTF does not involve any brain activity."
+      B: "The Random Dot task requires working memory, while VTF does not."
+      C: "VTF requires working memory to compare two sequential stimuli, whereas the RDM task involves continuous integration of a single stimulus."
+      D: "RDM is a somatosensory task, while VTF is a visual task."
+    correct_answer: "C"
+    reference: "Lecture 12, Slide 35"
+    reasoning: "Slide 35 states that VTF requires working memory (unlike the RDM) because it involves comparing two stimuli (f1 and f2) separated by a delay."
+
+  - id: 13
+    difficulty: "Hard"
+    type: "MCQ"
+    question: "Analyze the diagram on Slide 30. During the 'Sure option' (Ts waived) trials, how does the LIP activity compare to trials where the monkey chooses the target inside the neuron's response field (T_in)?"
+    options:
+      A: "It is identical to T_in trials."
+      B: "It is lower than T_in trials and fails to reach the same high threshold."
+      C: "It is higher than T_in trials."
+      D: "LIP neurons are completely silent during sure option trials."
+    correct_answer: "B"
+    reference: "Lecture 12, Slide 30"
+    question_requires_diagram: true
+    reasoning: "The graph on Slide 30 shows that LIP activity for 'Ts waived' (blue) is at an intermediate level, lower than 'Ts chosen' (red) for T_in."
+
+  - id: 14
+    difficulty: "Medium"
+    type: "Open"
+    question: "Define the 'Log Likelihood Ratio' in the context of combining evidence, and explain why the 'Log' version is particularly useful for neural implementation."
+    correct_answer: "The Log Likelihood Ratio (LogLR) is the logarithm of the probability of the evidence given hypothesis 1 divided by the probability of the evidence given hypothesis 2. It is useful because logarithms turn multiplication into addition. This allows for simple accumulation (summation) of evidence over time, which is easier for neural circuits to implement via synaptic integration."
+    reference: "Lecture 12, Slide 20"
+    reasoning: "Slide 20 explains that Log is additive, making accumulation easier."
+
+  - id: 15
+    difficulty: "Hard"
+    type: "MCQ"
+    question: "Which brain regions are involved in the Vibrotactile Frequency Discrimination (VTF) task for detection and comparison, according to the work of Romo and colleagues?"
+    options:
+      A: "Only the primary somatosensory cortex (S1)."
+      B: "S1 for initial encoding and Premotor (PM) areas for the decision/comparison."
+      C: "Only the Frontal Eye Fields (FEF)."
+      D: "The Hippocampus and Amygdala."
+    correct_answer: "B"
+    reference: "Lecture 12, Slide 35"
+    reasoning: "Slides 35 and 36 mention S1 and PM (Premotor) involvement in the VTF task."

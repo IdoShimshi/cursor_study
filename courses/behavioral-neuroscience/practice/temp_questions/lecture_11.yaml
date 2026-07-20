@@ -1,0 +1,166 @@
+lecture_name: "Lecture 11: Fear"
+questions:
+  - id: 1
+    difficulty: "Medium"
+    type: "MCQ"
+    question: "In the context of the neuropsychological approach to studying emotions, which of the following is an example of an 'active' approach?"
+    options:
+      A: "Observing brain activity using fMRI during a psychophysics experiment."
+      B: "Recording electrophysiological signals from neurons while a subject performs a task."
+      C: "Manipulating brain activity through optogenetic stimulation to observe changes in behavior."
+      D: "Analyzing behavioral data from patients who have naturally occurring brain lesions."
+    correct_answer: "C"
+    reference: "Lecture 11, Slide 2"
+    reasoning: "The active approach involves manipulating the brain (e.g., stimulation, lesions) and observing behavior, whereas the passive approach involves manipulating behavior and observing the brain."
+
+  - id: 2
+    difficulty: "Medium"
+    type: "MCQ"
+    question: "Which temporal relationship between the Conditioned Stimulus (CS) and the Unconditioned Stimulus (US) typically results in the weakest associative learning?"
+    options:
+      A: "Delay conditioning (CS overlaps with US)"
+      B: "Trace conditioning (short interval between CS and US)"
+      C: "Simultaneous conditioning (CS and US start and end together)"
+      0: "Backward conditioning (US precedes CS)"
+    correct_answer: "D"
+    reference: "Lecture 11, Slide 7"
+    reasoning: "According to the rules of thumb for conditioning strength, backward conditioning (where the US comes before the CS) is the least effective compared to simultaneous, trace, and delay conditioning."
+
+  - id: 3
+    difficulty: "Hard"
+    type: "Open"
+    question: "Analyze the fear circuit diagram on slide 12. Describe the three primary neural pathways originating from the amygdala and the specific physiological or behavioral responses they mediate."
+    correct_answer: "According to the diagram, the amygdala projects to: 1) The lateral hypothalamus, which mediates autonomic responses; 2) The paraventricular nucleus (PVN) of the hypothalamus, which mediates hormonal release (HPA axis); and 3) The periaqueductal gray (PAG), which mediates freezing behavior."
+    reference: "Lecture 11, Slide 12"
+    reasoning: "The question requires identifying specific output structures and their associated functions from the provided anatomical diagram."
+
+  - id: 4
+    difficulty: "Medium"
+    type: "MCQ"
+    question: "What role do NMDA receptors in the amygdala play in classical fear conditioning?"
+    options:
+      A: "They are exclusively required for the expression of fear responses."
+      B: "They are involved in both the acquisition of fear memory and the induction of long-term potentiation (LTP)."
+      C: "They act as inhibitors that prevent over-consolidation of traumatic memories."
+      D: "They are necessary for sensory perception of the CS but not for the association with the US."
+    correct_answer: "B"
+    reference: "Lecture 11, Slide 14"
+    reasoning: "The lecture states that NMDA is involved in both the acquisition of fear memory and the induction of LTP in the amygdala."
+
+  - id: 5
+    difficulty: "Hard"
+    type: "Open"
+    question: "Based on the inactivation studies mentioned in the lecture, explain the functional dissociation between the Lateral Amygdala (LA) and the Central Nucleus (Ce) during fear conditioning."
+    correct_answer: "The studies suggest that the Lateral Amygdala (LA) is the site of memory encoding and storage; it can acquire the association even if behavior is suppressed. The Central Nucleus (Ce) is the output station required for the expression of fear behavior (like freezing). Inactivating the Ce during training prevents the behavior but doesn't prevent the LA from forming the memory."
+    reference: "Lecture 11, Slide 15"
+    reasoning: "Understanding the different roles of amygdala sub-nuclei in learning vs. performance is a key conceptual mastery point."
+
+  - id: 6
+    difficulty: "Medium"
+    type: "MCQ"
+    question: "Research by Packard and McGaugh involving d-amphetamine injections into the amygdala suggests that the amygdala's role in memory is primarily one of:"
+    options:
+      A: "Exclusive storage for all types of memory."
+      B: "Encoding spatial maps of the environment."
+      C: "Modulating the consolidation of memories stored in other brain regions like the hippocampus and striatum."
+      D: "Inhibiting unimportant memories to prevent cognitive overload."
+    correct_answer: "C"
+    reference: "Lecture 11, Slide 18"
+    reasoning: "The lecture highlights that amygdala modulation affects both hippocampal-dependent (spatial) and striatum-dependent (cue) learning."
+
+  - id: 7
+    difficulty: "Hard"
+    type: "Open"
+    question: "Why is extinction learning described as 'new learning' rather than the simple erasure of the original fear memory? Cite two phenomena from the lecture that support this."
+    correct_answer: "Extinction is considered 'new safety learning' because the original memory remains intact but is inhibited. Evidence includes: 1) Spontaneous recovery, where the fear response returns after a delay, and 2) Faster re-learning (savings), where the association is re-acquired more quickly than the first time."
+    reference: "Lecture 11, Slide 21, 22"
+    reasoning: "This addresses the synthesis of how extinction works at a conceptual and behavioral level."
+
+  - id: 8
+    difficulty: "Medium"
+    type: "MCQ"
+    question: "Based on the 'Teaching signals' diagrams on slide 27, where are 'unsigned' (attention-based) prediction errors and 'signed' prediction errors primarily processed?"
+    options:
+      A: "Unsigned in the ACC; Signed in the Amygdala."
+      B: "Unsigned in the Amygdala; Signed in the ACC."
+      C: "Unsigned in the Hippocampus; Signed in the PFC."
+      D: "Both are processed in the Lateral Amygdala."
+    correct_answer: "B"
+    reference: "Lecture 11, Slide 27"
+    reasoning: "The diagram explicitly labels unsigned/attention errors in the amygdala and signed errors in the ACC."
+
+  - id: 9
+    difficulty: "Hard"
+    type: "Open"
+    question: "Explain the Partial Reinforcement Extinction Effect (PREE) using the 'Frustration theory' proposed by Amsel."
+    correct_answer: "Frustration theory suggests that during partial reinforcement, the omission of the US (the 'reward' or expected outcome) induces frustration. This frustration becomes a conditioned stimulus that predicts the eventual appearance of the US. During extinction, the subject continues to respond because the frustration signal (which is now present constantly) was previously associated with the US during training."
+    reference: "Lecture 11, Slide 26"
+    reasoning: "Requires synthesis of reinforcement schedules and behavioral theories of extinction."
+
+  - id: 10
+    difficulty: "Easy"
+    type: "MCQ"
+    question: "Which of the following is a characteristic of Conditioned Taste Aversion (CTA) that distinguishes it from many other types of classical conditioning?"
+    options:
+      A: "It requires dozens of pairings to become effective."
+      B: "It can be learned even with a long delay (several hours) between the CS and the US."
+      C: "It is only possible if the subject is consciously aware of the association."
+      D: "It only occurs in humans and higher primates."
+    correct_answer: "B"
+    reference: "Lecture 11, Slide 32"
+    reasoning: "CTA is famous for one-trial learning and long-delay learning, which challenged early behavioral theories."
+
+  - id: 11
+    difficulty: "Medium"
+    type: "MCQ"
+    question: "Referencing the consolidation experiment on slide 33, what is the effect of injecting Anisomycin into the BLA 8 hours after fear conditioning?"
+    options:
+      A: "It completely erases the long-term memory of the fear."
+      B: "It has no effect on long-term memory because the consolidation window has closed."
+      C: "It disrupts short-term memory but leaves long-term memory intact."
+      D: "It enhances the memory, making the subject even more scared the next day."
+    correct_answer: "B"
+    reference: "Lecture 11, Slide 33"
+    reasoning: "The diagram shows that at 8 hours (past the ~6hr rule of thumb), the memory is already consolidated and resistant to protein synthesis inhibitors."
+
+  - id: 12
+    difficulty: "Hard"
+    type: "Open"
+    question: "What is the concept of 'reconsolidation' as demonstrated by Nader and LeDoux, and why is it significant for treating trauma?"
+    correct_answer: "Reconsolidation is the process where a retrieved (active) memory becomes labile and requires new protein synthesis to be restabilized. It is significant because it provides a 'window of opportunity' to modify or weaken a traumatic memory by disrupting its restabilization after it has been recalled."
+    reference: "Lecture 11, Slide 35"
+    reasoning: "This concept bridges basic neurobiology with clinical applications for PTSD."
+
+  - id: 13
+    difficulty: "Easy"
+    type: "MCQ"
+    question: "The 'Little Albert' experiment demonstrated that fear of a specific object (a white rat) could spread to other similar objects (a rabbit, a fur coat). This phenomenon is known as:"
+    options:
+      A: "Selective attention"
+      B: "Spontaneous recovery"
+      C: "Over-generalization"
+      D: "Latent inhibition"
+    correct_answer: "C"
+    reference: "Lecture 11, Slide 37"
+    reasoning: "Over-generalization is the spread of a conditioned response to stimuli that were not specifically paired with the US."
+
+  - id: 14
+    difficulty: "Hard"
+    type: "Open"
+    question: "How does aversive learning affect the 'Just-Noticeable-Difference' (JND) for the conditioned stimulus, and how does this relate to the 'better safe than sorry' strategy?"
+    correct_answer: "Aversive learning *increases* the JND (discrimination threshold), meaning it becomes harder for the subject to distinguish the CS from similar stimuli. This promotes over-generalization, a 'better safe than sorry' strategy where the subject treats similar stimuli as dangerous to avoid missing a potential threat."
+    reference: "Lecture 11, Slide 38, 39"
+    reasoning: "Requires understanding the counter-intuitive finding that aversive learning can impair perceptual discrimination to favor survival."
+
+  - id: 15
+    difficulty: "Easy"
+    type: "MCQ"
+    question: "According to the reinforcement table on slide 3, if a stimulus is 'taken away' and the result is an 'increase in behavior,' the process is called:"
+    options:
+      A: "Positive reinforcement"
+      B: "Negative punishment"
+      C: "Positive punishment"
+      D: "Negative reinforcement"
+    correct_answer: "D"
+    reference: "Lecture 11, Slide 3"
+    reasoning: "Taking away an aversive stimulus (like pain) to increase a behavior is negative reinforcement (e.g., taking an aspirin)."
