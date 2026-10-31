@@ -1,0 +1,10 @@
+{
+  "id": "intro-computer-vision",
+  "name": "Introduction to Computer Vision",
+  "semester": "semester 3",
+  "notebookName": "MSC_CS",
+  "sectionGroupName": "Introduction to computer vision",
+  "sectionName": "lectures",
+  "matchMode": "contains",
+  "includeSubpages": false
+}
