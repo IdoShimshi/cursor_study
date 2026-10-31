@@ -1,5 +1,15 @@
 {
-  "python.defaultInterpreterPath": "${workspaceFolder}/scripts/.venv-lectures/bin/python",
-  "python.analysis.venvPath": "scripts",
-  "python.analysis.venv": ".venv-lectures"
+  "python.defaultInterpreterPath": "${workspaceFolder}/.venv/bin/python",
+  "python.analysis.venvPath": ".",
+  "python.analysis.venv": ".venv",
+
+  // Root workspace doesn't have shared/ as a workspace folder, so register its instructions and skills explicitly.
+  "chat.instructionsFilesLocations": {
+    ".github/instructions": true,
+    "shared/.github/instructions": true
+  },
+  "chat.agentSkillsLocations": {
+    ".github/skills": true,
+    "shared/.github/skills": true
+  }
 }

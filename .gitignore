@@ -1,4 +1,5 @@
 .env
+.venv/
 shared/.venv/
 scripts/.venv-lectures/
 courses/**/.venv/
