@@ -5,8 +5,8 @@
   ],
   "settings": {
     "terminal.integrated.cwd": "${workspaceFolder:Dynamical Systems}",
-    "python.defaultInterpreterPath": "${workspaceFolder:Dynamical Systems}/../../scripts/.venv-lectures/bin/python",
-    "python.analysis.venvPath": "${workspaceFolder:Dynamical Systems}/../../scripts",
-    "python.analysis.venv": ".venv-lectures"
+    "python.defaultInterpreterPath": "${workspaceFolder:Dynamical Systems}/../../.venv/bin/python",
+    "python.analysis.venvPath": "${workspaceFolder:Dynamical Systems}/../..",
+    "python.analysis.venv": ".venv"
   }
 }
