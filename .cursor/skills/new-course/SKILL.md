@@ -25,7 +25,7 @@ You need the following. Ask for anything not provided:
 
 **Tip:** if the user is unsure of notebook/section names, tell them to run this after setup:
 ```bash
-./scripts/export_lectures.sh --show-catalog
+./scripts/export_lectures.sh -ShowCatalog
 ```
 This lists all open OneNote notebooks and sections without exporting anything. They can fill in the config and re-run the full export once they know the right names.
 
@@ -97,5 +97,5 @@ If the course requires unique study workflows (e.g. no handwritten notes), creat
 Tell the user:
 
 1. Open `courses/<id>/<id>.code-workspace` in Cursor to start a study session.
-2. Run `./scripts/export_lectures.sh --show-catalog` (from the repo root) to confirm the OneNote config matches the right notebook/section before doing a real export.
+2. Run `./scripts/export_lectures.sh -ShowCatalog` (from the repo root) to confirm the OneNote config matches the right notebook/section before doing a real export.
 3. When ready to sync lectures, open the workspace and run `../../scripts/export_lectures.sh` from the course folder terminal (or from the repo root: `./scripts/export_lectures.sh`).

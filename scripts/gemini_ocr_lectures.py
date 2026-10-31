@@ -26,14 +26,24 @@ Requirements:
 - Transcribe text as faithfully as possible; use [illegible] for unclear words.
 """
 
-DEFAULT_MODEL = "gemini-2.5-flash"
+# Ordered best -> minimum acceptable. Free-tier quotas are tracked per model,
+# so when one model is throttled/exhausted the next one is used.
+# 3.8-flash measured much slower than the rest even at LOW thinking, so it is
+# tried last among the good models.
+DEFAULT_MODEL_CHAIN = [
+    "gemini-3.6-flash",
+    "gemini-3-flash-preview",
+    "gemini-3.8-flash",
+    "gemini-2.5-flash",
+    "gemini-3.5-flash-lite",
+]
 DEFAULT_CONCURRENCY = 4
 DEFAULT_REQUEST_INTERVAL_SEC = 0.5
 SIDECAR_SUFFIX = ".ocr.md"
 STALE_TRANSCRIPTION_NOTICE = (
     "**STALE** — page image was re-rendered; transcription pending."
 )
-REQUEST_TIMEOUT_SEC = 120
+REQUEST_TIMEOUT_SEC = 60
 MAX_RETRY_ATTEMPTS = 5
 RETRYABLE_STATUS_CODES = {408, 429, 500, 502, 503, 504}
 RETRY_DELAY_RE = re.compile(r"Please retry in ([\d.]+)s", re.IGNORECASE)
@@ -84,6 +94,54 @@ class RunController:
 
 
 @dataclass
+class ModelPool:
+    """Ordered model chain. Always hands out the best model that is usable now."""
+
+    models: list[str]
+    log: "Logger"
+    exhausted: dict[str, str] = field(default_factory=dict)
+    _cooldown_until: dict[str, float] = field(default_factory=dict)
+    _lock: asyncio.Lock = field(default_factory=asyncio.Lock)
+
+    async def acquire_model(self) -> str | None:
+        """Best non-exhausted, non-cooling model; waits if all are cooling.
+
+        Returns None when every model is exhausted.
+        """
+        while True:
+            async with self._lock:
+                live = [m for m in self.models if m not in self.exhausted]
+                if not live:
+                    return None
+                now = time.monotonic()
+                for model in live:
+                    if self._cooldown_until.get(model, 0.0) <= now:
+                        return model
+                wait = min(self._cooldown_until[m] for m in live) - now
+            await asyncio.sleep(max(wait, 0.1))
+
+    async def cool_down(self, model: str, seconds: float) -> None:
+        async with self._lock:
+            until = time.monotonic() + seconds
+            self._cooldown_until[model] = max(
+                self._cooldown_until.get(model, 0.0), until
+            )
+
+    async def exhaust(self, model: str, reason: str) -> None:
+        async with self._lock:
+            if model in self.exhausted:
+                return
+            self.exhausted[model] = reason
+            remaining = [m for m in self.models if m not in self.exhausted]
+        await self.log.emit_async(
+            "switch",
+            f"{model} unavailable ({reason}); "
+            + (f"remaining: {', '.join(remaining)}" if remaining else "no models left"),
+            err=True,
+        )
+
+
+@dataclass
 class Logger:
     verbose: bool
     repo_root: Path
@@ -123,14 +181,18 @@ class Logger:
         self,
         index: int,
         total: int,
-        attempt: int,
+        model: str,
         delay: float,
         info: RateLimitInfo,
+        attempt: int | None = None,
     ) -> None:
+        attempt_text = (
+            f"attempt {attempt}/{MAX_RETRY_ATTEMPTS}, " if attempt is not None else ""
+        )
         await self.emit_async(
             "retry",
-            f"[{index}/{total}] {info.quota_kind} throttle "
-            f"(attempt {attempt}/{MAX_RETRY_ATTEMPTS}, wait {delay:.0f}s, "
+            f"[{index}/{total}] {model} {info.quota_kind} throttle "
+            f"({attempt_text}cooldown {delay:.0f}s, "
             f"limit={info.limit or '?'})",
             err=True,
         )
@@ -144,7 +206,9 @@ class Logger:
 
     async def done(self, output_path: Path, char_count: int, elapsed: float) -> None:
         relative = output_path.relative_to(self.repo_root)
-        await self.emit_async("done", f"{relative} ({char_count} chars, {elapsed:.1f}s)")
+        await self.emit_async(
+            "done", f"{relative} ({char_count} chars, {elapsed:.1f}s)"
+        )
 
     async def fail(self, image_path: Path, exc: Exception) -> None:
         relative = image_path.relative_to(self.repo_root)
@@ -233,8 +297,17 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--model",
         type=str,
-        default=DEFAULT_MODEL,
-        help=f"Gemini model id (default: {DEFAULT_MODEL})",
+        default=None,
+        help="Use a single Gemini model id (no fallback chain)",
+    )
+    parser.add_argument(
+        "--models",
+        type=str,
+        default=None,
+        help=(
+            "Comma-separated fallback chain, best first "
+            f"(default: {','.join(DEFAULT_MODEL_CHAIN)})"
+        ),
     )
     parser.add_argument(
         "--concurrency",
@@ -407,6 +480,32 @@ def create_client(api_key: str, log: Logger) -> genai.Client:
     )
 
 
+def thinking_config_for(model: str) -> types.ThinkingConfig | None:
+    """OCR needs little reasoning; keep thinking minimal to cut latency.
+
+    Gemini 2.5 uses a token budget, Gemini 3.x uses a level.
+    """
+    if model.startswith("gemini-2.5"):
+        return types.ThinkingConfig(thinking_budget=0)
+    return types.ThinkingConfig(thinking_level=types.ThinkingLevel.LOW)
+
+
+def resolve_model_chain(args: argparse.Namespace) -> list[str]:
+    if args.models:
+        chain = [m.strip() for m in args.models.split(",") if m.strip()]
+        if chain:
+            return chain
+    if args.model:
+        return [args.model.strip()]
+    return list(DEFAULT_MODEL_CHAIN)
+
+
+def is_model_not_found_error(exc: Exception) -> bool:
+    from google.genai import errors
+
+    return isinstance(exc, errors.APIError) and exc.code == 404
+
+
 def is_retryable_error(exc: Exception) -> bool:
     from google.genai import errors
 
@@ -506,40 +605,77 @@ def retry_delay_seconds(info: RateLimitInfo, attempt: int) -> float:
 async def transcribe_image(
     client: genai.Client,
     image_path: Path,
-    model: str,
+    pool: ModelPool,
     log: Logger,
     index: int,
     total: int,
     limiter: RateLimiter,
     controller: RunController,
-) -> str:
+) -> tuple[str, str]:
+    """Transcribe one page, falling back through the model chain on quota errors.
+
+    Returns (text, model_used).
+    """
     image_bytes = await asyncio.to_thread(image_path.read_bytes)
     await log.detail(f"read {len(image_bytes)} bytes from {image_path.name}")
     last_error: Exception | None = None
+    transient_failures = 0
+    rate_limit_hits = 0
+    max_rate_limit_hits = 4 * len(pool.models)
 
-    for attempt in range(1, MAX_RETRY_ATTEMPTS + 1):
+    while True:
         if controller.aborted:
             raise PageRetriesExhausted(image_path, RuntimeError("run aborted"))
+        model = await pool.acquire_model()
+        if model is None:
+            reasons = "; ".join(f"{m}: {r}" for m, r in pool.exhausted.items())
+            raise PageRetriesExhausted(
+                image_path,
+                RuntimeError(f"all models exhausted ({reasons})"),
+            )
         await limiter.acquire()
         try:
-            await log.detail(f"api request attempt {attempt}/{MAX_RETRY_ATTEMPTS}")
+            await log.detail(f"api request using {model}")
             response = await client.aio.models.generate_content(
                 model=model,
                 contents=[
                     types.Part.from_bytes(data=image_bytes, mime_type="image/png"),
                     OCR_PROMPT,
                 ],
-                config=types.GenerateContentConfig(temperature=0.1),
+                config=types.GenerateContentConfig(
+                    temperature=0.1,
+                    thinking_config=thinking_config_for(model),
+                ),
             )
             if not response.text:
                 raise RuntimeError("Gemini returned an empty response")
-            await log.detail(f"received {len(response.text)} chars from Gemini")
-            return response.text
+            await log.detail(f"received {len(response.text)} chars from {model}")
+            return response.text, model
         except Exception as exc:
             last_error = exc
-            if attempt == MAX_RETRY_ATTEMPTS or not is_retryable_error(exc):
+            if is_model_not_found_error(exc):
+                await pool.exhaust(model, "model not found")
+                continue
+            if not is_retryable_error(exc):
                 raise PageRetriesExhausted(image_path, exc) from exc
-            rate_limit = parse_rate_limit_error(exc) or RateLimitInfo(
+
+            rate_limit = parse_rate_limit_error(exc)
+            if rate_limit is not None:
+                if rate_limit.is_daily_quota:
+                    await pool.exhaust(model, "daily quota")
+                    continue
+                rate_limit_hits += 1
+                if rate_limit_hits > max_rate_limit_hits:
+                    raise PageRetriesExhausted(image_path, exc) from exc
+                delay = retry_delay_seconds(rate_limit, 1)
+                await pool.cool_down(model, delay)
+                await log.retry(index, total, model, delay, rate_limit)
+                continue
+
+            transient_failures += 1
+            if transient_failures >= MAX_RETRY_ATTEMPTS:
+                raise PageRetriesExhausted(image_path, exc) from exc
+            transient = RateLimitInfo(
                 quota_kind="transient",
                 quota_id="",
                 limit=None,
@@ -547,22 +683,19 @@ async def transcribe_image(
                 retry_after_sec=None,
                 message=str(exc),
             )
-            delay = retry_delay_seconds(rate_limit, attempt)
-            await log.retry(index, total, attempt, delay, rate_limit)
-            await limiter.pause_all(delay)
+            delay = retry_delay_seconds(transient, transient_failures)
+            await pool.cool_down(model, delay)
+            await log.retry(
+                index, total, model, delay, transient, attempt=transient_failures
+            )
         finally:
             limiter.release()
-
-    raise PageRetriesExhausted(
-        image_path,
-        last_error or RuntimeError(f"failed to transcribe {image_path}"),
-    )
 
 
 async def process_page(
     client: genai.Client,
     image_path: Path,
-    model: str,
+    pool: ModelPool,
     log: Logger,
     index: int,
     total: int,
@@ -571,10 +704,10 @@ async def process_page(
 ) -> None:
     await log.run(index, total, image_path)
     started = time.monotonic()
-    text = await transcribe_image(
+    text, model = await transcribe_image(
         client,
         image_path,
-        model,
+        pool,
         log,
         index,
         total,
@@ -594,7 +727,7 @@ async def process_page(
 async def transcribe_pending(
     client: genai.Client,
     pending: list[Path],
-    model: str,
+    pool: ModelPool,
     log: Logger,
     limiter: RateLimiter,
     concurrency: int,
@@ -622,7 +755,7 @@ async def transcribe_pending(
                 await process_page(
                     client,
                     image_path,
-                    model,
+                    pool,
                     log,
                     index,
                     len(pending),
@@ -659,10 +792,13 @@ async def async_main(
         print("--concurrency must be at least 1", file=sys.stderr)
         return 1
 
+    chain = resolve_model_chain(args)
     log.info(
         f"running {len(pending)} page(s) with concurrency={args.concurrency}, "
         f"request_interval={args.request_interval:.1f}s"
     )
+    log.info(f"model chain (best first): {' > '.join(chain)}")
+    pool = ModelPool(models=chain, log=log)
     log.emit("detail", "processing newest lectures first") if log.verbose else None
 
     client = create_client(api_key, log)
@@ -673,7 +809,7 @@ async def async_main(
     transcribed, failures, not_attempted = await transcribe_pending(
         client,
         pending,
-        args.model,
+        pool,
         log,
         limiter,
         args.concurrency,
@@ -699,18 +835,26 @@ def main() -> int:
     args = parse_args()
     load_env(args.repo_root)
     log = Logger(verbose=args.verbose, repo_root=args.repo_root.resolve())
-    lectures_dir = args.lectures_dir.resolve() if args.lectures_dir else args.repo_root / "courses" / "dynamical-systems" / "materials" / "lectures"
+    lectures_dir = (
+        args.lectures_dir.resolve()
+        if args.lectures_dir
+        else args.repo_root / "courses" / "dynamical-systems" / "materials" / "lectures"
+    )
     if not lectures_dir.is_dir():
         print(f"Lectures directory not found: {lectures_dir}", file=sys.stderr)
         return 1
 
     log.info(f"scanning {lectures_dir}")
     if args.lecture:
-        log.emit("detail", f"lecture filter: {args.lecture!r}") if args.verbose else None
+        (
+            log.emit("detail", f"lecture filter: {args.lecture!r}")
+            if args.verbose
+            else None
+        )
     if args.page:
         log.emit("detail", f"page filter: {args.page!r}") if args.verbose else None
     if args.verbose:
-        log.emit("detail", f"model: {args.model}")
+        log.emit("detail", f"models: {', '.join(resolve_model_chain(args))}")
 
     all_images = find_lecture_page_images(lectures_dir, args.lecture, args.page)
     if not all_images:
@@ -732,7 +876,9 @@ def main() -> int:
             log.skip(image_path, reason)
 
     if not pending:
-        log.info(f"all {len(all_images)} page(s) already have up-to-date transcriptions")
+        log.info(
+            f"all {len(all_images)} page(s) already have up-to-date transcriptions"
+        )
         log.summary(transcribed=0, skipped=skipped, failed=0, pending=0)
         return 0
 
