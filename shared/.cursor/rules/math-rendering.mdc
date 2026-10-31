@@ -1,8 +1,6 @@
 ---
-description: LaTeX math rendering — use \( \) and \[ \] delimiters, never $ or $$
-alwaysApply: true
+alwaysApply: false
 ---
-
 # Math Rendering in Chat
 
 The chat UI does **not** render `$...$` or `$$...$$`. Always use:
