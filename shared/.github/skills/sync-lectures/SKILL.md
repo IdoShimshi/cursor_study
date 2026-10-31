@@ -62,7 +62,7 @@ Use these when you only need to re-transcribe, not re-export:
 ## Inspect available OneNote notebooks/sections
 
 ```bash
-../../scripts/export_lectures.sh --show-catalog
+../../scripts/export_lectures.sh -ShowCatalog
 ```
 
 Useful when setting up a new course or debugging a mismatch in `onenote_export_config.json`.
