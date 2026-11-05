@@ -1,0 +1,22 @@
+---
+description: Context for the Behavioral Neuroscience course
+globs: materials/**
+alwaysApply: false
+---
+
+# Behavioral Neuroscience
+
+This course explores the biological basis of behavior, focusing on the nervous system's structure and function, neural mechanisms of learning and memory, sensory systems, and the intersection of biology and psychology.
+
+## Study Workflow
+
+- **No Handwritten Notes:** This course does **not** use OneNote or the handwritten OCR workflow.
+- **Lecture PDFs:** All lectures are provided as typed PDFs in `materials/lectures/`.
+- **Primary Skill:** Use the `behavioral-neuroscience` skill (`.cursor/skills/behavioral-neuroscience/SKILL.md`) for all course-related tasks.
+- **PDF Extraction:** Use the `read-pdfs.mdc` rule to extract text from lecture PDFs directly using the `Read` tool.
+
+## Materials Structure
+
+- `materials/lectures/`: Official lecture PDFs.
+- `materials/assignments/`: Coursework and problem sets.
+- `materials/syllabus/`: Course schedule and policies.

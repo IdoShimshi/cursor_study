@@ -1,0 +1,166 @@
+lecture_name: "Lecture 2: Birdsong I"
+questions:
+  - id: 1
+    difficulty: "Easy"
+    type: "MCQ"
+    question: "Which of the following is NOT a shared characteristic between human speech and songbird birdsong?"
+    options:
+      A: "Both learn their motor behavior early in life."
+      B: "Both learn to communicate by listening to their parents."
+      C: "Both require auditory feedback (hearing their own vocalizations) to learn correctly."
+      D: "Both utilize a specialized cortical structure with clear laminar layers for vocal control."
+    correct_answer: "D"
+    reference: "Lecture 2, Slide 5"
+    reasoning: "Slide 5 lists the commonalities between humans and songbirds. Slide 12 explicitly states that birds lack a laminar structure in their brain, instead having nuclei."
+
+  - id: 2
+    difficulty: "Medium"
+    type: "MCQ"
+    question: "In the context of the song system circuitry, which of the following areas is considered part of the 'Learning Pathway' (Anterior Forebrain Pathway) rather than the 'Motor Pathway'?"
+    options:
+      A: "HVC"
+      B: "RA"
+      C: "LMAN"
+      D: "nXIIts"
+    correct_answer: "C"
+    reference: "Lecture 2, Slide 11"
+    reasoning: "Slide 11 diagrams the two pathways: the Motor Pathway (HVC -> RA -> nXIIts) and the Learning Pathway (Area X -> DLM -> LMAN -> RA)."
+
+  - id: 3
+    difficulty: "Hard"
+    type: "Open"
+    question: "Analyze the diagram on Slide 20 regarding the 'Collision Test.' Explain how this test allows researchers to distinguish between a neuron that projects to a specific target (e.g., HVC to RA) and one that does not, specifically focusing on the role of the refractory period."
+    correct_answer: "The collision test works by triggering a spontaneous action potential (AP) in the soma and then immediately applying an antidromic stimulus to the axon. If the neuron projects to the stimulation site, the antidromically propagated AP will 'collide' with the orthodromically propagated spontaneous AP and be cancelled out because the axon is in its refractory period. If no spike is detected at the soma following the stimulus when it is timed closely after a spontaneous spike, it confirms the neuron projects to that site. If the neuron did not project there, the stimulus would not generate a backwards-traveling spike anyway, or it would not be affected by the soma's spontaneous spike in the same way."
+    reference: "Lecture 2, Slide 20"
+    reasoning: "Slide 20 illustrates the collision test and its reliance on the refractory period to identify projection neurons."
+
+  - id: 4
+    difficulty: "Medium"
+    type: "MCQ"
+    question: "According to recordings from HVC-RA projecting neurons during singing, which statement best describes their firing pattern?"
+    options:
+      A: "They fire continuous, high-frequency spikes throughout the entire song motif."
+      B: "They fire a single, sparse burst of spikes (approx. 10ms) at a very precise time in the motif."
+      C: "Their activity is highly variable and shows no correlation with the song's stereotyped pattern."
+      D: "They fire only during the silent gaps between syllables."
+    correct_answer: "B"
+    reference: "Lecture 2, Slide 25"
+    reasoning: "Slide 25 and 26 show that HVC-RA neurons exhibit sparse, precise bursts of activity that occur at specific times within the stereotyped song motif."
+
+  - id: 5
+    difficulty: "Medium"
+    type: "Open"
+    question: "Explain the 'Falling Dominoes' model of sequence generation within HVC and how it contributes to the temporal structure of a bird's song."
+    correct_answer: "The 'Falling Dominoes' model (or chain model) suggests that HVC projection neurons are connected in a synaptically linked chain. A burst of activity in one group of neurons triggers a burst in the next, creating a precise temporal sequence that propagates through the network. This sequential activity serves as a 'clock' or timing signal where each neuron's burst represents a specific moment in the song motif, ultimately driving the motor output in RA."
+    reference: "Lecture 2, Slide 31"
+    reasoning: "Slide 31 describes the simple sequence generation circuit where bursting activity propagates through a chain of synaptically connected HVC-RA neurons."
+
+  - id: 6
+    difficulty: "Hard"
+    type: "MCQ"
+    question: "Based on the cooling experiments shown on Slide 40, what is the effect of cooling HVC by 10°C on the structure of the song?"
+    options:
+      A: "The song becomes higher in pitch but maintains the same tempo."
+      B: "Only the silent gaps between syllables are lengthened, while the syllables themselves remain at the same speed."
+      C: "The entire song motif, including individual notes and silent gaps, is stretched uniformly by approximately 30%."
+      D: "The song breaks down into a variable, subsong-like state."
+    correct_answer: "C"
+    reference: "Lecture 2, Slide 40"
+    reasoning: "Slide 40 and 41 show that cooling HVC causes a uniform stretching of the song across all timescales (notes, motif, gaps) at a rate of 3% per degree."
+
+  - id: 7
+    difficulty: "Medium"
+    type: "MCQ"
+    question: "What was the observed effect of cooling the RA (Robust nucleus of the Arcopallium) on song timing?"
+    options:
+      A: "It slowed down the song tempo similarly to HVC cooling."
+      B: "It increased the variability of the song, making it sound like plastic song."
+      C: "It had no significant effect on song timing or the structure of the notes."
+      D: "It caused the bird to stop singing entirely."
+    correct_answer: "C"
+    reference: "Lecture 2, Slide 42"
+    reasoning: "Slide 42 explicitly states that cooling RA has no effect on song timing at any timescale, contrasting it with the effect of HVC cooling."
+
+  - id: 8
+    difficulty: "Hard"
+    type: "Open"
+    question: "Based on the findings regarding the thalamic nucleus Uva (Slide 47), describe its role in song production and how its function differs from that of HVC in controlling the song sequence."
+    correct_answer: "Uva acts as an initiator for syllables within the song sequence. While HVC generates the internal timing of a syllable through its chain-like dynamics, Uva is critical for triggering the onset of the next syllable. Perturbation of Uva leads to truncations at the end of syllables because the signal to start the next module in HVC is missing, whereas HVC stimulation causes truncations at fixed time delays within the syllable itself."
+    reference: "Lecture 2, Slide 47"
+    reasoning: "Slide 47 discusses the role of Uva in driving vocal onsets and its necessity for starting following syllables."
+
+  - id: 9
+    difficulty: "Easy"
+    type: "MCQ"
+    question: "If HVC is lesioned in a young juvenile bird at the subsong stage, what is the effect on its vocalization?"
+    options:
+      A: "The bird becomes completely silent."
+      B: "The bird can still produce subsong, as subsong does not require HVC."
+      C: "The bird immediately begins to produce a crystallized adult song."
+      D: "The bird produces a song that is stereotyped but has no syllables."
+    correct_answer: "B"
+    reference: "Lecture 2, Slide 52"
+    reasoning: "Slide 52 states that HVC-lesioned birds could still produce subsong, concluding that 'Subsong does not require HVC'."
+
+  - id: 10
+    difficulty: "Medium"
+    type: "MCQ"
+    question: "Inactivation of LMAN in a juvenile bird during the plastic song stage leads to which of the following?"
+    options:
+      A: "An immediate increase in song variability."
+      B: "An immediate and significant reduction in song variability (premature stereotypy)."
+      C: "The bird reverts to the subsong stage."
+      D: "The bird's song tempo slows down by 30%."
+    correct_answer: "B"
+    reference: "Lecture 2, Slide 60"
+    reasoning: "Slide 60 and 61 show that LMAN is a generator of variability; inactivating it with drugs like TTX or Muscimol causes the song to become much more stereotyped (less variable)."
+
+  - id: 11
+    difficulty: "Medium"
+    type: "Open"
+    question: "Contrast directed and undirected singing in zebra finches. How do they differ in terms of social context, behavioral function, and the involvement of LMAN?"
+    correct_answer: "Directed singing occurs when a male sings to a female for courtship; it is highly stereotyped and has low variability. Undirected singing occurs when the bird is alone and is thought to be a form of 'practice' or rehearsal; it is more variable. LMAN drives this variability; during undirected singing, LMAN-RA activity is more variable, whereas during directed singing, variability is reduced, possibly due to suppression of the variability-generating pathway."
+    reference: "Lecture 2, Slide 65"
+    reasoning: "Slide 65 discusses the differences in variability between directed and undirected singing and the role of LMAN in driving that variability."
+
+  - id: 12
+    difficulty: "Hard"
+    type: "MCQ"
+    question: "According to the study by Andalman & Fee (2009), how is the learning 'bias' generated by the Anterior Forebrain Pathway (AFP) eventually integrated into the motor pathway?"
+    options:
+      A: "It is immediately hard-wired into HVC-RA synapses during the same day."
+      B: "It is consolidated into the motor pathway overnight, after a one-day delay."
+      C: "It remains in the AFP forever and never moves to the motor pathway."
+      D: "It is integrated into the motor pathway only when the bird hears its tutor's song again."
+    correct_answer: "B"
+    reference: "Lecture 2, Slide 70"
+    reasoning: "Slide 70 explains that the bias produced by the learning pathway is consolidated in the motor pathway after a one-day delay (overnight)."
+
+  - id: 13
+    difficulty: "Hard"
+    type: "Open"
+    question: "Analyze Slide 74 regarding 'Neural dynamics underlying birdsong practice.' What happens to the activity of spiny neurons in Area X during 'directed song' compared to 'practice mode' (undirected song), and what neurochemical system is implicated in this change?"
+    correct_answer: "During practice mode (undirected song), the ensemble activity of spiny neurons in Area X is song-specific and highly variable. During directed song, this activity is suppressed. The noradrenergic system (specifically from the locus coeruleus) is implicated, as injecting noradrenaline reduces vocal variability by directly suppressing spiny neuron activity, mimicking the state during directed song."
+    reference: "Lecture 2, Slide 74"
+    reasoning: "Slide 74 details the suppression of spiny neurons in Area X during directed song and the role of the noradrenergic system."
+
+  - id: 14
+    difficulty: "Medium"
+    type: "MCQ"
+    question: "What was the primary conclusion of the multi-generational experiment by Feher et al. (2009) where a colony was started by isolate birds?"
+    options:
+      A: "The birds never learned to sing a normal song and remained in the subsong stage forever."
+      B: "The birds eventually learned to sing the song of a different species (Bengalese finch)."
+      C: "Species-typical song culture emerged de novo within 3 to 4 generations."
+      D: "The isolate song was identical to the wild-type song from the very first generation."
+    correct_answer: "C"
+    reference: "Lecture 2, Slide 81"
+    reasoning: "Slide 81 states that 'Song evolved towards the wild-type in three to four generations. Thus, species-typical song culture can appear de novo.'"
+
+  - id: 15
+    difficulty: "Medium"
+    type: "Open"
+    question: "Based on the cross-fostering experiment shown on Slide 82, explain the difference between 'syllable morphology' and 'temporal gap timing' in terms of whether they are innate or learned."
+    correct_answer: "The experiment showed that zebra finches fostered by Bengalese finches learned the Bengalese finch syllable morphology (spectral features), indicating that syllable content is experience-dependent and learned. However, the birds maintained a temporal gap structure similar to that of zebra finches, indicating that temporal gap timing (syntax/prosody) is an innate, genetically determined component of the song."
+    reference: "Lecture 2, Slide 82"
+    reasoning: "Slide 82 summarizes that temporal gap coding is innate, whereas syllable coding is experience-dependent."

@@ -1,0 +1,161 @@
+lecture_name: "Lecture 5: Bat Echolocation"
+questions:
+  - id: 1
+    difficulty: "Easy"
+    type: "MCQ"
+    question: "A bat emits a sonar pulse and receives an echo 20 ms later. Given the speed of sound is approximately 340 m/s, what is the distance to the target?"
+    options:
+      A: "6.8 m"
+      B: "3.4 m"
+      C: "13.6 m"
+      D: "1.7 m"
+    correct_answer: "B"
+    reference: "Lecture 5, Slide 10"
+    reasoning: "Range is calculated as R = c*T/2. For T = 0.02s and c = 340m/s, R = (340 * 0.02) / 2 = 3.4 meters."
+
+  - id: 2
+    difficulty: "Medium"
+    type: "Open"
+    question: "Based on the Rayleigh scattering graph on Slide 15, explain the relationship between the sonar cross section (σ) and the ratio of target radius to wavelength (r/λ). Why is this relationship critical for a bat's ability to hunt small insects?"
+    correct_answer: "The graph shows that when the ratio r/λ is small (Rayleigh scattering regime), the sonar cross section σ drops sharply, proportional to f^4 (or 1/λ^4). To detect small targets like insects (small r), bats must use small wavelengths (λ), which correspond to high frequencies (ultrasound). Using lower frequencies would result in a negligible sonar cross section, making small insects invisible to the sonar system."
+    reference: "Lecture 5, Slide 15"
+    reasoning: "Understanding how physical constraints (wavelength vs. target size) dictate the use of ultrasound."
+
+  - id: 3
+    difficulty: "Medium"
+    type: "MCQ"
+    question: "How does increasing the frequency of an echolocation call affect the maximum detection range and the beam width?"
+    options:
+      A: "Increases detection range and narrows the beam width"
+      B: "Decreases detection range and widens the beam width"
+      C: "Decreases detection range and narrows the beam width"
+      D: "Increases detection range and widens the beam width"
+    correct_answer: "C"
+    reference: "Lecture 5, Slides 23-24"
+    reasoning: "Higher frequencies suffer from higher atmospheric attenuation, limiting range, and produce narrower (more directional) beams due to smaller diffraction."
+
+  - id: 4
+    difficulty: "Medium"
+    type: "Open"
+    question: "Describe three adaptive changes a bat typically makes to its echolocation calls when transitioning from the approach phase to the tracking (terminal buzz) phase. For each change, provide the functional rationale."
+    correct_answer: "1) Increase in call rate: provides a higher update rate for tracking rapidly moving targets. 2) Decrease in call duration: avoids overlap between the outgoing call and incoming echo, preventing 'self-deafening' at close range. 3) Increase in bandwidth: improves temporal and range resolution (Δt ∝ 1/BW)."
+    reference: "Lecture 5, Slide 34"
+    reasoning: "Synthesizing behavioral adaptations during the closing stages of a hunt."
+
+  - id: 5
+    difficulty: "Hard"
+    type: "MCQ"
+    question: "Analyzing the emission curves for the clicking bat (Rousettus) on Slide 50, what is the primary advantage of locking the maximum *slope* of the beam on the target rather than the peak intensity?"
+    options:
+      A: "It maximizes the Signal-to-Noise Ratio (SNR) of the echo"
+      B: "It optimizes the accuracy of target localization based on echo intensity"
+      C: "It reduces the energy expenditure required for sound production"
+      D: "It prevents the bat from being jammed by other bats' calls"
+    correct_answer: "B"
+    reference: "Lecture 5, Slide 50"
+    reasoning: "Localization is optimized at the maximum slope because small changes in target direction result in the largest changes in echo intensity (maximizing Fisher Information)."
+
+  - id: 6
+    difficulty: "Hard"
+    type: "Open"
+    question: "Observe the response fields for 'Standard' vs. 'Tracking' delay-tuned neurons on Slide 57. How does the 'Tracking' neuron's sensitivity to echo amplitude and pulse-echo delay differ from the 'Standard' neuron, and why is this adaptation beneficial for an approaching bat?"
+    correct_answer: "Standard delay-tuned neurons respond to a specific delay across a range of amplitudes. In contrast, 'Tracking' neurons have a diagonal response field: they respond to shorter delays only at higher echo amplitudes. This adaptation matches the natural physics of an approach, where the echo becomes louder as the distance (delay) decreases, allowing the neuron to optimally track the target's progress."
+    reference: "Lecture 5, Slide 57"
+    reasoning: "Analyzing neural adaptations to the dynamic sensory statistics of flight."
+
+  - id: 7
+    difficulty: "Easy"
+    type: "MCQ"
+    question: "Which of the following bats produces sonar signals via tongue-clicks rather than laryngeal vocalization?"
+    options:
+      A: "Mustached bat (Pteronotus parnellii)"
+      B: "Big brown bat (Eptesicus fuscus)"
+      C: "Horseshoe bat (Rhinolophus)"
+      D: "Egyptian fruit bat (Rousettus)"
+    correct_answer: "D"
+    reference: "Lecture 5, Slide 39"
+    reasoning: "Distinguishing between laryngeal and clicking bats."
+
+  - id: 8
+    difficulty: "Medium"
+    type: "Open"
+    question: "Explain why CF-FM bats perform 'Doppler Shift Compensation' (DSC) and how this behavior relates to the 'Auditory Fovea' (DSCF area) in their auditory cortex."
+    correct_answer: "CF-FM bats possess an 'auditory fovea' (DSCF area) consisting of neurons with extremely sharp frequency tuning around the individual bat's dominant call harmonic (CF2). When flying, the bat's own movement creates a Doppler shift in the echo. To keep the echo frequency within the narrow tuning range of these specialized neurons, the bat lowers its emission frequency (DSC), ensuring it can analyze fine modulations like insect wing flutter."
+    reference: "Lecture 5, Slides 67, 70"
+    reasoning: "Connecting behavioral motor-sensory loops with cortical organization."
+
+  - id: 9
+    difficulty: "Medium"
+    type: "MCQ"
+    question: "Looking at the beam width experiments on Slide 35, how does the sonar beam of Eptesicus serotinus at 17.5 kHz (red) compare to the beam at 35 kHz (blue)?"
+    options:
+      A: "The 17.5 kHz beam is significantly wider than the 35 kHz beam"
+      B: "The 35 kHz beam is significantly wider than the 17.5 kHz beam"
+      C: "Both frequencies produce identical beam widths"
+      D: "The 17.5 kHz beam is narrower but has higher intensity"
+    correct_answer: "A"
+    reference: "Lecture 5, Slide 35"
+    reasoning: "Lower frequencies (longer wavelengths) result in broader diffraction patterns and wider emission beams."
+
+  - id: 10
+    difficulty: "Easy"
+    type: "Open"
+    question: "What is the primary advantage of the Constant Frequency (CF) component in the calls of bats like the mustached bat when hunting in 'cluttered' environments (e.g., dense vegetation)?"
+    correct_answer: "The CF component allows for Doppler processing. While the background (clutter) reflects static or slowly shifting echoes, a moving insect produces rapid Doppler modulations (flutter) via its wing movements. This 'glint' allows the insect to 'pop out' against the clutter, enabling the bat to detect prey hidden near foliage."
+    reference: "Lecture 5, Slides 55, 65"
+    reasoning: "Identifying the ecological function of CF calls in clutter rejection."
+
+  - id: 11
+    difficulty: "Hard"
+    type: "MCQ"
+    question: "The temporal resolution (and thus range resolution) of a bat's sonar system is primarily limited by which parameter of the call?"
+    options:
+      A: "Pulse duration"
+      B: "The bandwidth of the FM sweep (chirp)"
+      C: "The frequency of the CF component"
+      D: "The intensity of the call"
+    correct_answer: "B"
+    reference: "Lecture 5, Slide 26"
+    reasoning: "Temporal resolution is inversely proportional to bandwidth (Δt ∝ 1/Δf). This is the principle of pulse compression."
+
+  - id: 12
+    difficulty: "Medium"
+    type: "Open"
+    question: "Describe how smooth water surfaces act as 'acoustic mirrors' for bats and explain how ripples created by a frog can help a bat locate it even after the frog stops calling."
+    correct_answer: "Smooth water acts as an acoustic mirror because it produces specular reflection, bouncing sound away from the bat unless it is hitting the surface perpendicularly. This makes the surface appear 'black' or like a hole. Ripples, however, create non-specular reflections (scattering) and act as a 'mechanical memory' that persists for seconds, allowing the bat to localize the center of the concentric rings where the frog is located."
+    reference: "Lecture 5, Slides 17, 22"
+    reasoning: "Understanding environmental interaction with sonar signals."
+
+  - id: 13
+    difficulty: "Medium"
+    type: "MCQ"
+    question: "What is the functional goal of the 'Automatic Gain Control' (AGC) behavior observed in many bat species as they approach a target?"
+    options:
+      A: "To compensate for the increasing atmospheric attenuation at close range"
+      B: "To stabilize the echo frequency within the auditory fovea"
+      C: "To stabilize the echo amplitude within the tuning range of cortical neurons"
+      D: "To widen the emission beam to keep the target in the field of view"
+    correct_answer: "C"
+    reference: "Lecture 5, Slide 69"
+    reasoning: "As distance decreases, echo intensity naturally increases (~1/R^4). AGC reduces call intensity to prevent saturating the auditory system."
+
+  - id: 14
+    difficulty: "Hard"
+    type: "Open"
+    question: "Discuss the 'Cocktail-party nightmare' faced by bats in large swarms. List at least three different strategies (behavioral or neural) that bats might use to avoid jamming or interference from the calls of other bats."
+    correct_answer: "Strategies include: 1) Spatial filtering (directional hearing and emission beams). 2) Jamming Avoidance Response (JAR), where bats shift their call frequency away from neighbors. 3) Efference copy/timing tags, using combination-sensitive neurons that only respond to echoes following the bat's own vocalization. 4) Use of personally-unique call signatures. 5) Integration of information across multiple call sequences to filter out random noise."
+    reference: "Lecture 5, Slides 42-43"
+    reasoning: "Synthesizing multi-agent interference problems and solutions in biosonar."
+
+  - id: 15
+    difficulty: "Medium"
+    type: "MCQ"
+    question: "In the mustached bat's auditory cortex, which areas are specialized for computing target range and target velocity, respectively?"
+    options:
+      A: "DSCF area for range, FM-FM area for velocity"
+      B: "FM-FM area for range, CF-CF area for velocity"
+      C: "CF-CF area for range, DSCF area for velocity"
+      D: "DSCF area for range, CF-CF area for velocity"
+    correct_answer: "B"
+    reference: "Lecture 5, Slide 61"
+    reasoning: "The mustached bat has modular computational maps: FM-FM neurons compute pulse-echo delay (range), while CF-CF neurons compute Doppler shift magnitude (velocity)."

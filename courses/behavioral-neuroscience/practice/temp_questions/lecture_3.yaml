@@ -1,0 +1,166 @@
+lecture_name: "Lecture 3: Birdsong II"
+questions:
+  - id: 1
+    difficulty: "Easy"
+    type: "MCQ"
+    question: "Once a Zebra Finch has learned its song, for approximately how long can it produce that song with high precision?"
+    options:
+      A: "A few weeks"
+      B: "One breeding season"
+      C: "Several years"
+      D: "The duration of its life, but only if it continues to hear a tutor"
+    correct_answer: "C"
+    reference: "Lecture 3, Slide 6"
+    reasoning: "Slide 6 explicitly states that once learned, the song is produced with high precision for years, showing a comparison between day 0 and day 405."
+
+  - id: 2
+    difficulty: "Medium"
+    type: "MCQ"
+    question: "Based on the neural state model shown on Slide 7, which of the following best describes the relationship between HVC and RA neurons during song production?"
+    options:
+      A: "HVC neurons provide continuous, tonic inhibition to RA neurons."
+      B: "Specific HVC neurons fire at precise time points in the motif to drive reliable sequences in RA neurons."
+      C: "RA neurons act as the 'master clock,' providing timing information back to HVC."
+      D: "HVC and RA neurons fire simultaneously and randomly to create vocal variability."
+    correct_answer: "B"
+    reference: "Lecture 3, Slide 7"
+    reasoning: "The diagram on Slide 7 illustrates HVC neurons firing at specific 'time in motif' points, which in turn drive sequences of RA neurons that control the muscles for syllables."
+
+  - id: 3
+    difficulty: "Medium"
+    type: "Open"
+    question: "Explain the concept of a 'Synfire Chain' in the context of HVC activity. How does this model account for the timing of a bird's song?"
+    correct_answer: "A Synfire Chain consists of a sequence of neuron groups where each group triggers the next in a precise, feed-forward manner. In the context of HVC, this creates 'time slices' of approximately 10ms. As the activity propagates through the chain, it provides a robust and reliable temporal framework (a 'neural clock') that defines the progression of the song motif."
+    reference: "Lecture 3, Slide 8"
+    reasoning: "Slide 8 introduces the Synfire Chain as a model for robust neural sequences, defining these approximately 10ms time slices."
+
+  - id: 4
+    difficulty: "Easy"
+    type: "MCQ"
+    question: "According to Thorndike's 'Law of Effect' discussed in the lecture, what happens to vocalizations that produce a 'satisfying effect' during the learning process?"
+    options:
+      A: "They are immediately crystallized and never change again."
+      B: "They become more likely to occur again in that same situation."
+      C: "They are suppressed to allow for more exploration."
+      D: "They trigger a reset of the HVC neural clock."
+    correct_answer: "B"
+    reference: "Lecture 3, Slide 9"
+    reasoning: "Slide 9 quotes Thorndike's Law of Effect: 'Responses that produce a satisfying effect... become more likely to occur again in that situation.'"
+
+  - id: 5
+    difficulty: "Hard"
+    type: "Open"
+    question: "How does the VTA (Ventral Tegmental Area) contribute to the 'Actor-Critic' model of birdsong learning? Specify what signal it provides and what that signal represents."
+    correct_answer: "The VTA acts as the 'Critic' in the model. It computes and signals the Reward Prediction Error (RPE) via dopamine neurons. In birdsong, this RPE represents the difference between the actual auditory feedback of the song produced and the internal template (the goal). This signal then modulates the 'Actor' (HVC/LMAN/RA circuit) to reinforce or discourage specific vocal 'guesses'."
+    reference: "Lecture 3, Slides 10-11"
+    reasoning: "Slides 10 and 11 detail the reinforcement learning framework where VTA signals RPE to guide the evaluation and learning of the song."
+
+  - id: 6
+    difficulty: "Medium"
+    type: "MCQ"
+    question: "When comparing the syntax of Zebra Finches and Bengalese Finches, what is a key distinction regarding their song structure?"
+    options:
+      A: "Zebra Finches have highly variable syntax, while Bengalese Finches are extremely stereotyped."
+      B: "Zebra Finches produce songs with precise repetitions, whereas Bengalese Finches utilize branching transitions."
+      C: "Bengalese Finches do not require auditory feedback, while Zebra Finches do."
+      D: "Zebra Finches are open-ended learners, while Bengalese Finches are closed-ended learners."
+    correct_answer: "B"
+    reference: "Lecture 3, Slides 12-13"
+    reasoning: "Slides 12 and 13 introduce Bengalese Finches as having 'branching transitions,' contrasting them with the more stereotyped precision of Zebra Finches."
+
+  - id: 7
+    difficulty: "Medium"
+    type: "Open"
+    question: "What is the role of auditory feedback in the 'branching transitions' of Bengalese Finch songs? What happens when this feedback is disrupted?"
+    correct_answer: "Auditory feedback is crucial for maintaining and regulating the probabilities of branching transitions. Research (e.g., Sakata 2006) indicates that these transitions involve real-time evaluation of the song. If auditory feedback is disrupted (e.g., through deafening or 'crystallization' experiments), the bird may lose the ability to manage these flexible transitions correctly."
+    reference: "Lecture 3, Slide 16"
+    reasoning: "Slide 16 explicitly links branching transitions to auditory feedback, citing Sakata 2006."
+
+  - id: 8
+    difficulty: "Hard"
+    type: "MCQ"
+    question: "Analyze the experiment involving HVC cooling on Slide 20. What is the primary conclusion regarding the effect of temperature on Bengalese Finch song?"
+    options:
+      A: "Cooling HVC only slows down the tempo of the song without affecting syntax."
+      B: "Cooling HVC changes the syntax (sequence of syllables) but has no effect on timing."
+      C: "Cooling HVC affects both the timing (slowing it down) and the syntax (changing transition probabilities)."
+      D: "Cooling HVC causes the bird to stop singing entirely."
+    correct_answer: "C"
+    reference: "Lecture 3, Slide 20"
+    reasoning: "Slide 20 shows that HVC cooling changes the Bengalese finch syntax and timing, asking 'What syntax properties are reflected in HVC activity?' and showing shifts in transition/repetition behavior."
+
+  - id: 9
+    difficulty: "Hard"
+    type: "MCQ"
+    question: "In the neural encoding of Bengalese Finch syntax (Slide 23), what does 'repetition-specific activity' refer to?"
+    options:
+      A: "Neurons that fire only when a bird repeats the exact same song motif from the previous day."
+      B: "HVC activity that changes its firing pattern based on the number of times a specific syllable has already been repeated in a sequence."
+      C: "RA neurons that fire identically for every syllable regardless of its position."
+      D: "A decrease in VTA dopamine release when a syllable is repeated too many times."
+    correct_answer: "B"
+    reference: "Lecture 3, Slide 23"
+    reasoning: "Slide 23 discusses 'Repetition specific activity' in HVC, suggesting that the neural state reflects how many repetitions of a syllable have occurred, which is necessary for tracking syntax rules."
+
+  - id: 10
+    difficulty: "Medium"
+    type: "Open"
+    question: "Canaries are described as 'open-ended learners.' How does their song repertoire change over their lifetime, particularly between their first and second year?"
+    correct_answer: "Unlike closed-ended learners like Zebra Finches, Canaries can modify their songs as adults. They typically learn an initial repertoire in their first year (e.g., ~25 syllables). In the second year, after a period of song 'instability' or relearning during the non-breeding season, they can add new syllables and reorganize their syntax, often resulting in a larger repertoire (e.g., ~38 syllables)."
+    reference: "Lecture 3, Slide 29"
+    reasoning: "Slide 29 illustrates the lifecycle of a Canary's song, showing the increase in syllable count from 25 to 38 between year 1 and year 2/3."
+
+  - id: 11
+    difficulty: "Medium"
+    type: "MCQ"
+    question: "Examine the hierarchical structure of Canary song shown on Slide 30. Which of the following correctly describes the organization of their vocalizations?"
+    options:
+      A: "Songs are composed of random syllables with no repeating patterns."
+      B: "Syllables are organized into 'phrases,' and these phrases are then sequenced according to long-range syntax rules."
+      C: "Canaries only sing one single, long syllable that lasts for several minutes."
+      D: "The hierarchical structure is entirely learned from a tutor and has no innate components."
+    correct_answer: "B"
+    reference: "Lecture 3, Slide 30"
+    reasoning: "Slide 30 (and 31) shows that syllables compose phrases (e.g., Phrase 1, Phrase 2), and these phrases follow long-range syntax rules, noted as an 'innate syntactic structure'."
+
+  - id: 12
+    difficulty: "Hard"
+    type: "Open"
+    question: "Explain the significance of 'context-dependent' HVC activity in Canaries. How does this provide evidence for long-range sequence memory?"
+    correct_answer: "Context-dependent activity means that HVC neurons fire differently for the same syllable depending on the preceding or following syllables (the 'context'). This implies that the brain is 'tracking' the sequence over several seconds. For example, a neuron might fire for syllable 'A' only if it was preceded by 'B' and 'C', demonstrating that HVC encodes information about the long-range syntax (working memory) rather than just the immediate motor state."
+    reference: "Lecture 3, Slides 36-38"
+    reasoning: "Slides 36-38 show that HVC neurons reflect 1st and 2nd order sequence correlations, indicating 'hidden neural states' underlying long-range syntax."
+
+  - id: 13
+    difficulty: "Medium"
+    type: "MCQ"
+    question: "In the context of seasonal plasticity in Canaries, which type of neurons in HVC are notably replaced during neurogenesis?"
+    options:
+      A: "Only inhibitory interneurons"
+      B: "All neurons in the telencephalon"
+      C: "Primarily the HVC-to-RA projection neurons"
+      D: "The VTA-to-HVC dopaminergic inputs"
+    correct_answer: "C"
+    reference: "Lecture 3, Slide 44"
+    reasoning: "Slide 44 notes that in HVC, 'mostly HVC->RA, some interneurons' are replaced, with about 50% replaced every year."
+
+  - id: 14
+    difficulty: "Medium"
+    type: "Open"
+    question: "The lecture mentions several speculative benefits for adult neurogenesis and seasonal plasticity in birds. Discuss two of these potential adaptive values."
+    correct_answer: "Potential adaptive values include: 1) Providing a substrate for adult learning, essentially 're-opening' the sensitive period for song modification. 2) Replacing neurons that have become 'damaged' or 'overworked' due to the high metabolic demands of high-rate singing. 3) Allowing for 'performance-related hypertrophy' where the circuit expands during the breeding season to support complex song and then regresses to save energy during the off-season."
+    reference: "Lecture 3, Slide 47"
+    reasoning: "Slide 47 lists several speculative reasons for the adaptive value of neurogenesis, including adult learning, replacing overworked neurons, and pruning/keeping expert neurons."
+
+  - id: 15
+    difficulty: "Medium"
+    type: "MCQ"
+    question: "Based on the experiments with Nightingales described on Slide 51, how is their large repertoire of ~200 songs thought to be organized in memory?"
+    options:
+      A: "As a single, continuous sequence that must be sung from start to finish."
+      B: "In small 'packages' of 3-4 songs that are memorized and retrieved together."
+      C: "In a completely random access system where any song can be retrieved at any time."
+      D: "By the frequency of the first note of each song."
+    correct_answer: "B"
+    reference: "Lecture 3, Slide 51"
+    reasoning: "Slide 51 presents evidence for hierarchical memorization/retrieval, noting that Nightingales learn and retrieve songs in 'packages of 3-4 songs,' which is a property of their memory system."

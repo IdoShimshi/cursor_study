@@ -1,0 +1,161 @@
+lecture_name: "Lecture 13: Reward Learning"
+questions:
+  - id: 1
+    difficulty: "Medium"
+    type: "MCQ"
+    question: "According to Dual Process Theory, which of the following is a primary characteristic of System 2 (Model-Based) control?"
+    options:
+      A: "It is fast and automatic."
+      B: "It is computationally cheap to use."
+      C: "It is deliberate and sensitive to outcome value."
+      D: "It is implemented primarily in the habitual circuit."
+    correct_answer: "C"
+    reference: "Lecture 13, Slide 2"
+    reasoning: "Slide 2 and 3 contrast System 1 (Model-Free/Habitual) which is automatic and outcome-indifferent with System 2 (Model-Based/Goal-Directed) which is deliberate and sensitive to the current value of an outcome."
+
+  - id: 2
+    difficulty: "Hard"
+    type: "Open"
+    question: "Explain the difference between habitual and goal-directed circuits in terms of their sensitivity to outcome value. How would a devalued reward (e.g., food after satiation) affect behavior in each circuit?"
+    correct_answer: "The goal-directed circuit (System 2) is sensitive to outcome value; if a reward is devalued, the animal will stop the associated action because it performs forward-planning based on the current utility. The habitual circuit (System 1) is indifferent to outcome value; it relies on learned stimulus-response associations, so the animal will continue the behavior even if the reward is no longer desired (e.g., continuing to press a lever for food when full)."
+    reference: "Lecture 13, Slide 3"
+    reasoning: "Slides 3 and 4 define the behavioral control differences. The key distinction is the 'sensitivity to outcome value' which determines how an agent reacts to devalued rewards."
+
+  - id: 3
+    difficulty: "Easy"
+    type: "MCQ"
+    question: "E.L. Thorndike's 'Law of Effect' (1911) suggests that responses followed by 'satisfaction' are:"
+    options:
+      A: "Less likely to recur in that same situation."
+      B: "More firmly connected with the situation and more likely to recur."
+      C: "Learned only through observation and social imitation."
+      D: "A result of unsupervised self-organization in the brain."
+    correct_answer: "B"
+    reference: "Lecture 13, Slide 6"
+    reasoning: "Thorndike's Law of Effect, as quoted on slide 6, states that responses followed by satisfaction become more firmly connected to the situation, increasing their probability of recurrence."
+
+  - id: 4
+    difficulty: "Hard"
+    type: "Open"
+    question: "Using the equations and logic presented on Slide 14, explain the computational reason for the 'Blocking Effect.' Why does the weight for the new stimulus (x) fail to increase during Phase 2?"
+    correct_answer: "In Phase 1, the animal learns that stimulus 'a' predicts reward 'R', so Va becomes equal to R. In Phase 2, the compound stimulus 'ax' is presented. The total prediction is V_total = Va + Vx. Since Va is approx R and Vx starts at 0, the prediction V_total is already equal to the reward R. The resulting Reward Prediction Error (delta = R - V_total) is zero. Since learning requires a non-zero error to update weights, no learning occurs for stimulus 'x'."
+    reference: "Lecture 13, Slide 14"
+    reasoning: "Slide 14 provides the formal math for blocking: because the reward is already fully predicted by the first stimulus, the prediction error for the compound is zero, preventing the second stimulus from acquiring value."
+
+  - id: 5
+    difficulty: "Medium"
+    type: "MCQ"
+    question: "In the Rescorla-Wagner model, what happens to a state's predictive value ($V$) when the Reward Prediction Error (RPE) is exactly zero?"
+    options:
+      A: "The value of the state increases to match the reward."
+      B: "The value of the state remains unchanged."
+      C: "The value of the state decreases through extinction."
+      D: "The state is forgotten by the system."
+    correct_answer: "B"
+    reference: "Lecture 13, Slide 13"
+    reasoning: "Slide 13 notes that when RPE = 0, the state remains unchanged. This represents a state of perfect prediction where no further learning is necessary."
+
+  - id: 6
+    difficulty: "Medium"
+    type: "Open"
+    question: "What is meant by the 'Necessity of Surprise' in reinforcement learning? Contrast this with a simple associative (Hebbian) model."
+    correct_answer: "The 'Necessity of Surprise' states that learning occurs only when expectations are violated (co-occurrence is unpredicted). A simple Hebbian model assumes that mere co-occurrence of stimulus and reward is enough to strengthen an association. However, phenomena like blocking show that co-occurrence without surprise (where the reward is already expected) does not lead to new learning."
+    reference: "Lecture 13, Slide 11"
+    reasoning: "Slide 11 and 12 emphasize that surprise (discrepancy between prediction and reality) is the driver of learning, which is a key advancement over basic Hebbian association."
+
+  - id: 7
+    difficulty: "Hard"
+    type: "MCQ"
+    question: "How does the system typically handle the 'Exploration-Exploitation' tradeoff in reinforcement learning?"
+    options:
+      A: "By always choosing the action with the highest estimated value."
+      B: "By choosing actions based on a probability function (e.g., Softmax) to occasionally try lower-value options."
+      C: "By only exploring when the prediction error is negative."
+      D: "By eliminating all randomness once the first reward is found."
+    correct_answer: "B"
+    reasoning: "Slides 18-22 discuss the k-armed bandit problem and the need for exploration. Softmax action selection allows the system to balance exploitation (choosing the best known) and exploration (trying others) by making selection probabilistic."
+    reference: "Lecture 13, Slide 22"
+
+  - id: 8
+    difficulty: "Hard"
+    type: "Open"
+    question: "Explain the 'temporal credit assignment problem' and how Temporal Difference (TD) learning provides a solution."
+    correct_answer: "The problem is associating a current action with a reward that is delayed in time. TD learning solves this by updating value estimates continuously at each time step based on successive predictions (bootstrapping). It compares the current prediction with the immediate reward plus the estimated value of the *next* state, allowing the 'credit' for a future reward to propagate back to the earlier actions and states that predicted it."
+    reference: "Lecture 13, Slide 25"
+    reasoning: "Slides 24 and 25 introduce the challenge of delayed rewards and show how TD learning uses successive predictions to update values before the final reward is reached."
+
+  - id: 9
+    difficulty: "Easy"
+    type: "MCQ"
+    question: "Which midbrain dopamine pathway projects to the ventral striatum (nucleus accumbens) and is primarily involved in reward processing and motivation?"
+    options:
+      A: "Nigro-striatal pathway"
+      B: "Mesocortical motor pathway"
+      C: "Mesolimbic pathway"
+      D: "Tuberoinfundibular pathway"
+    correct_answer: "C"
+    reference: "Lecture 13, Slide 31"
+    reasoning: "Slide 31 distinguishes between the Mesolimbic pathway (VTA to nucleus accumbens/PFC for reward) and the Nigro-striatal pathway (SNc to dorsal striatum for motor/habits)."
+
+  - id: 10
+    difficulty: "Medium"
+    type: "Open"
+    question: "Based on the table on Slide 34, compare the Direct (D1) and Indirect (D2) receptor pathways in the basal ganglia. What is their respective effect on the thalamus and the final behavioral outcome?"
+    correct_answer: "The Direct pathway (D1) facilitates action ('Go') by causing disinhibition (excitation) of the thalamus. The Indirect pathway (D2) suppresses action ('No-Go') by causing inhibition of the thalamus. These two pathways work in balance to orchestrate movement and choice."
+    reference: "Lecture 13, Slide 34"
+    reasoning: "Slide 34 provides a summary table of the D1 'Go' and D2 'No-Go' pathways, which is central to understanding how the basal ganglia gate behavioral output."
+
+  - id: 11
+    difficulty: "Medium"
+    type: "MCQ"
+    question: "What are the three components of the 'Three-Factor Rule' for cortico-striatal plasticity?"
+    options:
+      A: "Serotonin, Glutamate, and GABA"
+      B: "Cortical glutamate, SPN depolarization, and phasic dopamine"
+      C: "Thalamic input, Hippocampal input, and Amygdala input"
+      D: "Acetylcholine, Dopamine, and Norepinephrine"
+    correct_answer: "B"
+    reference: "Lecture 13, Slide 35"
+    reasoning: "Slide 35 describes the convergence required for LTP at the spiny projection neuron: cortical glutamate (state/action), SPN firing, and a dopamine burst (reinforcement)."
+
+  - id: 12
+    difficulty: "Hard"
+    type: "Open"
+    question: "Analyze the dopamine firing patterns described on Slide 36. How does the activity of midbrain dopamine neurons change during 'Reward Omission,' and what does this reveal about their computational function?"
+    correct_answer: "During reward omission (when an expected reward does not occur), dopamine neurons show a distinct pause in firing, dropping below their baseline rate. This reveals that these neurons are not simply 'reward detectors'; instead, they quantitatively encode Reward Prediction Error (RPE), with pauses representing a negative error (reality was worse than expected)."
+    reference: "Lecture 13, Slide 36"
+    reasoning: "Slide 36 and 37 cover the seminal Schultz et al. findings. The negative dip during omission is the key evidence that dopamine signals the difference between expected and actual rewards."
+
+  - id: 13
+    difficulty: "Medium"
+    type: "MCQ"
+    question: "What is the primary difficulty mentioned regarding the 'Representation Challenge' and how the brain implements RL in the real world?"
+    options:
+      A: "Dopamine neurons are not found in humans."
+      B: "Defining discrete 'states' for prediction errors in a continuous, noisy, and high-dimensional environment."
+      C: "Rewards in the real world are never actually satisfying."
+      D: "The brain cannot compute values for more than two actions at once."
+    correct_answer: "B"
+    reference: "Lecture 13, Slide 40"
+    reasoning: "Slide 40 highlights that while models assume clean, discrete states, the brain must perform abstraction (likely via PFC and hippocampus) to define 'states' from complex real-world data."
+
+  - id: 14
+    difficulty: "Hard"
+    type: "Open"
+    question: "Examine the 'dopamine ramping' phenomenon discussed on Slide 45. How does this finding from Mohebi et al. challenge or extend the canonical TD-RPE hypothesis?"
+    correct_answer: "The canonical TD-RPE hypothesis focuses on sub-second bursts of dopamine in response to errors. Mohebi et al. showed that dopamine in the striatum also exhibits slow 'ramps' that increase as a subject approaches a goal. These ramps correlate with motivation and vigor rather than just prediction errors and can occur independently of the spiking rate of dopamine neurons, suggesting dopamine release has functions beyond signaling RPE."
+    reference: "Lecture 13, Slide 45"
+    reasoning: "Slides 43-46 discuss findings that challenge the strict RPE framework, specifically slow dynamics that relate to motivational states and distal goals."
+
+  - id: 15
+    difficulty: "Medium"
+    type: "MCQ"
+    question: "What does the term 'Circuit Heterogeneity' imply about the dopaminergic system?"
+    options:
+      A: "All dopamine neurons project to the same location."
+      B: "The system is a monolith where every neuron signals the same parameter."
+      C: "Different sub-regions of the striatum receive dopamine signals tuned to different parameters or time horizons."
+      D: "Dopamine release is only triggered by primary rewards like food and water."
+    correct_answer: "C"
+    reference: "Lecture 13, Slide 42"
+    reasoning: "Slide 42 references Engelhart et al. (2019) to show that the dopaminergic system is highly multifunctional and regionally specialized, rather than a uniform global broadcast."

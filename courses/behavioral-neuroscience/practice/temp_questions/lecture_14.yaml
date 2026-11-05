@@ -1,0 +1,166 @@
+lecture_name: "Lecture 14: Sex Differences"
+questions:
+  - id: 1
+    difficulty: "Medium"
+    type: "MCQ"
+    question: "Arnold A. Berthold's 19th-century experiments with roosters were foundational for behavioral neuroendocrinology. What was the primary conclusion of his study regarding the influence of testes on male-typical development?"
+    options:
+      A: "Testes influence development through direct neural connections to the brain."
+      B: "Testes must be present in the original anatomical location to function."
+      C: "Testes secrete a substance into the bloodstream that influences morphology and behavior."
+      D: "Testes only affect physical morphology, while the brain develops independently of hormones."
+    correct_answer: "C"
+    reference: "Lecture 14, Slide 12"
+    reasoning: "Berthold found that castrated roosters regained male-typical traits if testes were implanted anywhere in the body cavity, proving that the influence was chemical (hormonal) via the blood, not neural."
+
+  - id: 2
+    difficulty: "Hard"
+    type: "Open"
+    question: "Explain the 'Organization/Activation' hypothesis of sex hormones as proposed by William C. Young. How do the effects of hormones differ between the prenatal and adult stages?"
+    correct_answer: "The hypothesis states that sex hormones have two distinct roles: 1) Organization: During the prenatal/neonatal stage, hormones act to permanently and irreversibly organize the nervous system in a sex-specific manner. 2) Activation: During adult life, the same hormones have temporary activation effects, causing the organized circuits to function and produce sex-typical behaviors. A key piece of evidence was that female guinea pigs exposed to androgens in utero showed male-like behavior in adulthood when treated with androgens, but reduced female-typical behavior when treated with estrogen."
+    reference: "Lecture 14, Slide 16"
+    reasoning: "This is a core conceptual framework in neuroendocrinology, distinguishing between permanent structural changes during development and transient functional changes in adulthood."
+
+  - id: 3
+    difficulty: "Medium"
+    type: "MCQ"
+    question: "Based on the classic model of brain sexual differentiation shown in the diagram on Slide 17, which hormonal event is primarily responsible for the 'Activation' phase in adult males?"
+    options:
+      A: "Prenatal Testosterone surge"
+      B: "Adult Testosterone secretion"
+      C: "Perinatal Estradiol exposure"
+      D: "Adult Progesterone secretion"
+    correct_answer: "B"
+    reference: "Lecture 14, Slide 17"
+    reasoning: "The diagram explicitly labels Testosterone as the activating hormone in the adult stage for males, following the earlier organization phase."
+
+  - id: 4
+    difficulty: "Hard"
+    type: "Open"
+    question: "Describe the 'Aromatization Hypothesis' regarding brain masculinization in rodents. Why does testosterone, rather than dihydrotestosterone (DHT), successfully masculinize the male brain?"
+    correct_answer: "The aromatization hypothesis posits that in rodents, testosterone must be converted (aromatized) into estradiol within the brain to masculinize neural circuits. Evidence includes: 1) Testosterone's effect is blocked by estrogen receptor antagonists. 2) Aromatase inhibitors block the masculinizing effects of testosterone. 3) Radio-labeled testosterone is recovered from the brain as radio-labeled estradiol. DHT does not masculinize the brain because it cannot be aromatized into estrogen."
+    reference: "Lecture 14, Slide 29"
+    reasoning: "This addresses the counterintuitive fact that 'female' hormones (estrogens) are often the actual agents of brain masculinization in many mammalian species."
+
+  - id: 5
+    difficulty: "Easy"
+    type: "MCQ"
+    question: "Which of the following brain nuclei is typically larger in female rodents compared to males?"
+    options:
+      A: "SDN-POA (Sexually Dimorphic Nucleus of the Preoptic Area)"
+      B: "MePD (Posterodorsal Medial Amygdala)"
+      C: "AVPV (Anteroventral Periventricular Nucleus)"
+      D: "BNST (Bed Nucleus of the Stria Terminalis)"
+    correct_answer: "C"
+    reference: "Lecture 14, Slide 52"
+    reasoning: "The AVPV is one of the few brain regions that is significantly larger in females, whereas the SDN-POA and MePD are larger in males."
+
+  - id: 6
+    difficulty: "Medium"
+    type: "MCQ"
+    question: "Looking at the SDN measurements on Slide 33, how does prenatal nutritional stress (NS) affect the volume of the SDN-POA in male rats compared to control males?"
+    options:
+      A: "It significantly increases the volume."
+      B: "It has no measurable effect on the volume."
+      C: "It significantly decreases the volume."
+      D: "It causes the SDN-POA to disappear entirely."
+    correct_answer: "C"
+    reference: "Lecture 14, Slide 33"
+    reasoning: "The graph on slide 33 shows that both environmental stress (ES) and nutritional stress (NS) lead to a reduction in SDN-POA volume in males compared to controls."
+
+  - id: 7
+    difficulty: "Medium"
+    type: "Open"
+    question: "What is the functional role of Tyrosine Hydroxylase (TH+) expressing neurons in the AVPV of female mice regarding social behavior?"
+    correct_answer: "In female mice, TH+ AVPV neurons are critical for promoting maternal care behaviors (such as pup retrieval and licking) and suppressing conspecific aggressive behaviors. Manipulations like optogenetic activation or over-expression of these neurons enhance maternal care, while their ablation reduces it."
+    reference: "Lecture 14, Slide 65, 67"
+    reasoning: "This highlights the link between a sexually dimorphic structure (AVPV) and sex-specific behavioral outcomes."
+
+  - id: 8
+    difficulty: "Hard"
+    type: "MCQ"
+    question: "Research by Sofer et al. (2024) investigated the role of oxytocinergic (OT+) neurons in the Paraventricular Nucleus (PVN). What was the sex-specific finding regarding these neurons and dominance hierarchy?"
+    options:
+      A: "Ablation of OT+ PVN neurons abolishes dominance hierarchy in males only."
+      B: "Activation of OT+ PVN neurons increases aggression in both males and females."
+      C: "Ablation of OT+ PVN neurons abolishes dominance hierarchy in females only."
+      D: "OT+ PVN neurons have no effect on social hierarchy in either sex."
+    correct_answer: "C"
+    reference: "Lecture 14, Slide 73"
+    reasoning: "The study demonstrated that the oxytocinergic system in the PVN regulates dominance behavior specifically in females, with ablation leading to a loss of the hierarchy."
+
+  - id: 9
+    difficulty: "Medium"
+    type: "Open"
+    question: "What happens to the sexual behavior of female mice when the TrpC2 gene, which is essential for pheromone signaling, is mutated? What does this suggest about the 'female brain'?"
+    correct_answer: "Female mice with a TrpC2 mutation show a loss of sexual discrimination and exhibit male-typical sexual behaviors, such as mounting and sniffing of both males and females. This suggests that the 'male-typical' neural circuits for sexual behavior are present in the female brain but are normally inhibited or bypassed by pheromonal signals processed through the VNO/TrpC2 pathway."
+    reference: "Lecture 14, Slide 80, 83"
+    reasoning: "This challenges the idea of purely binary brains, suggesting that sex-typical networks exist in both sexes and are differentially activated."
+
+  - id: 10
+    difficulty: "Medium"
+    type: "MCQ"
+    question: "According to the gene expression maps on Slide 54, which of the following markers shows higher expression in the male Bed Nucleus of the Stria Terminalis (BNST) compared to the female?"
+    options:
+      A: "Kisspeptin"
+      B: "Androgen receptor"
+      C: "Tyrosine Hydroxylase"
+      B: "Estrogen receptor α"
+    correct_answer: "B"
+    reference: "Lecture 14, Slide 54"
+    reasoning: "The slide shows that the Androgen Receptor (AR) and Estrogen Receptor alpha (ERα) have higher expression in the male BNST and MeA."
+
+  - id: 11
+    difficulty: "Easy"
+    type: "Open"
+    question: "Why is it important to consider 'Sex as a Biological Variable' (SABV) in neuroscience research, and what was a common historical justification for excluding females?"
+    correct_answer: "It is important because sex differences exist in brain structure, hormone levels, disease prevalence, and responses to medication; ignoring sex can lead to incomplete or biased scientific conclusions. Historically, researchers often excluded females by claiming that female data was more variable due to the estrous cycle, or that no sex differences were expected so only males were needed for simplicity."
+    reference: "Lecture 14, Slide 93, 94"
+    reasoning: "This covers the ethical and methodological shift toward inclusive research practices mandated by the NIH since 2016."
+
+  - id: 12
+    difficulty: "Medium"
+    type: "MCQ"
+    question: "Congenital Adrenal Hyperplasia (CAH) is a genetic condition that results in elevated prenatal exposure to testosterone. How does this condition typically affect toy and game preferences in girls?"
+    options:
+      A: "They show a significant increase in preference for female-typical toys."
+      B: "They show no difference in play behavior compared to healthy girls."
+      C: "They show an increased preference for male-typical toys and games."
+      D: "They avoid all social play and prefer solitary activities."
+    correct_answer: "C"
+    reference: "Lecture 14, Slide 98"
+    reasoning: "Studies (e.g., Pasterski et al. 2005) show that girls with CAH spend more time playing with 'male-typical' toys, indicating an effect of prenatal androgens on human behavior."
+
+  - id: 13
+    difficulty: "Easy"
+    type: "MCQ"
+    question: "The 2D:4D digit ratio is often used in human studies as a retrospective marker. What is it hypothesized to indicate?"
+    options:
+      A: "Adult testosterone levels"
+      B: "Prenatal androgen exposure"
+      C: "Genetic predisposition to heart disease"
+      D: "Total brain volume"
+    correct_answer: "B"
+    reference: "Lecture 14, Slide 99"
+    reasoning: "The ratio between the index (2nd) and ring (4th) fingers is considered a marker for the level of androgens a fetus was exposed to in the womb."
+
+  - id: 14
+    difficulty: "Hard"
+    type: "Open"
+    question: "Describe the experimental design and findings of Terkel and Rosenblatt (1968, 1972) regarding maternal behavior. What did their blood transfusion study reveal about the initiation of caregiving?"
+    correct_answer: "They transfused blood from a parturient female (one that just gave birth) into a virgin female. They found that the virgin female subsequently showed a significantly reduced latency to express maternal behaviors toward newborn pups. This revealed that there are specific hormonal factors present in the blood of maternal females that can induce maternal behavior in naive animals."
+    reference: "Lecture 14, Slide 44, 45"
+    reasoning: "This was a landmark study demonstrating that the transition to motherhood is biologically driven by systemic hormonal changes."
+
+  - id: 15
+    difficulty: "Medium"
+    type: "MCQ"
+    question: "Which of the following statements regarding sex differences in human brain diseases is correct based on the lecture data?"
+    options:
+      A: "Alzheimer's disease is significantly more prevalent in men."
+      B: "Autism Spectrum Disorder (ASD) and ADHD are more common in males."
+      C: "Depression and Anxiety show no sex bias in prevalence."
+      D: "Schizophrenia is almost exclusively found in females."
+    correct_answer: "B"
+    reference: "Lecture 14, Slide 91"
+    reasoning: "Slide 91 shows a clear male bias for ASD, ADHD, and early-onset Schizophrenia, while females show higher rates of Depression, Anxiety, and Alzheimer's."
