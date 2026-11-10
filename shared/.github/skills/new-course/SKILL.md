@@ -5,7 +5,7 @@ description: Set up a new course in this repo. Use when the user says they want 
 
 # New course setup
 
-The repo root is `/home/ido/code/msc/cursor_study`. Follow these steps in order. Collect missing information from the user before creating files.
+The repo root is the directory containing `.git` and `requirements.txt`. Follow these steps in order. Collect missing information from the user before creating files.
 
 ## Step 1 — Gather required information
 

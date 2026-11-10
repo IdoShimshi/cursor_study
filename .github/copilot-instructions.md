@@ -6,4 +6,4 @@ Framework for studying university courses with AI assistance.
 - `shared/.github/` — shared instructions (`instructions/`) and skills (`skills/`: `lecture-notes`, `sync-lectures`, `new-course`).
 - `courses/<course>/` — per-course materials, config, and course-specific instructions/skills in `courses/<course>/.github/`.
 
-Python: use the project venv at `/home/ido/code/msc/cursor_study/.venv` (dependencies in `requirements.txt`).
+Python: if the VS Code terminal has activated the selected environment, use `python`; otherwise use `<repo-root>/.venv/bin/python`. The default environment is the repository's `.venv` (dependencies in `requirements.txt`).

@@ -13,17 +13,7 @@ Run Python for anything beyond trivial steps. Use **NumPy**, **SciPy**, and **Sy
 
 ### Execution environment
 
-Use the project virtual environment at the repo root:
-
-- **Path:** `/home/ido/code/msc/cursor_study/.venv`
-- **Activation:** `source /home/ido/code/msc/cursor_study/.venv/bin/activate`
-
-If the current course folder has its own `.venv` (e.g. `courses/<course>/.venv`), prefer that one instead.
-
-**Example:**
-```bash
-source /home/ido/code/msc/cursor_study/.venv/bin/activate && python3 script.py
-```
+If the VS Code terminal has activated the selected environment, use `python`. Otherwise, use `<repo-root>/.venv/bin/python` (or the course's `.venv` if it has one). Avoid bare `python3`, which may select the system interpreter.
 
 Execute the code and base the answer on the output.
 

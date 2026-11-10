@@ -19,7 +19,7 @@ Use the repository script `scripts/deduplicate_incremental_pdf.py` to collapse c
 The script is at the repository root under `scripts/`. From the repository root, run it with the project Python interpreter and the input PDF path:
 
 ```bash
-/home/ido/code/msc/cursor_study/.venv/bin/python scripts/deduplicate_incremental_pdf.py path/to/input.pdf
+.venv/bin/python scripts/deduplicate_incremental_pdf.py path/to/input.pdf
 ```
 
 By default this creates a sibling PDF named `<input-stem>_deduplicated.pdf`. There is no JSON report. The script prints the before/after page counts and grouped ranges to the console.
@@ -27,7 +27,7 @@ By default this creates a sibling PDF named `<input-stem>_deduplicated.pdf`. The
 To choose the output filename, pass it as the second positional argument:
 
 ```bash
-/home/ido/code/msc/cursor_study/.venv/bin/python scripts/deduplicate_incremental_pdf.py path/to/input.pdf path/to/output.pdf
+.venv/bin/python scripts/deduplicate_incremental_pdf.py path/to/input.pdf path/to/output.pdf
 ```
 
 If the current working directory is not the repository root, use the script's absolute path or change to the root first. Quote paths containing spaces.

@@ -18,4 +18,6 @@ Do **not** reach for Python (`pymupdf`/`fitz`), `pdftotext`, or shell extraction
 
 If Read works, use its output — do not install packages or run scripts just to re-extract the same text.
 
+If extraction is needed, use PyMuPDF. If the VS Code terminal has activated the selected environment, run `python`; otherwise, use `<repo-root>/.venv/bin/python`. Prefer `import pymupdf`.
+
 **Handwritten lecture pages:** follow the lecture-notes skill (`page-XX.ocr.md`, then `page-XX.png`). That workflow is separate from reading typed PDFs like assignments.

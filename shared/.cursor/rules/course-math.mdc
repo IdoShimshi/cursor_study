@@ -13,14 +13,7 @@ Run Python for anything beyond trivial steps. Use **NumPy**, **SciPy**, and **Sy
 
 ### Execution Environment
 
-Always use the shared virtual environment:
-- **Path:** `/home/ido/code/msc/cursor_study/shared/.venv`
-- **Activation:** `source /home/ido/code/msc/cursor_study/shared/.venv/bin/activate`
-
-**Example:**
-```bash
-source /home/ido/code/msc/cursor_study/shared/.venv/bin/activate && python3 script.py
-```
+If the VS Code terminal has activated the selected environment, use `python`. Otherwise, use `<repo-root>/.venv/bin/python` (or the course's `.venv` if it has one). Avoid bare `python3`, which may select the system interpreter.
 
 Execute the code and base the answer on the output.
 
