@@ -23,7 +23,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--lectures-dir",
         type=Path,
-        default=Path(__file__).resolve().parent.parent / "courses" / "dynamical-systems" / "materials" / "lectures",
+        default=Path(__file__).resolve().parent.parent / "courses" / "semester-2" / "dynamical-systems" / "materials" / "lectures",
         help="Directory containing exported lecture PDFs",
     )
     parser.add_argument(

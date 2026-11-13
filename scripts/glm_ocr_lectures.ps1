@@ -128,7 +128,7 @@ function Find-LecturePageImages {
 }
 
 $repoRoot = Get-RepoRoot $RepoRoot
-$lecturesDir = Join-Path $repoRoot "courses\dynamical-systems\materials\lectures"
+$lecturesDir = Join-Path $repoRoot "courses\semester-2\dynamical-systems\materials\lectures"
 if (-not (Test-Path $lecturesDir)) {
     throw "Lectures directory not found: $lecturesDir"
 }

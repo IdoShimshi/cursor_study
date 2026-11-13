@@ -17,7 +17,7 @@ You need the following. Ask for anything not provided:
 |-------|---------|-------|
 | Course display name | `Linear Algebra` | How it appears in rules and workspace |
 | Course ID (slug) | `linear-algebra` | Lowercase, hyphen-separated; derive from name and confirm |
-| Semester | `2025-26` | Free text |
+| Semester | `2` | Used in the folder path `courses/semester-<number>/` |
 | OneNote notebook name | `MSC_CS` | Exact or partial name (match_mode: contains) |
 | OneNote section group | `Linear Algebra` | Optional — leave empty if section is directly in notebook |
 | OneNote section name | `lectures` | Usually "lectures" |
@@ -32,11 +32,11 @@ This lists all open OneNote notebooks and sections without exporting anything. T
 ## Step 2 — Create the course folder structure
 
 ```bash
-mkdir -p courses/<id>/materials/{lectures,assignments,syllabus}
-mkdir -p courses/<id>/.cursor/rules
+mkdir -p courses/semester-<number>/<id>/materials/{lectures,assignments,syllabus}
+mkdir -p courses/semester-<number>/<id>/.cursor/rules
 ```
 
-## Step 3 — Create `courses/<id>/onenote_export_config.json`
+## Step 3 — Create `courses/semester-<number>/<id>/onenote_export_config.json`
 
 One file holds both the course identity and the export config (the PS script ignores unknown fields):
 
@@ -55,26 +55,26 @@ One file holds both the course identity and the export config (the PS script ign
 
 ## Step 4 — Create the course workspace file
 
-Create `courses/<id>/<id>.code-workspace`:
+Create `courses/semester-<number>/<id>/<id>.code-workspace`:
 
 ```json
 {
   "folders": [
-    { "path": "../../shared", "name": "shared" },
+    { "path": "../../../shared", "name": "shared" },
     { "path": ".", "name": "<display name>" }
   ],
   "settings": {
     "terminal.integrated.cwd": "${workspaceFolder:<display name>}",
-    "python.defaultInterpreterPath": "${workspaceFolder:<display name>}/../../scripts/.venv-lectures/bin/python",
-    "python.analysis.venvPath": "${workspaceFolder:<display name>}/../../scripts",
-    "python.analysis.venv": ".venv-lectures"
+    "python.defaultInterpreterPath": "${workspaceFolder:<display name>}/../../../.venv/bin/python",
+    "python.analysis.venvPath": "${workspaceFolder:<display name>}/../../..",
+    "python.analysis.venv": ".venv"
   }
 }
 ```
 
 ## Step 5 — Add course-specific AI guidance
 
-Create `courses/<id>/.cursor/rules/<id>.mdc`:
+Create `courses/semester-<number>/<id>/.cursor/rules/<id>.mdc`:
 
 ```markdown
 ---
@@ -90,12 +90,12 @@ alwaysApply: false
 The lecture-notes skill (`shared/.cursor/skills/lecture-notes/SKILL.md`) has the full workflow for reading handwritten lecture notes.
 ```
 
-If the course requires unique study workflows (e.g. no handwritten notes), create a course-specific skill in `courses/<id>/.cursor/skills/<id>/SKILL.md` and reference it in the rule.
+If the course requires unique study workflows (e.g. no handwritten notes), create a course-specific skill in `courses/semester-<number>/<id>/.cursor/skills/<id>/SKILL.md` and reference it in the rule.
 
 ## Step 6 — Verify
 
 Tell the user:
 
-1. Open `courses/<id>/<id>.code-workspace` in Cursor to start a study session.
+1. Open `courses/semester-<number>/<id>/<id>.code-workspace` in Cursor to start a study session.
 2. Run `./scripts/export_lectures.sh -ShowCatalog` (from the repo root) to confirm the OneNote config matches the right notebook/section before doing a real export.
-3. When ready to sync lectures, open the workspace and run `../../scripts/export_lectures.sh` from the course folder terminal (or from the repo root: `./scripts/export_lectures.sh`).
+3. When ready to sync lectures, open the workspace and run `../../../scripts/export_lectures.sh` from the course folder terminal (or from the repo root: `./scripts/export_lectures.sh`).

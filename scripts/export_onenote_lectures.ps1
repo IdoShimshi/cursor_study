@@ -91,7 +91,7 @@ function Get-ConfigPath {
         return (Resolve-Path -LiteralPath $ProvidedConfigPath).Path
     }
 
-    return (Join-Path $Root 'courses/dynamical-systems/onenote_export_config.json')
+    return (Join-Path $Root 'courses/semester-2/dynamical-systems/onenote_export_config.json')
 }
 
 function Read-ExportConfig {
@@ -506,7 +506,7 @@ function Sync-OneNoteLectures {
     $outputDirectory = if ($CourseRoot) {
         Get-NormalPath -Path (Join-Path $CourseRoot 'materials/lectures')
     } else {
-        Get-NormalPath -Path (Join-Path $Root 'courses/dynamical-systems/materials/lectures')
+        Get-NormalPath -Path (Join-Path $Root 'courses/semester-2/dynamical-systems/materials/lectures')
     }
     $statePath = Join-Path $outputDirectory '.export_state.json'
     $oneNote = Connect-OneNote
