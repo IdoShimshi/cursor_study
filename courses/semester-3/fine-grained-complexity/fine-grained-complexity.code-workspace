@@ -1,0 +1,12 @@
+{
+  "folders": [
+    { "path": "../../../shared", "name": "shared" },
+    { "path": ".", "name": "Fine-Grained Complexity" }
+  ],
+  "settings": {
+    "terminal.integrated.cwd": "${workspaceFolder:Fine-Grained Complexity}",
+    "python.defaultInterpreterPath": "${workspaceFolder:Fine-Grained Complexity}/../../../.venv/bin/python",
+    "python.analysis.venvPath": "${workspaceFolder:Fine-Grained Complexity}/../../..",
+    "python.analysis.venv": ".venv"
+  }
+}
