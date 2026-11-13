@@ -4,9 +4,9 @@ import json
 import re
 from pathlib import Path
 
-BASE_DIR = Path('/home/ido/code/msc/cursor_study/courses/behavioral-neuroscience/practice')
+BASE_DIR = Path(__file__).resolve().parent
 YAML_DIR = BASE_DIR / 'temp_questions'
-LECTURES_DIR = Path('/home/ido/code/msc/cursor_study/courses/behavioral-neuroscience/materials/lectures')
+LECTURES_DIR = BASE_DIR.parent / 'materials' / 'lectures'
 OUTPUT_FILE = BASE_DIR / 'exam_data.json'
 
 def get_lecture_dir_map():

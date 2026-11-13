@@ -1,0 +1,12 @@
+{
+  "folders": [
+    { "path": "../../../shared", "name": "shared" },
+    { "path": ".", "name": "Behavioral Neuroscience" }
+  ],
+  "settings": {
+    "terminal.integrated.cwd": "${workspaceFolder:Behavioral Neuroscience}",
+    "python.defaultInterpreterPath": "${workspaceFolder:Behavioral Neuroscience}/../../../.venv/bin/python",
+    "python.analysis.venvPath": "${workspaceFolder:Behavioral Neuroscience}/../../..",
+    "python.analysis.venv": ".venv"
+  }
+}

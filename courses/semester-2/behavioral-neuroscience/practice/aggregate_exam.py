@@ -1,6 +1,9 @@
 import os
 import random
 import re
+from pathlib import Path
+
+PRACTICE_DIR = Path(__file__).resolve().parent
 
 def parse_md(filepath):
     with open(filepath, 'r') as f:
@@ -33,7 +36,7 @@ def parse_md(filepath):
 
     return q_blocks, a_blocks
 
-temp_dir = '/home/ido/code/msc/cursor_study/courses/behavioral-neuroscience/practice/temp_questions'
+temp_dir = PRACTICE_DIR / 'temp_questions'
 all_pairs = []
 
 for filename in sorted(os.listdir(temp_dir)):
@@ -52,14 +55,14 @@ for filename in sorted(os.listdir(temp_dir)):
 random.shuffle(all_pairs)
 
 # Write Exam
-with open('/home/ido/code/msc/cursor_study/courses/behavioral-neuroscience/practice/practice_exam.md', 'w') as f:
+with open(PRACTICE_DIR / 'practice_exam.md', 'w') as f:
     f.write("# Behavioral Neuroscience Practice Exam\n\n")
     f.write(f"Total Questions: {len(all_pairs)}\n\n")
     for i, pair in enumerate(all_pairs, 1):
         f.write(f"{i}. {pair['q']}\n\n---\n\n")
 
 # Write Answers
-with open('/home/ido/code/msc/cursor_study/courses/behavioral-neuroscience/practice/practice_exam_answers.md', 'w') as f:
+with open(PRACTICE_DIR / 'practice_exam_answers.md', 'w') as f:
     f.write("# Behavioral Neuroscience Practice Exam - Answer Key\n\n")
     for i, pair in enumerate(all_pairs, 1):
         f.write(f"## Question {i}\n")

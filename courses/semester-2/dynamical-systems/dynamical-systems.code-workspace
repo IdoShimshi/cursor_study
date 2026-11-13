@@ -1,0 +1,12 @@
+{
+  "folders": [
+    { "path": "../../../shared", "name": "shared" },
+    { "path": ".", "name": "Dynamical Systems" }
+  ],
+  "settings": {
+    "terminal.integrated.cwd": "${workspaceFolder:Dynamical Systems}",
+    "python.defaultInterpreterPath": "${workspaceFolder:Dynamical Systems}/../../../.venv/bin/python",
+    "python.analysis.venvPath": "${workspaceFolder:Dynamical Systems}/../../..",
+    "python.analysis.venv": ".venv"
+  }
+}

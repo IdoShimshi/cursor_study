@@ -1,13 +1,13 @@
 {
   "folders": [
-    { "path": "../../shared", "name": "shared" },
+    { "path": "../../../shared", "name": "shared" },
     { "path": ".", "name": "Deep Learning for Computer Vision" }
   ],
   "settings": {
     "terminal.integrated.cwd": "${workspaceFolder:Deep Learning for Computer Vision}",
-    "python.defaultInterpreterPath": "${workspaceFolder:Deep Learning for Computer Vision}/../../.venv/bin/python",
+    "python.defaultInterpreterPath": "${workspaceFolder:Deep Learning for Computer Vision}/../../../.venv/bin/python",
     "python.terminal.activateEnvironment": true,
-    "python.analysis.venvPath": "${workspaceFolder:Deep Learning for Computer Vision}/../..",
+    "python.analysis.venvPath": "${workspaceFolder:Deep Learning for Computer Vision}/../../..",
     "python.analysis.venv": ".venv"
   }
 }

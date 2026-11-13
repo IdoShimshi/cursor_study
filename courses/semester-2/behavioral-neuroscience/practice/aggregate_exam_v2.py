@@ -2,6 +2,9 @@ import os
 import random
 import yaml
 import re
+from pathlib import Path
+
+PRACTICE_DIR = Path(__file__).resolve().parent
 
 def clean_yaml_content(content):
     # Subagents might wrap YAML in triple backticks
@@ -11,7 +14,7 @@ def clean_yaml_content(content):
         content = re.search(r"```\n(.*?)\n```", content, re.DOTALL).group(1)
     return content
 
-temp_dir = '/home/ido/code/msc/cursor_study/courses/behavioral-neuroscience/practice/temp_questions'
+temp_dir = PRACTICE_DIR / 'temp_questions'
 all_questions = []
 
 for filename in sorted(os.listdir(temp_dir)):
@@ -33,7 +36,7 @@ for filename in sorted(os.listdir(temp_dir)):
 random.shuffle(all_questions)
 
 # Write Exam
-with open('/home/ido/code/msc/cursor_study/courses/behavioral-neuroscience/practice/practice_exam.md', 'w') as f:
+with open(PRACTICE_DIR / 'practice_exam.md', 'w') as f:
     f.write("# Behavioral Neuroscience Practice Exam\n\n")
     f.write(f"Total Questions: {len(all_questions)}\n\n")
     f.write("---")
@@ -52,7 +55,7 @@ with open('/home/ido/code/msc/cursor_study/courses/behavioral-neuroscience/pract
         f.write("\n---")
 
 # Write Answers
-with open('/home/ido/code/msc/cursor_study/courses/behavioral-neuroscience/practice/practice_exam_answers.md', 'w') as f:
+with open(PRACTICE_DIR / 'practice_exam_answers.md', 'w') as f:
     f.write("# Behavioral Neuroscience Practice Exam - Answer Key\n\n")
     for i, q in enumerate(all_questions, 1):
         f.write(f"## Question {i}\n")
