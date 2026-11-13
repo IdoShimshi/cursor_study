@@ -13,15 +13,16 @@ Scripts are not part of the study workspace. Run them relative to the course fol
 <repo>/
   scripts/         ← pipeline (not indexed in study workspace)
   courses/
-    <course>/      ← you are here
-      materials/lectures/
-      onenote_export_config.json
+    <semester>/
+      <course>/    ← you are here
+        materials/lectures/
+        onenote_export_config.json
 ```
 
 ## Run the sync
 
 ```bash
-../../scripts/export_lectures.sh
+../../../scripts/export_lectures.sh
 ```
 
 This single command runs the full pipeline:
@@ -53,16 +54,16 @@ Note: the pipeline scripts manage their own virtual environment (`scripts/.venv-
 Use these when you only need to re-transcribe, not re-export:
 
 ```bash
-../../scripts/gemini_ocr_lectures.sh --dry-run              # list pages missing/stale transcription
-../../scripts/gemini_ocr_lectures.sh                        # transcribe missing/stale only
-../../scripts/gemini_ocr_lectures.sh --lecture "Lecture 3"  # one lecture
-../../scripts/gemini_ocr_lectures.sh --force                # re-transcribe everything
+../../../scripts/gemini_ocr_lectures.sh --dry-run              # list pages missing/stale transcription
+../../../scripts/gemini_ocr_lectures.sh                        # transcribe missing/stale only
+../../../scripts/gemini_ocr_lectures.sh --lecture "Lecture 3"  # one lecture
+../../../scripts/gemini_ocr_lectures.sh --force                # re-transcribe everything
 ```
 
 ## Inspect available OneNote notebooks/sections
 
 ```bash
-../../scripts/export_lectures.sh -ShowCatalog
+../../../scripts/export_lectures.sh -ShowCatalog
 ```
 
 Useful when setting up a new course or debugging a mismatch in `onenote_export_config.json`.

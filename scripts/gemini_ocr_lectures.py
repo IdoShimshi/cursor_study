@@ -838,7 +838,7 @@ def main() -> int:
     lectures_dir = (
         args.lectures_dir.resolve()
         if args.lectures_dir
-        else args.repo_root / "courses" / "dynamical-systems" / "materials" / "lectures"
+        else args.repo_root / "courses" / "semester-2" / "dynamical-systems" / "materials" / "lectures"
     )
     if not lectures_dir.is_dir():
         print(f"Lectures directory not found: {lectures_dir}", file=sys.stderr)
