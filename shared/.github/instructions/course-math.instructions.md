@@ -13,7 +13,7 @@ Run Python for anything beyond trivial steps. Use **NumPy**, **SciPy**, and **Sy
 
 ### Execution environment
 
-If the VS Code terminal has activated the selected environment, use `python`. Otherwise, use `<repo-root>/.venv/bin/python` (or the course's `.venv` if it has one). Avoid bare `python3`, which may select the system interpreter.
+Use the repository-wide interpreter rule in `python-environment.instructions.md`; avoid bare `python3`, which may select the system interpreter.
 
 Execute the code and base the answer on the output.
 

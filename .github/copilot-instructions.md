@@ -6,4 +6,4 @@ Framework for studying university courses with AI assistance.
 - `shared/.github/` — shared instructions (`instructions/`) and skills (`skills/`: `lecture-notes`, `sync-lectures`, `new-course`).
 - `courses/semester-<number>/<course>/` — per-course materials, config, and course-specific instructions/skills in `courses/semester-<number>/<course>/.github/`.
 
-Python: if the VS Code terminal has activated the selected environment, use `python`; otherwise use `<repo-root>/.venv/bin/python`. The default environment is the repository's `.venv` (dependencies in `requirements.txt`).
+Python: use the root `<repo-root>/.venv` by default. See `shared/.github/instructions/python-environment.instructions.md` for the rule.
