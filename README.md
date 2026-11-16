@@ -53,7 +53,7 @@ cursor-study/
 ## Python environments
 
 - **Root `.venv`** — default for the whole project and for all course workspaces. Create with `python3 -m venv .venv && .venv/bin/pip install -r requirements.txt`.
-- **Per-course venv (optional)** — create `courses/<semester>/<course>/.venv` and point that course's `.code-workspace` interpreter at it.
+- **Per-course venv (exception only)** — use one only when explicitly requested; agents should otherwise keep using the repository-root `.venv` for course work. Things like pdf reading, general python scripting to do some request, should use that. A code specific and dedicated to the course work (assignment, etc) that requires additional and unique imports can have its own course venv.
 - **`scripts/.venv-lectures`** — created automatically by the pipeline shell scripts; independent of the above.
 
 ## Quick start
