@@ -1,0 +1,12 @@
+{
+  "folders": [
+    { "path": "../../../shared", "name": "shared" },
+    { "path": ".", "name": "Algorithms, Games, and Economics" }
+  ],
+  "settings": {
+    "terminal.integrated.cwd": "${workspaceFolder:Algorithms, Games, and Economics}",
+    "python.defaultInterpreterPath": "${workspaceFolder:Algorithms, Games, and Economics}/../../../.venv/bin/python",
+    "python.analysis.venvPath": "${workspaceFolder:Algorithms, Games, and Economics}/../../..",
+    "python.analysis.venv": ".venv"
+  }
+}
