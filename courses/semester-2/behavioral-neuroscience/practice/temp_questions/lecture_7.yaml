@@ -1,0 +1,156 @@
+lecture_name: "Lecture 7: Animal Navigation I"
+questions:
+  - id: 1
+    difficulty: "Easy"
+    type: "MCQ"
+    question: "Which navigational strategy is defined as navigation towards a directly-perceptible sensory cue, such as a specific visual landmark or a specific odor?"
+    options:
+      A: "Path integration"
+      B: "Beaconing"
+      C: "Route following"
+      D: "Cognitive mapping"
+    correct_answer: "B"
+    reference: "Lecture 7, Slide 12"
+    reasoning: "Beaconing involves moving directly toward a sensory cue that the animal can perceive at that moment (visual, olfactory, or auditory)."
+
+  - id: 2
+    difficulty: "Medium"
+    type: "Open"
+    question: "Explain why path integration is considered an 'error-prone' strategy and how the accumulation of these errors affects long-distance navigation in mammals compared to insects like the desert ant."
+    correct_answer: "Path integration is error-prone because it is a cumulative process where small errors in estimating distance or direction are integrated over time. The problem is that these errors accumulate rather than cancel out. In desert ants (Cataglyphis), path integration is highly accurate, but they still use systematic search as a backup. Mammals are generally less effective path integrators than ants and likely use path integration primarily to 'fill the gaps' when reliable external landmarks are unavailable."
+    reference: "Lecture 7, Slide 31-32"
+    reasoning: "The lecture highlights that path integration accumulates errors (Slide 32) and notes the performance difference between mammals and desert ants."
+
+  - id: 3
+    difficulty: "Medium"
+    type: "MCQ"
+    question: "Based on the experiment by Wittlinger et al. (2006) discussed in the lecture, what is the primary mechanism used by desert ants (Cataglyphis fortis) to measure distance?"
+    options:
+      A: "Optic flow"
+      B: "Energy consumption"
+      C: "Step counter (pedometer)"
+      D: "Magnetic inclination"
+    correct_answer: "C"
+    reference: "Lecture 7, Slide 30"
+    reasoning: "The lecture explicitly states that desert ants use a step counter as their odometer, while honeybees use optic flow."
+
+  - id: 4
+    difficulty: "Hard"
+    type: "Open"
+    question: "Compare and contrast the 'Cognitive Map' theory (Tolman, O'Keefe & Nadel) with the 'Map-and-Compass' theory (Kramer). In your answer, mention the different research traditions from which these concepts emerged."
+    correct_answer: "The Cognitive Map theory (Tolman, 1948) suggests an abstract representation of space allowing flexible navigation between any two points; it emerged from laboratory work on rats (neuropsychological approach). The Map-and-Compass theory (Kramer, 1953) breaks homing into two steps: determining location (Map) and then determining direction (Compass); it emerged from field work on birds (neuroethological approach). While conceptually similar in allowing flexible navigation, they reflect different scales of navigation and historical academic backgrounds."
+    reference: "Lecture 7, Slide 34-35"
+    reasoning: "Slide 34 describes the Cognitive Map/neuropsychological approach, and Slide 35 describes Map-and-Compass/neuroethological approach."
+
+  - id: 5
+    difficulty: "Medium"
+    type: "MCQ"
+    question: "Analyze the diagram on Slide 12 showing Tinbergen's wasp experiment. What conclusion can be drawn from the fact that the wasp flies to the circle of pine cones rather than the actual nest entrance?"
+    options:
+      A: "The wasp uses olfactory cues to find the nest."
+      B: "The wasp uses path integration to return home."
+      C: "The wasp uses the spatial arrangement of visual landmarks (beaconing) to locate the nest."
+      D: "The wasp is unable to distinguish between pine cones and nest entrances."
+    correct_answer: "C"
+    reference: "Lecture 7, Slide 12"
+    reasoning: "The experiment shows that when landmarks (pine cones) are moved, the wasp follows the landmarks, demonstrating visual beaconing."
+
+  - id: 6
+    difficulty: "Medium"
+    type: "Open"
+    question: "In honeybees, optic flow serves multiple purposes beyond just measuring distance. Describe two other behavioral functions of optic flow mentioned in the lecture."
+    correct_answer: "1. Regulating flight speed: Bees hold global image velocity constant to control how fast they fly. 2. Flight control: It allows them to fly through the center of passages, land smoothly, and extend their legs at the appropriate time."
+    reference: "Lecture 7, Slide 41"
+    reasoning: "Slide 41 lists several functions of optic flow including flight speed regulation and landing/navigation through passages."
+
+  - id: 7
+    difficulty: "Hard"
+    type: "MCQ"
+    question: "Sea turtle hatchlings employ different sensory cues at different stages of their journey. Which of the following correctly describes the compass cue used to maintain a course into the open sea?"
+    options:
+      A: "Magnetic inclination"
+      B: "Wave direction"
+      C: "The North Star"
+      D: "Chemical imprinting"
+    correct_answer: "B"
+    reference: "Lecture 7, Slide 44-45"
+    reasoning: "Hatchling sea turtles use wave direction as a compass to keep their course away from the shore and into the open sea."
+
+  - id: 8
+    difficulty: "Hard"
+    type: "Open"
+    question: "Explain the proposed 'Radical-Pair' mechanism for magnetic compass sensing in night-migratory birds. What specific molecule and location in the body are involved?"
+    correct_answer: "The proposed mechanism involves a light-dependent and magnetic-field-dependent chemical reaction (radical-pair reaction). The candidate molecules are Cryptochromes, which are located in the bird's retina. This suggests that the magnetic sense in these birds may be linked to their visual system."
+    reference: "Lecture 7, Slide 51-52"
+    reasoning: "Slides 51 and 52 detail the radical-pair model, cryptochromes, and the retina as the location."
+
+  - id: 9
+    difficulty: "Medium"
+    type: "MCQ"
+    question: "Desert ants (Cataglyphis) are known to use multiple compasses. Which cue is used specifically to detect the polarization pattern of the sky, and where is this detected?"
+    options:
+      A: "The ventral rim area of the eye detecting wind direction."
+      B: "The dorsal rim area of the compound eye detecting polarized light."
+      C: "The antennae detecting magnetic field lines."
+      D: "The ocelli detecting the sun's position."
+    correct_answer: "B"
+    reference: "Lecture 7, Slide 28"
+    reasoning: "Slide 28 states that insects see polarization patterns in the Dorsal Rim Area of their compound eyes."
+
+  - id: 10
+    difficulty: "Medium"
+    type: "Open"
+    question: "According to Kramer's two-step 'Map-and-Compass' theory, what is the specific function of the 'Map' step?"
+    correct_answer: "The Map step is the process of computing one's current location relative to the goal (e.g., 'Where am I relative to home?'). This must be done before the Compass step, which determines the specific direction to travel."
+    reference: "Lecture 7, Slide 35"
+    reasoning: "Slide 35 defines the Map step as computing location and the Compass step as computing direction."
+
+  - id: 11
+    difficulty: "Easy"
+    type: "MCQ"
+    question: "Egyptian fruit bats show highly efficient commuting flights. Which of the following is NOT a characteristic of their navigation to specific fruit trees?"
+    options:
+      A: "Very straight flight paths (straightness index > 0.9)"
+      B: "High speed (up to 63 km/hr)"
+      C: "Random foraging until a tree is found by chance"
+      D: "Returning to the same individual tree night after night"
+    correct_answer: "C"
+    reference: "Lecture 7, Slide 10"
+    reasoning: "Slide 10 lists the characteristics, including very straight flights and returning to the same tree, which contradicts random foraging."
+
+  - id: 12
+    difficulty: "Medium"
+    type: "Open"
+    question: "Describe the 'Mosaic Map' concept. How does it differ from a global Euclidean map?"
+    correct_answer: "A Mosaic Map is based on visual landmarks and involves 'self-triangulation.' It is 'piece-wise,' meaning the animal uses different sets of familiar landmarks in different locations to navigate, rather than having a single continuous coordinate system (Euclidean map) for the entire environment."
+    reference: "Lecture 7, Slide 56"
+    reasoning: "Slide 56 explains the Mosaic Map as piece-wise and based on visual landmarks."
+
+  - id: 13
+    difficulty: "Medium"
+    type: "MCQ"
+    question: "In the honeybee waggle dance, what determines whether a scout bee performs a 'Round dance' versus a 'Waggle dance'?"
+    options:
+      A: "The quality of the nectar (sugar concentration)"
+      B: "The distance to the feeder (less than or greater than ~50m)"
+      C: "the time of day"
+      D: "The presence of predators near the hive"
+    correct_answer: "B"
+    reference: "Lecture 7, Slide 39"
+    reasoning: "Slide 39 shows that the Round dance is for distances < 50m and the Waggle dance is for distances > 50m."
+
+  - id: 14
+    difficulty: "Hard"
+    type: "Open"
+    question: "Summarize the different types of information provided by the Earth's magnetic field that animals can use for navigation. Distinguish between 'Compass' and 'Map' information."
+    correct_answer: "The magnetic field provides 'Compass' information through directional headers (knowing North vs. South). It provides 'Map' (locational) information through: 1. Magnetic Inclination (providing latitude), 2. Magnetic Declination (providing longitude, especially near poles), and 3. Magnetic Anomalies (providing detailed local landmarks)."
+    reference: "Lecture 7, Slide 57-59"
+    reasoning: "Slides 57-59 discuss the geomagnetic field, inclination for latitude, declination for longitude, and anomalies for local maps."
+
+  - id: 15
+    difficulty: "Hard"
+    type: "Open"
+    question: "Synthesis: Why might evolution favor animals having multiple, redundant compass mechanisms (e.g., sun, stars, magnetic, wind)? Provide an example from the lecture where an animal switches cues."
+    correct_answer: "Redundant mechanisms ensure navigational success across different environmental conditions (e.g., day vs. night, clear vs. cloudy). For example, the desert ant (Slide 29) uses a sun or polarization compass when available, but switches to a wind compass when these celestial cues are obstructed."
+    reference: "Lecture 7, Slide 29, 53"
+    reasoning: "Slide 29 shows the ant switching to wind when celestial cues are missing, and Slide 53 summarizes the variety of compasses, implying their complementary nature."

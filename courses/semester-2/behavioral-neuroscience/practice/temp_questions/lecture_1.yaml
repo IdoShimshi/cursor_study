@@ -1,0 +1,161 @@
+lecture_name: "Lecture 1: Intro Animal Behavior"
+questions:
+  - id: 1
+    difficulty: "Easy"
+    type: "MCQ"
+    question: "Which of the following is NOT a characteristic of innate behavior?"
+    options:
+      A: "It is uniform and stereotyped across the species."
+      B: "It is modified by trial-and-error experience."
+      C: "It is functional the first time it is performed."
+      D: "It is triggered by a specific sign stimulus."
+    correct_answer: "B"
+    reference: "Lecture 1, Slide 26"
+    reasoning: "Innate behavior is inborn, stereotyped, and functional from the first performance. Behavior modified by trial-and-error experience is the definition of learned behavior (Slide 30)."
+
+  - id: 2
+    difficulty: "Medium"
+    type: "Open"
+    question: "Using the example of lion intimidation (mane size/color), briefly explain the difference between a proximate mechanism and an ultimate function according to Tinbergen’s four questions."
+    correct_answer: "Proximate mechanism refers to the 'how' (immediate cause): in lions, this includes visual signals like a big, dark mane and the physiological increase in testosterone that triggers the behavior. Ultimate function refers to the 'why' (evolutionary benefit): a dark mane provides reproductive information about strength, leading to better survival chances and increased attractiveness to females (sexual selection)."
+    reference: "Lecture 1, Slide 24"
+    reasoning: "Tinbergen's framework distinguishes between the immediate biological mechanisms (proximate) and the evolutionary advantages for survival and reproduction (ultimate)."
+
+  - id: 3
+    difficulty: "Easy"
+    type: "MCQ"
+    question: "The concept of 'Umwelt,' as proposed by Jakob von Uexküll, refers to:"
+    options:
+      A: "The objective physical environment surrounding an organism."
+      B: "The set of learned behaviors an animal acquires from its parents."
+      C: "The organism's species-specific model of the world based on its unique senses."
+      D: "The social hierarchy within a group of animals."
+    correct_answer: "C"
+    reference: "Lecture 1, Slide 16"
+    reasoning: "Umwelt describes how an animal perceives the world through its specific sensory systems (e.g., UV vision in bees vs. human vision)."
+
+  - id: 4
+    difficulty: "Hard"
+    type: "Open"
+    question: "Referring to the models shown on Lecture 1, Slide 49, explain why the male stickleback attacks the bottom four models but not the top one, despite the top one looking more like a realistic fish."
+    correct_answer: "The male stickleback’s aggressive behavior is a Fixed Action Pattern (FAP) triggered by a specific 'sign stimulus' or 'releaser,' which in this case is the red color on the ventral (bottom) side of the intruder. The top model, though realistic in shape, lacks the red belly and thus does not release the aggressive response. The bottom four models, while unrealistic in shape, all possess a red underside, which is sufficient to trigger the FAP."
+    reference: "Lecture 1, Slide 49"
+    reasoning: "This requires analyzing the diagram to understand that sign stimuli (releasers) are often specific features rather than the whole object."
+
+  - id: 5
+    difficulty: "Medium"
+    type: "MCQ"
+    question: "Which statement best describes a Fixed Action Pattern (FAP)?"
+    options:
+      A: "A flexible behavior that is refined every time it is performed."
+      B: "A behavior that, once initiated by a sign stimulus, is carried through to completion."
+      C: "A response to a neutral stimulus that weakens over time."
+      D: "A voluntary movement learned through positive reinforcement."
+    correct_answer: "B"
+    reference: "Lecture 1, Slide 42"
+    reasoning: "FAPs are highly stereotypic, triggered by external stimuli, and are characterized by their continuation to completion once started (e.g., egg-rolling in geese)."
+
+  - id: 6
+    difficulty: "Hard"
+    type: "Open"
+    question: "Distinguish between classical conditioning and operant conditioning in terms of the animal's role and the nature of the response."
+    correct_answer: "In classical conditioning (Pavlovian), the animal forms an unconscious association between two stimuli (e.g., bell and food), and the response is typically an involuntary reflex. In operant conditioning (Skinnerian), the response is voluntary; the animal must 'operate' on the environment (perform a behavior) to receive a reward or avoid punishment, thereby associating its own behavior with a consequence."
+    reference: "Lecture 1, Slide 75"
+    reasoning: "This focuses on the conceptual distinction between involuntary/reflexive learning and voluntary/consequence-based learning."
+
+  - id: 7
+    difficulty: "Medium"
+    type: "MCQ"
+    question: "A 'supernormal stimulus' is one that:"
+    options:
+      A: "Mimics a natural stimulus but produces no response."
+      B: "Is so weak that it fails to trigger a Fixed Action Pattern."
+      C: "Is an exaggerated version of a stimulus that elicits a stronger-than-normal response."
+      D: "Combines multiple sensory modalities to confuse the animal."
+    correct_answer: "C"
+    reference: "Lecture 1, Slide 46"
+    reasoning: "An exaggerated stimulus (like a giant egg for a goose) can elicit a stronger response than the natural stimulus because it exploits the underlying evolutionary preference (larger eggs often mean healthier chicks)."
+
+  - id: 8
+    difficulty: "Hard"
+    type: "Open"
+    question: "Referring to the graph on Lecture 1, Slide 99, compare the amplitude of the Middle Latency Response (MLR) in the blind mole rat when exposed to auditory versus seismic stimuli. What does this indicate about their sensory adaptation?"
+    correct_answer: "The graph shows that the amplitude of the MLR is significantly higher (higher peaks) in response to seismic signals compared to auditory (air-borne) signals. This indicates that the blind mole rat's auditory system has adapted to prioritize seismic vibrations, which are detected via bone conduction through the lower jaw, reflecting its specialized niche in underground communication."
+    reference: "Lecture 1, Slide 99"
+    reasoning: "This requires quantitative interpretation of the MLR graph to support the conceptual point about sensory adaptation (neuroethology)."
+
+  - id: 9
+    difficulty: "Medium"
+    type: "MCQ"
+    question: "Which of the following is a key characteristic of imprinting behavior as studied by Konrad Lorenz?"
+    options:
+      A: "It can occur at any point during an animal's adult life."
+      B: "It is easily reversed if the animal is exposed to a different model later."
+      C: "It occurs during a specific 'critical period' early in life and is typically irreversible."
+      D: "It is entirely learned and has no innate component."
+    correct_answer: "C"
+    reference: "Lecture 1, Slide 56"
+    reasoning: "Imprinting is a hybrid of innate and learned behavior: the tendency to imprint is innate, but the object is learned during a sensitive critical period, resulting in a permanent bond."
+
+  - id: 10
+    difficulty: "Medium"
+    type: "Open"
+    question: "Explain Amotz Zahavi’s 'Handicap Principle' (Costly Signaling Theory) and how it relates to the evolution of seemingly disadvantageous traits like the peacock’s tail."
+    correct_answer: "The Handicap Principle suggests that traits which are costly to develop and maintain (like a large, heavy, and bright peacock tail) act as 'honest signals' of high genetic quality. Because only a very fit and healthy male can afford the 'handicap' of such a trait and still survive, females use these signals to evaluate the quality of potential mates during sexual selection."
+    reference: "Lecture 1, Slide 9"
+    reasoning: "This explains why natural selection doesn't eliminate costly traits if they provide a significant advantage in sexual selection."
+
+  - id: 11
+    difficulty: "Easy"
+    type: "MCQ"
+    question: "Neuroethology is best defined as the study of:"
+    options:
+      A: "Animal behavior strictly in controlled laboratory settings."
+      B: "The evolution of human psychology from animal ancestors."
+      C: "The neural basis of natural animal behavior in its ecological context."
+      D: "The genetic mutations that lead to behavioral disorders."
+    correct_answer: "C"
+    reference: "Lecture 1, Slide 91"
+    reasoning: "Neuroethology combines ethology (natural behavior) and neuroscience to understand how the brain controls behavior in context."
+
+  - id: 12
+    difficulty: "Hard"
+    type: "Open"
+    question: "Referring to the somatosensory cortex maps on Lecture 1, Slide 102, how does the cortical representation of the star-nosed mole differ from that of the mouse, and how does this relate to their respective Umwelts?"
+    correct_answer: "The cortical map of the star-nosed mole shows a massively enlarged representation of its 'star' (nasal appendages) compared to other body parts, whereas the mouse map shows a more prominent representation of its whiskers (mystacial vibrissae). This reflects their different Umwelts: the star-nosed mole relies almost exclusively on the tactile input from its star to navigate and hunt in the dark, while the mouse relies heavily on its whiskers for spatial sensing."
+    reference: "Lecture 1, Slide 102"
+    reasoning: "This requires analyzing the cortical maps to see how brain space is allocated to the most important sensory organs for each species' survival."
+
+  - id: 13
+    difficulty: "Medium"
+    type: "MCQ"
+    question: "According to the research on voles, what is the primary neurobiological difference associated with monogamous vs. polygamous social behavior?"
+    options:
+      A: "Prairie voles have higher levels of testosterone than Montane voles."
+      B: "Prairie voles (monogamous) show a different distribution/density of vasopressin receptors (V1aR) in the brain compared to Montane voles (polygamous)."
+      C: "Montane voles have a larger somatosensory cortex."
+      D: "Prairie voles have more complex visual systems for mate recognition."
+    correct_answer: "B"
+    reference: "Lecture 1, Slide 109, 110"
+    reasoning: "Social behavior differences (monogamy vs polygamy) are linked to differences in the expression and distribution of V1aR (vasopressin receptors) in specific brain regions."
+
+  - id: 14
+    difficulty: "Medium"
+    type: "Open"
+    question: "Can learned experiences override innate behaviors? Provide an example from the lecture involving mice."
+    correct_answer: "Yes, learning can refine or even override innate programs. An example is the experiment where male mice, who have an innate attraction to female pheromones, were subjected to classical conditioning where the female odor was associated with nausea (LiCl injection). This negative conditioning resulted in 'conditioned odor aversion,' causing the mice to avoid the females despite their initial innate drive."
+    reference: "Lecture 1, Slide 71-73"
+    reasoning: "This demonstrates the plasticity of behavior and the interaction between hardwired circuits and learning."
+
+  - id: 15
+    difficulty: "Easy"
+    type: "MCQ"
+    question: "In the context of evolutionary causes of behavior, 'fitness' is defined as:"
+    options:
+      A: "The physical strength and speed of an individual."
+      B: "The ability to learn complex tasks quickly."
+      C: "The ability of an individual to survive and reproduce, passing on its genes."
+      D: "The rank of an animal within its social group."
+    correct_answer: "C"
+    reference: "Lecture 1, Slide 5"
+    reasoning: "Fitness is the ultimate measure of evolutionary success, combining survival and reproductive output."

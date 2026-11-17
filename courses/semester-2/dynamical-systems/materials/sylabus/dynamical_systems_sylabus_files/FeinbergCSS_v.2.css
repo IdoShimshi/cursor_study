@@ -1,0 +1,959 @@
+/* **
+ * For Applications:
+ * 361 -> 186
+ * 367 -> 199
+ */
+
+@import url('//fonts.googleapis.com/css?family=Roboto:100,400,600');
+@import url('//fonts.googleapis.com/css?family=PT+Sans');
+
+body {
+	background-color: #fff;
+	-webkit-font-smoothing: subpixel-antialiased;
+	font-size: 100%;
+	font-family: "Roboto", Arial;
+}
+/* Header area */
+header#uHeader {
+	width:  1000px;
+	height: 100%;
+	margin: 0px auto;
+    background-color: #000 !important;
+    background-image: none;
+}
+header#uHeader .apex_grid_container {
+    position: static;
+    width: 100%;
+}
+header#uHeader .apex_grid_container .apex_cols {
+    float: none;
+    display: block;
+    margin-left: 0px;
+    margin-right: 0px;
+
+    width: 100%;
+}
+header#uHeader nav {
+	background-color: #000 !important;
+	background-image: none !important;
+	border: 0;
+}
+div.mobile_nav {
+	display: none;
+}
+header#uHeader nav ul.uMainNav li a {
+    text-shadow: 0 0px 0 transparent;
+    font-family: "Roboto",Arial;
+    font-weight: 400;
+    line-height: 40px;
+    letter-spacing: 0.27px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    font-size: 15px;
+}
+header#uHeader nav ul.uMainNav li a:hover,
+header#uHeader nav ul.uMainNav li a:focus {
+	background: #000000;
+	text-decoration: underline;
+}
+header#uHeader nav ul.uMainNav li a.active {
+    background: #1698d8;
+    -webkit-box-shadow: 0 1px 0 rgba(255,255,255,0.25) inset;
+    -moz-box-shadow: 0 1px 0 rgba(255,255,255,0.25) inset;
+    box-shadow: 0 0 0 transparent;
+    color: #000000;
+    border-bottom: none;
+}
+.weizmann_logo {
+    width: 200px;
+    margin-top: 5px;
+    margin-left: 53px;
+}
+.weizmann_logo img {
+	width: 100%;
+}
+header#uHeader div.logoBar a#uLogo:focus,
+header#uHeader .Feinberg_title a:focus {
+	outline: 1px dotted #fff;
+}
+.Feinberg_title {
+    color: #ffffff;
+    font-size: 50px;
+	background: url(https://erez.weizmann.ac.il/UI/weiz_img/feinberg_banner.jpg) no-repeat;
+	background-size: cover;
+    height: 286px;
+}
+.Feinberg_title .title {
+	float: left;
+    position: absolute;
+    margin-top: 53px;
+    margin-left: 53px;
+}
+.Feinberg_title .title a {
+    color: #fff;
+    text-decoration: none;
+    font-family: "Roboto",Arial;
+    font-size: 30px;
+    font-weight: 100;
+    color: #ffffff;
+    background-color: rgba(0,0,0,0.58);
+    display: block;
+    padding: 0 10px 10px;
+}
+.Feinberg_title .title span.large.bold {
+    font-size: 60px;
+    font-weight: 700;
+    display: block;
+    line-height: 72px;
+}
+.userBlock{
+	display: none !important
+}
+.uBreadcrumbsContainer {
+	display: none;
+}
+/* Body area */
+
+div#uBodyContainer {
+	max-width: 1000px;
+	margin: 0px auto;
+}
+div#uBodyContainer .apex_grid_container,
+div#uBodyContainer .apex_grid_container .apex_cols {
+    width: 100%;
+}
+div#uBodyContainer .apex_grid_container .apex_cols {
+	margin: 0 0 0 0;
+}
+div#uBodyContainer .apex_grid_container .apex_cols.apex_span_5.alpha {
+    margin-bottom: 10px;
+}
+div#uBodyContainer section.uRegion {
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    -webkit-box-shadow: 0 0 0 transparent;
+    -moz-box-shadow: 0 0 0 transparent;
+    box-shadow: 0 0 0 transparent;
+    border: 1px solid #AAA;
+    background-color: #FFF;
+    color: #333;
+    margin: 0 0 -1px 0;
+    border-top: 0px;
+    border-bottom: 0px;
+    font-family: "Roboto", Arial;
+}
+div#uBodyContainer section.uRegion.firstRegion {
+	-webkit-border-top-left-radius: 5px;
+	-webkit-border-top-right-radius: 5px;
+	-moz-border-radius-topleft: 5px;
+	-moz-border-radius-topright: 5px;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+    border-top: 1px solid #AAA;
+}
+div#uBodyContainer section.uRegion.uButtonRegion{
+	-webkit-border-bottom-right-radius: 5px;
+	-webkit-border-bottom-left-radius: 5px;
+	-moz-border-radius-bottomright: 5px;
+	-moz-border-radius-bottomleft: 5px;
+	border-bottom-right-radius: 5px;
+	border-bottom-left-radius: 5px;
+    border-bottom: 1px solid #AAA;
+}
+div#uBodyContainer section.OneSection {
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    margin: 10px 0px;
+    border: 1px solid #aaa;
+}
+section.uRegion>div.uRegionHeading {
+	display: block;
+	width: auto;
+	padding: 8px;
+    background-image: none;
+    border-bottom: 0px;
+    -webkit-box-shadow: 0 0 0 transparent;
+    -moz-box-shadow: 0 0 0 transparent;
+    box-shadow: 0 0 0 transparent;
+    background-color: #fff;
+}
+section.uRegion>div.uRegionHeading h1, .TairH1 {
+    display: inline-block;
+    vertical-align: initial;
+    font: 400 30px/30px "Roboto",Arial,sans-serif;
+    text-shadow: 0 0 0 transparent;
+    padding: 0 0 0 0px;
+    color: #2C3E50;
+    border-bottom: 3px Solid #FFC709;
+    margin-bottom: 10px;
+}
+section.uButtonRegion {
+	background: #fff !important;
+	border-top: 0px;
+}
+section.uButtonRegion div.uButtonRegionContentContainer span.uButtonContainer {
+	display: block;
+}
+section.uButtonRegion button.uButton, .TairButton {
+    background: #0077A0;
+    border: 0px;
+    padding: 5px 10px;
+    color: white !important;
+    cursor: pointer;
+}
+a.TairButton {
+	margin-left: 10px;
+    /* height: 10px; */
+    padding-top: 3px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	text-decoration: none;
+}
+section.uButtonRegion button.uButton:hover,
+section.uButtonRegion button.uButton:focus,
+.TairButton:hover, .TairButton:focus {
+	background: #005f7e !important;
+}
+section.uButtonRegion button.uButton span, section.uButtonRegion .uButtonLarge span, section.uButtonRegion .uButton.uHotButton span, section.uButtonRegion .uHotButton.uButtonLarge span, .TairButton span {
+    background: transparent !important;
+    color: white;
+    text-shadow: 0 0 0 transparent;
+    font-family: "Roboto",Arial;
+    font-size: 16px;
+    -webkit-box-shadow: 0 0px 0 rgba(255,255,255,0.75) inset;
+    -moz-box-shadow: 0 0px 0 rgba(255,255,255,0.75) inset;
+    box-shadow: 0 0px 0 rgba(255,255,255,0.75) inset;
+}
+section.uButtonRegion div.uButtonRegionContentContainer div.uButtonRegionContent {
+    display: block;
+    padding: 8px;
+}
+div.fieldContainer>label {
+	font: normal 14px/20px "Roboto",Arial,sans-serif;
+	color: #586674;
+}
+div.fieldContainer>label.uRequired {
+	font-weight: 400;
+    text-shadow: 0 0 0 transparent;
+    color: #000;
+}
+section.uRegion input.text_field, section.uRegion select.selectlist, section.uRegion input.password, section.uRegion input[type="text"], section.uRegion input[type="password"], section.uRegion textarea, table.uReport input.text_field, table.uReport select.selectlist, table.uReport input.password, table.uReport input[type="text"], table.uReport input[type="password"], table.uReport textarea, div.fieldContainer input.text_field, div.fieldContainer select.selectlist, div.fieldContainer input.password, div.fieldContainer input[type="text"], div.fieldContainer input[type="password"], div.fieldContainer textarea {
+	font-family: "Roboto", Arial,sans-serif;
+    font-size: 14px;
+    width: 230px;
+}
+section.uRegion input[maxlength="6"] {
+	width: 90px;
+}
+h2.H2_access {
+	font-size: 24px;
+    margin-bottom: 5px;
+    line-height: 30px;
+    color: #349baf;
+    font-family: "Roboto",Arial;
+    font-weight: 400;
+    letter-spacing: 0.43px;
+}
+
+h3.H3_access {
+    color: #349baf;
+    font-family: "Roboto", Arial;
+    font-weight: 400;
+    font-size: 20px;
+    margin: 10px 0;
+    line-height: 25px;
+}
+div.red {
+	color: red;
+	padding-bottom: 10px;
+    font-family: "Roboto",Arial;
+    font-size: 14px;
+}
+
+div.text {
+    margin-bottom: 15px;
+}
+.darkblue {
+	color: #00008B !important;
+}
+.bold {
+	font-weight: 700 !important;
+}
+.red { color: red; }
+table.CreateTable {
+    border: 1px solid #AAA;
+    text-align: left;
+    border-collapse: collapse;
+    border-spacing: 0 0;
+}
+table.CreateTable td, table.CreateTable th {
+    padding: 8px !important;
+    line-height: 20px !important;
+    border: 1px solid #AAA !important;
+    text-align: left;
+    font-size: 15px;
+    min-width: 130px;
+}
+table.CreateTable thead th {
+    background: #F2F2F2;
+    color: /*#3FA9F5 */ #0969ad;
+    text-shadow: 0 0 0 transparent;
+    font-weight: 600;
+}
+table.CreateTable div.fieldContainer {margin: 0 0 0 0;}
+table.CreateTable div.fieldContainer.horizontal div.fieldControls {
+    margin-left: 0px;
+}
+table.CreateTable div.fieldContainer.horizontal>label {
+    width: auto;
+    padding: 0 0 0 0;
+}
+/* Ph.D. Application-Submitted */
+.Paragraph {
+    font-family: "Roboto",Arial;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+.Paragraph ol {
+    margin: 10px 0px;
+    padding-left: 15px;
+}
+.Paragraph ol li {
+    padding-top: 5px;
+}
+.paragraphSection div.fieldContainer.horizontal div.fieldControls {
+    margin-left: 0px;
+}
+.sectionStyle {
+    /* -webkit-box-shadow: 0 0 0 transparent; */
+    -moz-box-shadow: 0 0 0 transparent;
+    box-shadow: 0 0 0 transparent;
+    border: 1px solid #AAA;
+    background-color: #FFF;
+    color: #333;
+    border-top: 0px;
+    border-bottom: 0px;
+    font-family: "Roboto", Arial;
+    padding: 15px 10px 0px;
+}
+.sectionStyle ul, ul {
+    MARGIN-LEFT: 20PX;
+}
+.sectionStyle ul li, ul li{
+	padding-bottom: 5px;
+}
+section.uMessageRegion div.uMessageText {
+    margin: 0 40px;
+}
+section.uMessageRegion div.uRegionContent ul.htmldbUlErr {
+    margin: 4px 15px;
+}
+span.display_only {
+	font-size: 14px !important;
+	font-family: 'Roboto', Arial, sans-serif !important;
+}
+
+/* HebPosition Pages */
+
+header#uHeader.HebPosition{
+	direction: ltr;
+}
+div#uBodyContainer.HebPosition {
+	direction: rtl;
+	text-align: right;
+}
+.HebPosition div.fieldContainer.horizontal>label {
+	float: right;
+	padding-right: 0px;
+	padding-left: 8px;
+}
+.HebPosition .ui-datepicker-trigger {
+    margin: 4px 2px 0 0;
+}
+.HebPosition .calculator a, .HebPosition .colorpicker a, .HebPosition .lov a, .HebPosition .datepicker a {
+    margin: 0 2px 0 0px;
+}
+.HebPosition .rightlabels .fieldControls /* for :359:1*/ {
+/*	direction: ltr;
+	float: right;*/
+}
+
+/* Fix Phone fields */
+
+div.PhoneNo {
+    display: inline;
+    float: right;
+    width: 375px;
+}
+.EnglishDisplay div.PhoneNo, .EnglishDisplay div.PhonePrefix {float: left;}
+div.PhoneNo div.fieldControls {
+    margin-left: 0px !important;
+    float: right;
+}
+.EnglishDisplay div.PhoneNo div.fieldControls { float: left;}
+div.PhoneNo div.fieldControls input.text_field  {
+	width: 146px;
+}
+
+div.PhonePrefix {
+    display: inline-block;
+    width: 97px;
+}
+div.PhonePrefix>label {
+    width: 10px !important;
+    text-align: center;
+    padding: 3px 8px !important;
+}
+.EnglishDisplay div.PhonePrefix>label {
+    width: auto !important;
+    text-align: left;
+    padding: 3px 8px 3px 0px !important;
+}
+.EnglishDisplay div.PhonePrefix {
+	width: 292px !important;
+}
+
+.EnglishDisplay div.PhoneNo>label {
+    width: 10px !important;
+}
+.EnglishDisplay div.PhoneNo>label {
+    text-align: center;
+    padding: 3px 8px 3px 8px;
+}
+.HebPosition div.PhonePrefix div.fieldControls {
+    margin-left: 0px !important;	
+}
+.HebPosition div.PhonePrefix select.selectlist, .EnglishDisplay div.PhonePrefix select.selectlist {
+    width: 56px;
+}
+
+
+/* Collapsible */
+
+section.TairCollapsible {
+	padding: 0 0 5px 0;
+}
+section.TairCollapsible a.uRegionControl {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+}
+section.TairCollapsible a.uRegionControl img {
+	width: 16px !important;
+	height:16px !important;
+}
+section.TairCollapsible a.uRegionControl img {
+    background-position: -62px -190px;
+}
+section.TairCollapsible a.uRegionControl.uRegionCollapsed img {
+    background-position: -22px -191px;
+}
+.HebPosition section.TairCollapsible a.uRegionControl.uRegionCollapsed img {
+    background-position: -44px -191px;
+}
+section.TairCollapsible h3.H3_access {
+    border: 1px solid #aaa;
+    padding: 5px;
+    margin: 0 0 0 0;
+    background-size: 100%;
+    background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #fafafa), color-stop(50%, #f0f0f0), color-stop(100%, #eaeaea));
+    background-image: -webkit-linear-gradient(top, #fafafa 0%,#f0f0f0 50%,#eaeaea 100%);
+    background-image: -moz-linear-gradient(top, #fafafa 0%,#f0f0f0 50%,#eaeaea 100%);
+    background-image: linear-gradient(top, #fafafa 0%,#f0f0f0 50%,#eaeaea 100%);
+}
+section.TairCollapsible div.uRegionHeading {
+	padding-bottom: 1px;
+}
+section.TairCollapsible div.uRegionContent {
+	margin: -2px 8px 8px;
+	padding: 25px 10px;
+	border: 1px solid #aaa;
+}
+section.TairCollapsible h4.H4_access {
+    margin: 15px 0px;
+    font-weight: 600;
+}
+.contactUS {
+    
+    font-size: 13px;
+    line-height: 20px;
+}
+.contactUS .marginned {
+	margin: 10px auto;
+	width: 1000px;
+}
+
+/* v.2 Changes */
+
+div.uParentTabs {
+	display: none;
+}
+table.uReportAlternative, table.uReportStandard {
+    border: 1px solid #aaa;
+}
+table.uReportAlternative thead>tr>th,
+table.uReportStandard    thead>tr>th {
+    border: 1px solid #AAA;
+    padding: 8px;
+    background-color: #f2f2f2;
+    background-image: none;
+    color: #0969ad;
+    font-size: 15px;
+    line-height: 18px;
+    font-family: "Roboto",arial, sans-serif;
+    width: 12.5%;
+    text-align: left;
+}
+table.uReportAlternative thead>tr>th[align='center'],
+table.uReportStandard    thead>tr>th[align='center'] {
+	text-align: center;
+}
+table.uReportAlternative>tbody>tr>td,
+table.uReportStandard tbody>tr>td {
+    border-bottom: 1px solid #AAA;
+    padding: 10px 10px;
+    font: normal 14px/18px "Roboto", Arial, sans-serif;
+}
+table.uReportContainer {
+	width: 100%;
+}
+table.uReportStandard {
+	width: 50%;
+	margin-bottom: 20px;
+}
+.New_successMessage {
+    position: relative;
+    z-index: 5;
+    background-color: #DBEEDB;
+    margin-bottom: 15px;
+}
+
+section.h2-element-invisible h2.H2_access,
+body.CourseDetails h1 span.element-invisible {
+	width: 1px;
+	height:1px;
+	overflow:hidden;
+	display: inline-block;
+}
+body.CourseDetails h2.H2_access {
+	font-size: 18px;
+	margin-bottom: 0px;
+}
+body.CourseDetails /*section.bold*/div.fieldContainer.horizontal span.display_only {
+	font-weight: bold;
+	color: #586674;
+}
+body.CourseDetails div.fieldContainer.horizontal>label {
+	padding: 0px 8px 0 0;
+}
+body.CourseDetails div.fieldContainer {
+    margin: 0 0 5px 0;
+}
+body.CourseDetails section.uRegion>div.uRegionContent {
+	padding-top: 0px;
+}
+body.CourseDetails section.uRegion>div.uRegionHeading {
+	padding-top: 12px;
+	padding-bottom:0px;
+}
+body.CourseDetails section.uRegion>div.uRegionHeading h1 {
+    margin-bottom: 20px;
+    font-size: 22px;
+}
+body.CourseDetails section.uRegion.firstRegion>div.uRegionContent {
+	display: none;
+}
+body.CourseDetails ol {
+    margin: 0 0 0 20px !important;
+}
+body.CourseDetails ol>br, body.CourseDetails ul>br,
+body.CourseDetails ol li>br:nth-child(1), body.CourseDetails ul li>br:nth-child(1),
+body.CourseDetails ol li>br:nth-child(2n), body.CourseDetails ul li>br:nth-child(2n){
+	display: none;
+}
+body.CourseDetails ol li, body.CourseDetails ul li {
+	padding-bottom: 10px;
+}
+
+body.WomenInScience header#uHeader {
+	background-color: rgba(0,0,0,0)!important;
+	width: 1300px;
+}
+body.WomenInScience div#uBodyContainer {
+	max-width: 1300px;
+}
+body.WomenInScience .weizmann_logo {
+	padding-top: 12px;
+    padding-left: 100px;
+    margin: 0 0 0 0;
+    width: auto;
+}
+.WomenInScience_title {
+	font-family: 'PT Sans Narrow', sans-serif;
+    font-size: 55px;
+    line-height: 62px;
+    letter-spacing: 0.49px;
+    color: #FD7122;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: 20px 0 10px 100px;
+}
+.WomenInScience_title span {
+    margin-right: 10px;
+    font-weight: 400;
+}
+body.WomenInScience section.uRegion>div.uRegionHeading h1 {
+    font-size: 27px;
+    line-height: 31px;
+    color: #FD7122;
+    border-bottom: 0;
+}
+
+
+
+/* End v.2 changes */
+@media screen and (min-width: 1900px) {
+}
+@media screen and (max-width: 1899px) and (min-width: 1420px) {
+  .HebPosition div.PhoneNo {
+    width: 343px;
+  }
+  .EnglishDisplay div.PhonePrefix {
+	  width: 252px !important;
+  }
+}
+@media screen and (max-width: 1419px) and (min-width: 1025px) {
+  .HebPosition div.PhoneNo {
+    width: 300px;
+  }
+  .EnglishDisplay div.PhonePrefix {
+    width: 214px !important;
+  }
+}
+@media screen and (max-width: 1024px) and (min-width: 960px) {
+  .HebPosition div.PhoneNo {
+    width: 283px;
+  }
+  .EnglishDisplay div.PhonePrefix {
+    width: 186px !important;
+  }
+}
+@media screen and (max-width: 1659px) and (min-width: 960px){
+  .contactUS .marginned {
+    margin: 10px auto;
+    width: auto;
+    padding: 0px 10px;
+  }
+}
+
+/* 768 < Screen < 959px */
+
+@media screen and (max-width: 959px) and (min-width: 768px) {
+  header#uHeader {
+    width: auto;
+  }
+  header#uHeader .apex_grid_container {
+    padding: 0 0 0 0;
+  }
+  .Feinberg_title {
+    height: 220px;
+    /*background-size: contain;*/
+  }
+  .Feinberg_title .title {
+    margin-left: 24px;
+  }
+  section.uRegion[class*='Table']>div.uRegionContent {
+  	overflow: scroll;
+  }
+  .HebPosition div.PhoneNo {
+    width: 283px;
+  }
+  .contactUS .marginned {
+    margin: 10px auto;
+    width: auto;
+    padding: 0px 10px;
+  }
+  .EnglishDisplay div.PhonePrefix {
+    width: 186px !important;
+  }
+  div[id*='_catch'] {
+	overflow-x: scroll;
+  }
+  body.WomenInScience .weizmann_logo {
+    width: 300px;
+    padding: 0 10px;
+  }
+  .WomenInScience_title {
+    font-size: 25px;
+    line-height: 30px;
+    margin: 20px 10px;
+  }
+  .WomenInScience_title span {
+  	display: block;
+  }
+}
+
+/* 480 < Screen < 767px */
+
+@media screen and (max-width: 767px) and (min-width: 480px) {
+  header#uHeader {
+    width: auto;
+  }
+  header#uHeader .apex_grid_container {
+    padding: 0 0 0 0;
+  }
+  .weizmann_logo {
+    width: 200px;
+    /* margin-top: 5px; */
+    margin-left: 0px;
+    margin: 5px auto;
+  }
+  .Feinberg_title {
+    background-size: contain;
+    height: 240px;
+  }
+  .Feinberg_title .title {
+	margin-top: 175px;;
+	margin-left: 0px;
+	position: static;
+    width: 100%;
+  }
+  .Feinberg_title .title a {
+    background-color: rgba(0,0,0,1);
+    text-align: center;
+  }
+  div#uBodyContainer .apex_grid_container:first-child {
+  	width: auto;
+  }
+  section.uRegion[class*='Table']>div.uRegionContent {
+  	overflow: scroll;
+  }
+  div.fieldContainer div.fieldControls input.hasDatepicker {
+  	width: 90%;
+  }
+  div.fieldContainer fieldset.lov {
+  	width: 80%;
+  }
+  .HebPosition div.fieldContainer.horizontal>label {
+  	float: none;
+  	text-align: right !important;
+  }
+  div.fieldContainer.horizontal>label br {
+  	display: none;
+  }
+  div.PhoneNo {
+  	width: 150px;
+  }
+  div.PhonePrefix>label {
+    width: 10px !important;
+    padding: 4px 5px !important;
+    text-align: center !important;
+    float: right !important;
+  }
+  div.PhonePrefix {
+    width: 120px;
+    margin-top: 26px;
+  }
+  div.PhonePrefix select{
+  	width: 50px !important;
+  }
+  .contactUS .marginned {
+    margin: 10px auto;
+    width: auto;
+    padding: 0px 10px;
+  }
+  .EnglishDisplay {
+  	height: 65px;
+  }
+  .EnglishDisplay div.PhonePrefix>label {
+    float: none !important;
+    position: relative;
+    width: 112px!important;
+   }
+  .EnglishDisplay div.PhonePrefix {
+    width: 50px !important;
+    margin-top: 0px;
+  }
+  .EnglishDisplay div.PhoneNo {
+    width: 175px;
+    margin-top: 28px;
+  }
+  .EnglishDisplay div.PhoneNo>label {
+    width: 10px !important;
+    text-align: center !important;
+    float: left;
+    display: inline;
+  }
+  div.fieldContainer fieldset.lov table.lov input.popup_lov {
+  	width: 100% !important;
+  }
+  div[id*='_catch'] {
+	overflow-x: scroll;
+  }
+  table.uReportStandard {
+	width: 100%;
+  }
+  body.WomenInScience .weizmann_logo {
+    width: 300px;
+    padding: 0 10px;
+  }
+  .WomenInScience_title {
+    font-size: 25px;
+    line-height: 30px;
+    margin: 20px 10px;
+  }
+  .WomenInScience_title span {
+  	display: block;
+  }
+}
+
+/* Max 479px */
+
+@media only screen and (max-width: 479px){
+  header#uHeader {
+    width: auto;
+  }
+  header#uHeader .apex_grid_container {
+    padding: 0 0 0 0;
+  }
+  .weizmann_logo {
+    width: 200px;
+    /* margin-top: 5px; */
+    margin-left: 0px;
+    margin: 5px auto;
+  }
+  .Feinberg_title {
+  	background-size: contain;
+  	height: 200px;
+  }
+  .Feinberg_title .title {
+	margin-top: 91px;
+	margin-left: 0px;
+	position: static;
+    width: 100%;
+  }
+  .Feinberg_title .title a {
+    background-color: rgba(0,0,0,1);
+    text-align: center;
+  }
+  section.uRegion>div.uRegionHeading h1, .TairH1 {
+  	font-size: 20px;
+  }
+  div#uBodyContainer .apex_grid_container {
+    width: 308px;
+  }
+  section.uRegion[class*='Table']>div.uRegionContent {
+  	overflow: scroll;
+  }
+  .HebPosition div.fieldContainer.horizontal>label {
+  	float: none;
+  	text-align: right !important;
+  }
+  .HebPosition div.fieldContainer.horizontal>label br {
+  	display: none;
+  }
+  div.fieldContainer div.fieldControls input.hasDatepicker {
+  	width: 90%;
+  }
+  div.fieldContainer fieldset.lov {
+  	width: 97%;
+  }
+  .contactUS .marginned {
+    margin: 10px auto;
+    width: auto;
+    padding: 0px 10px;
+  }
+  section.TairCollapsible h3.H3_access {
+  	font-size: 16px;
+  }
+  .HebPosition div.PhoneNo {
+  	width: 150px;
+  }
+  .HebPosition div.PhonePrefix>label {
+    width: 10px !important;
+    padding: 4px 5px !important;
+    text-align: center !important;
+    float: right !important;
+  }
+  .HebPosition div.PhonePrefix {
+    width: 120px;
+    margin-top: 26px;
+  }
+  .HebPosition div.PhonePrefix select{
+  	width: 50px !important;
+  }
+  .EnglishDisplay {
+  	height: 65px;
+  }
+  .EnglishDisplay div.PhonePrefix>label {
+    float: none !important;
+    position: relative;
+    width: 112px!important;
+   }
+  .EnglishDisplay div.PhonePrefix {
+    width: 56px !important;
+    margin-top: 0px;
+  }
+  .EnglishDisplay div.PhoneNo {
+    width: 175px;
+    margin-top: 26px;
+  }
+  .EnglishDisplay div.PhoneNo>label {
+    width: 10px !important;
+    text-align: center !important;
+    float: left;
+    display: inline;
+  }
+  .EnglishDisplay div.PhonePrefix>label {
+    padding: 3px 0px !important;
+  }
+  div.fieldContainer fieldset.lov table.lov input.popup_lov {
+  	width: 100% !important;
+  }
+  div[id*='_catch'] {
+	overflow-x: scroll;
+  }
+  table.uReportStandard {
+	width: 100%;
+  }
+  div.mobile_nav {
+	display: block;
+  }
+  .mobile_nav .toggler {
+    color: white;
+    padding: 15px;
+    background: #000;
+    border: 0;
+    margin: 5px;
+  }
+  header#uHeader nav ul.uMainNav {
+  	height: auto;
+  	display: none;
+  }
+  header#uHeader nav ul.uMainNav.display {
+  	display: block;
+  }
+  header#uHeader nav div.apex_cols ul.uMainNav li {
+  	float: none;
+  	display: block !important;
+  }
+  header#uHeader nav ul.uMainNav li a {
+  	float: none;
+  }
+  body.WomenInScience .weizmann_logo {
+    width: 300px;
+    padding: 0 10px;
+  }
+  .WomenInScience_title {
+    font-size: 25px;
+    line-height: 30px;
+    margin: 20px 10px;
+  }
+  .WomenInScience_title span {
+  	display: block;
+  }
+}
+

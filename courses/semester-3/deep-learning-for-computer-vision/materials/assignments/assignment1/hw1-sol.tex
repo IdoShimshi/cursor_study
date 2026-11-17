@@ -1,0 +1,93 @@
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,bm}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{enumitem}
+\usepackage{hyperref}
+
+\title{HW1 -- Theory Solutions}
+\author{\textit{Your Name}}
+\date{\today}
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\transpose}{^{\mathsf T}}
+\newcommand{\loss}{\mathcal{L}}
+
+\begin{document}
+\maketitle
+
+\section*{1. Normal Equations}
+
+\begin{proof}
+At a minimizer, the gradient of $\loss$ with respect to $\bm{\theta}$ is zero. Using $h_{\bm{\theta}}(\bm{x}_i)=\bm{\theta}\transpose\bm{x}_i$,
+\begin{align*}
+\nabla_{\bm{\theta}}\loss
+&=\nabla_{\bm{\theta}}\left[\frac{1}{2M}\sum_{i=1}^{M}
+	(\bm{\theta}\transpose\bm{x}_i-y_i)^2\right] \\
+&=\frac{1}{M}\sum_{i=1}^{M}
+	(\bm{\theta}\transpose\bm{x}_i-y_i)\bm{x}_i \\
+&=\frac{1}{M}\bm{X}\transpose(\bm{X}\bm{\theta}-\bm{y}).
+\end{align*}
+Here, $\nabla_{\bm{\theta}}(\bm{\theta}\transpose\bm{x}_i-y_i)=\bm{x}_i$, since $\bm{x}_i$ and $y_i$ are fixed with respect to $\bm{\theta}$. Therefore,
+\[
+\bm{0}=\frac{1}{M}\bm{X}\transpose(\bm{X}\bm{\theta}-\bm{y})
+\quad\Longrightarrow\quad
+\bm{X}\transpose\bm{X}\bm{\theta}=\bm{X}\transpose\bm{y}.
+\]
+\end{proof}
+
+\section*{2. Unique Solution}
+
+\begin{proof}
+We prove both directions.
+
+\paragraph{If $\bm{X}$ has full column rank, the minimizer is unique.}
+Full column rank means that $\bm{X}\bm{v}=\bm{0}$ only when $\bm{v}=\bm{0}$. Thus, for every nonzero $\bm{v}$,
+\[
+ \bm{v}\transpose\bm{X}\transpose\bm{X}\bm{v}
+=(\bm{X}\bm{v})\transpose(\bm{X}\bm{v})
+=\lVert\bm{X}\bm{v}\rVert^2>0,
+\]
+so $\bm{X}\transpose\bm{X}$ is invertible. Let
+\[
+\bm{\theta}^{*}=(\bm{X}\transpose\bm{X})^{-1}\bm{X}\transpose\bm{y}.
+\]
+Then $\bm{X}\transpose(\bm{X}\bm{\theta}^{*}-\bm{y})=\bm{0}$, so $\bm{\theta}^{*}$ satisfies the normal equations. For any $\bm{\theta}$, write $\bm{d}=\bm{\theta}-\bm{\theta}^{*}$. Using $\lVert\bm{a}+\bm{b}\rVert^2=\lVert\bm{a}\rVert^2+2\bm{a}\transpose\bm{b}+\lVert\bm{b}\rVert^2$,
+\begin{align*}
+\loss(\bm{\theta})-\loss(\bm{\theta}^{*})
+&=\frac{1}{2M}\left(
+ \lVert\bm{X}\bm{\theta}^{*}-\bm{y}+\bm{X}\bm{d}\rVert^2
+ -\lVert\bm{X}\bm{\theta}^{*}-\bm{y}\rVert^2\right)\\
+&=\frac{1}{2M}\left(
+ \lVert\bm{X}\bm{\theta}^{*}-\bm{y}\rVert^2
+ +2(\bm{X}\bm{\theta}^{*}-\bm{y})\transpose\bm{X}\bm{d}
+ +\lVert\bm{X}\bm{d}\rVert^2
+ -\lVert\bm{X}\bm{\theta}^{*}-\bm{y}\rVert^2\right)\\
+&=\frac{1}{2M}\left(
+ 2(\bm{X}\bm{\theta}^{*}-\bm{y})\transpose\bm{X}\bm{d}
+ +\lVert\bm{X}\bm{d}\rVert^2
+\right)\\
+&=\frac{1}{2M}\lVert\bm{X}\bm{d}\rVert^2\geq 0.
+\end{align*}
+The remaining cross term is zero because
+\[
+(\bm{X}\bm{\theta}^{*}-\bm{y})\transpose\bm{X}\bm{d}
+=\bigl(\bm{X}\transpose(\bm{X}\bm{\theta}^{*}-\bm{y})\bigr)\transpose\bm{d}=0,
+\]
+Equality holds only if $\bm{X}\bm{d}=\bm{0}$, which by full column rank implies $\bm{d}=\bm{0}$. Therefore $\bm{\theta}^{*}$ is the unique minimizer.
+
+\paragraph{If the minimizer is unique, $\bm{X}$ has full column rank.}
+Suppose instead that $\bm{X}$ does not have full column rank. Then there is a nonzero vector $\bm{v}$ such that $\bm{X}\bm{v}=\bm{0}$. For a minimizer $\bm{\theta}^{*}$,
+\[
+ \loss(\bm{\theta}^{*}+\bm{v})
+=\frac{1}{2M}\lVert\bm{X}(\bm{\theta}^{*}+\bm{v})-\bm{y}\rVert^2
+=\frac{1}{2M}\lVert\bm{X}\bm{\theta}^{*}-\bm{y}\rVert^2
+=\loss(\bm{\theta}^{*}).
+\]
+Since $\bm{v}\neq\bm{0}$, this gives a different minimizer, contradicting uniqueness. Hence $\bm{X}$ must have full column rank.
+\end{proof}
+
+\end{document}

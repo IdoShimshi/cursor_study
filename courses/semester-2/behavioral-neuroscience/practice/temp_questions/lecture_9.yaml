@@ -1,0 +1,161 @@
+lecture_name: "Lecture 9: Neuroethology"
+questions:
+  - id: 1
+    difficulty: "Easy"
+    type: "MCQ"
+    question: "According to August Krogh’s principle, why should a researcher choose a specific animal species for their study?"
+    options:
+      A: "Because the species is a standard laboratory model"
+      B: "Because the species is the most convenient or 'created' for studying a specific biological problem"
+      C: "Because the species has the most complex nervous system"
+      D: "Because the species is easy to breed in large quantities"
+    correct_answer: "B"
+    reference: "Lecture 9, Slide 2"
+    reasoning: "Krogh's principle states that for many biological problems, there will be an 'animal of choice' on which it can be most conveniently studied, sometimes appearing as if it were 'created' for that specific physiological purpose."
+
+  - id: 2
+    difficulty: "Medium"
+    type: "Open"
+    question: "Compare the advantages of using 'standard animal models' (like mice or fruit flies) with the advantages of following Krogh’s Principle when choosing a research organism."
+    correct_answer: "Standard models benefit from a vast existing knowledge base and advanced molecular/genetic tools. Krogh's Principle allows researchers to choose a species that naturally excels at the behavior of interest or offers unique technical advantages (e.g., giant axons in squid), avoiding the limitations of a 'one-size-fits-all' approach and potentially discovering unique biological mechanisms."
+    reference: "Lecture 9, Slide 8"
+    reasoning: "Slide 8 discusses the trade-offs between the deep technical toolkit of standard models and the specialized biological fit of Krogh-inspired choices."
+
+  - id: 3
+    difficulty: "Hard"
+    type: "MCQ"
+    question: "Based on the comparative studies of hippocampal activity in rodents and bats, which of the following neural phenomena was found to be absent in bats despite being coupled with position coding in rodents?"
+    options:
+      A: "Neural synchronization"
+      B: "Spatial coding of position"
+      C: "Theta oscillations"
+      D: "Synaptic plasticity"
+    correct_answer: "C"
+    reference: "Lecture 9, Slide 13"
+    reasoning: "Slide 13 highlights that while synchronization and position coding are found in both species, theta oscillations (a hallmark of rodent hippocampus) are absent in the bat hippocampus, demonstrating that theta is not invariant across species."
+
+  - id: 4
+    difficulty: "Hard"
+    type: "Open"
+    question: "Explain why the prevalence of 'top-down' projections in the cortex serves as an argument for studying natural behaviors rather than reduced, stimulus-driven experimental setups."
+    correct_answer: "Top-down projections (from higher to lower cortical areas) are anatomically more massive than bottom-up projections. They carry signals related to expectation, attention, and prediction. In highly controlled or reductionist experiments, these natural top-down influences are often eliminated, leading to a potentially incomplete or distorted understanding of how the brain processes information in natural, complex environments."
+    reference: "Lecture 9, Slide 22-23"
+    reasoning: "The lecture emphasizes that massive top-down projections represent the brain's internal state and expectations, which are central to natural behavior but often ignored in 'passive' stimulus experiments."
+
+  - id: 5
+    difficulty: "Medium"
+    type: "MCQ"
+    question: "Why was the horseshoe crab (Limulus) retina specifically chosen as an ideal model for discovering lateral inhibition?"
+    options:
+      A: "It has a very high resolution similar to humans"
+      B: "Its compound eye has a simple circuitry with one output neuron per ommatidium and accessible individual nerve fibers"
+      C: "It was the only animal available to researchers at the Weizmann Institute"
+      D: "It uses chemical rather than electrical synapses for all visual processing"
+    correct_answer: "B"
+    reference: "Lecture 9, Slide 5"
+    reasoning: "Slide 5 explains that the long optic nerves and simple ommatidial structure allowed researchers to record from individual fibers and map the inhibitory connections easily."
+
+  - id: 6
+    difficulty: "Medium"
+    type: "Open"
+    question: "Describe how the process of laboratory mouse domestication has impacted the validity of using standard lab strains to study social behaviors like aggression."
+    correct_answer: "Domestication favored mice that were easy to handle and breed, which inadvertently selected against and eliminated intense aggressive behaviors. Wild female mice show much higher levels of aggression towards intruders than laboratory strains (e.g., C57BL/6), meaning lab strains may not be valid models for the full range of natural social interactions."
+    reference: "Lecture 9, Slide 15"
+    reasoning: "Slide 15 shows data comparing wild vs. lab female mice, highlighting how breeding for convenience removed natural behavioral traits."
+
+  - id: 7
+    difficulty: "Easy"
+    type: "MCQ"
+    question: "Neuroethology is best described as a field that seeks to understand the neural mechanisms of natural behavior by synthesizing which two disciplines?"
+    options:
+      A: "Neurobiology and Ethology"
+      B: "Psychology and Sociology"
+      C: "Anatomy and Physiology"
+      D: "Ecology and Physics"
+    correct_answer: "A"
+    reference: "Lecture 9, Slide 1"
+    reasoning: "The lecture defines neuroethology as the intersection of neurobiology (mechanisms) and ethology (natural behavior)."
+
+  - id: 8
+    difficulty: "Hard"
+    type: "Open"
+    question: "Define 'active sensing' and explain its significance in the context of natural neuroscience research."
+    correct_answer: "Active sensing is the process where an animal actively probes its environment (e.g., whisking, sniffing, echolocation) to acquire information. It is significant because sensory neurons respond differently to natural (active) stimulation than to passive stimulation. It demonstrates the reciprocal interaction between the brain and the world."
+    reference: "Lecture 9, Slide 20"
+    reasoning: "Slide 20 illustrates that the brain is not a passive receiver; motor actions (probing) are integral to how sensory information is processed."
+
+  - id: 9
+    difficulty: "Medium"
+    type: "MCQ"
+    question: "According to the lecture, what is the primary reason BALB/c mice might be considered a 'bad' model for studying anxiety?"
+    options:
+      A: "They are too aggressive to be tested in standard arenas"
+      B: "Their movement patterns, often interpreted as anxiety, differ fundamentally from wild mice and may not represent the intended emotional state"
+      C: "They lack the neural circuitry for fear"
+      D: "They are genetically identical to humans in their stress responses, making them too complex"
+    correct_answer: "B"
+    reference: "Lecture 9, Slide 16"
+    reasoning: "Slide 16 notes that movement differences between BALB/c and wild mice suggest that common lab interpretations of 'anxiety' behavior may be flawed."
+
+  - id: 10
+    difficulty: "Medium"
+    type: "Open"
+    question: "Analyze the diagram on Slide 26. Differentiate between 'Controlled but Unnatural' and 'Natural but Uncontrolled' behaviors, providing one example of each from the lecture."
+    correct_answer: "'Controlled but Unnatural' refers to experiments with high environmental control but artificial behavior (e.g., head-fixed self-stimulation). 'Natural but Uncontrolled' refers to authentic behavior in natural settings where variables are not regulated by the experimenter (e.g., lion group hunting or buffalo communal defense)."
+    reference: "Lecture 9, Slide 26"
+    reasoning: "This question requires synthesis of the quadrant diagram showing the spectrum from laboratory to field research."
+
+  - id: 11
+    difficulty: "Hard"
+    type: "MCQ"
+    question: "Looking at the connectivity chart on Slide 23, what is the primary takeaway regarding the anatomical organization of cortical projections?"
+    options:
+      A: "Bottom-up projections from the thalamus are more numerous than top-down projections"
+      B: "Top-down projections are generally much stronger and more massive than bottom-up projections"
+      C: "Projections only flow in one direction from V1 to higher areas"
+      D: "Cortical areas are only connected to their immediate neighbors"
+    correct_answer: "B"
+    reference: "Lecture 9, Slide 23"
+    reasoning: "The visual representation and text on slide 23 emphasize that top-down projections are massive compared to the relatively thin bottom-up streams."
+
+  - id: 12
+    difficulty: "Easy"
+    type: "Open"
+    question: "Define 'champion species' in the context of neuroethology and mention one criticism discussed in the lecture."
+    correct_answer: "A champion species is an animal that exhibits a specific behavior in an extreme or highly specialized way (e.g., bats for echolocation). A criticism is that results from such specialists may not generalize to other species or to human brain function."
+    reference: "Lecture 9, Slide 9"
+    reasoning: "Slide 9 discusses the focus on extreme species and the tension between specificity and generality in neuroethology."
+
+  - id: 13
+    difficulty: "Medium"
+    type: "MCQ"
+    question: "Which of the following is NOT listed in the lecture as a reason for studying natural behaviors to avoid artifacts?"
+    options:
+      A: "Reducing experimental stress"
+      B: "Avoiding the effects of overtraining on brain structure"
+      C: "Ensuring the animal's survival in the lab"
+      D: "Capturing top-down effects like attention and expectation"
+    correct_answer: "C"
+    reference: "Lecture 9, Slide 25"
+    reasoning: "Slide 25 lists stress, overtraining, and top-down effects, but 'survival in the lab' is not mentioned as a reason to diversify towards natural behavior."
+
+  - id: 14
+    difficulty: "Hard"
+    type: "Open"
+    question: "How does the comparative approach help in identifying 'invariant computational principles' versus 'unique specializations'?"
+    correct_answer: "By comparing neural mechanisms across species facing similar challenges (e.g., navigation), invariants are traits found in all (like spatial coding), while specializations are unique to one (like theta-coupling in rodents but not bats). This distinguishes core logic from implementation details."
+    reference: "Lecture 9, Slide 14"
+    reasoning: "Slide 14 explicitly links the comparative approach to identifying mechanisms that generalize versus those that are unique adaptations."
+
+  - id: 15
+    difficulty: "Easy"
+    type: "MCQ"
+    question: "Eric Kandel was awarded the Nobel Prize for his work on the neurobiology of learning and memory. Which animal did he use as his 'animal of choice' according to Krogh's Principle?"
+    options:
+      A: "Drosophila"
+      B: "Aplysia (Sea Slug)"
+      C: "C. elegans"
+      D: "Zebra Finch"
+    correct_answer: "B"
+    reference: "Lecture 9, Slide 6"
+    reasoning: "Slide 6 identifies Aplysia as Kandel's model of choice due to its large identified neurons and robust learning behaviors."

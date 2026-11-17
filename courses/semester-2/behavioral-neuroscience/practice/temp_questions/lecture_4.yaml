@@ -1,0 +1,161 @@
+lecture_name: "Lecture 4: Sensory Ecology"
+questions:
+  - id: 1
+    difficulty: "Easy"
+    type: "MCQ"
+    question: "What does the term 'Umwelt', as introduced by Jakob von Uexküll, refer to in the context of behavioral neuroscience?"
+    options:
+      A: "The physical environment of an organism as measured by scientific instruments."
+      B: "The internal physiological state of an organism."
+      C: "The sensory and behavioral world of a species from its own perspective."
+      D: "The total biomass of a species within a specific ecological niche."
+    correct_answer: "C"
+    reference: "Lecture 4, Slide 1"
+    reasoning: "Slide 1 defines Umwelt as 'the sensory world and the behavioral world of each species – from the perspective of the species.'"
+
+  - id: 2
+    difficulty: "Easy"
+    type: "Open"
+    question: "Define 'Sensory Ecology' and explain how it differs from the general study of ecology."
+    correct_answer: "Sensory Ecology is the study of how the physical environment affects the information available to an organism's sensory systems. While general ecology focuses on interactions between organisms and their environment (physical and biological), sensory ecology specifically investigates the physics of stimulus transmission and how it shapes sensory inputs."
+    reference: "Lecture 4, Slide 14"
+    reasoning: "Slide 14 explicitly defines Sensory Ecology and contrasts it with the broader definition of Ecology."
+
+  - id: 3
+    difficulty: "Medium"
+    type: "MCQ"
+    question: "According to the lecture, why is the border between 'innate' and 'learned' behaviors considered 'fuzzy'?"
+    options:
+      A: "Because most innate behaviors are actually learned in the womb."
+      B: "Because many innate behaviors are followed by a phase of refinement through practice and learning."
+      C: "Because the genetic basis for behaviors has not yet been fully mapped."
+      D: "Because isolated animals cannot develop any behaviors whatsoever."
+    correct_answer: "B"
+    reference: "Lecture 4, Slide 8"
+    reasoning: "Slide 8 states that some innate behaviors (which develop in isolation) are followed by learning, where the animal improves with practice, creating a continuum."
+
+  - id: 4
+    difficulty: "Medium"
+    type: "Open"
+    question: "Contrast the 'neuroethological approach' with the 'neuropsychological approach' in studying brain function. What are the primary strengths of each?"
+    correct_answer: "The neuroethological approach focuses on 'more natural' experiments, studying natural behaviors that the brain evolved to perform. Its strength is biological relevance. The neuropsychological approach focuses on 'better controlled' experiments, often using artificial tasks to isolate specific variables. Its strength is rigorous experimental control."
+    reference: "Lecture 4, Slide 12"
+    reasoning: "Slide 12 illustrates the continuum between these two approaches and their respective focuses."
+
+  - id: 5
+    difficulty: "Hard"
+    type: "MCQ"
+    question: "In three-dimensional space, the intensity (I) of a signal from a point source decreases as 1/R². However, under certain conditions, such as the Deep Sea Sound Channel shown on Slide 32, this spreading can become approximately two-dimensional. In such a 2D waveguide, how does the intensity (I) decrease relative to the distance (R)?"
+    options:
+      A: "I ~ 1/R"
+      B: "I ~ 1/R³"
+      C: "I ~ log(R)"
+      D: "Intensity remains constant (I ~ 1)"
+    correct_answer: "A"
+    reference: "Lecture 4, Slide 31-32"
+    reasoning: "Slide 31 explains that for 2D, waves spread as ~1/R instead of the usual ~1/R² geometric spreading."
+
+  - id: 6
+    difficulty: "Medium"
+    type: "MCQ"
+    question: "Based on the principles of reflection and scattering illustrated on Slide 25, why is 'Mirror Camouflage' an effective strategy for silvery fish in the ocean's midwater?"
+    options:
+      A: "Because the fish reflects the dark floor of the ocean, making it invisible from above."
+      B: "Because light scattering is uniform in azimuth at these depths, making the reflected light match the background light."
+      C: "Because the silvery scales absorb all incoming light, creating a silhouette."
+      D: "Because the fish can change its color to match the surrounding water perfectly."
+    correct_answer: "B"
+    reference: "Lecture 4, Slide 25"
+    reasoning: "Slide 25 states that scattering in the midwater is uniform in azimuth, allowing the reflected light to match the background light when using a mirror."
+
+  - id: 7
+    difficulty: "Medium"
+    type: "Open"
+    question: "Analyze the hunting behavior of the Archerfish as depicted on Slide 28. What physical property of wave propagation must the fish account for to successfully hit its prey, and why is this challenging?"
+    correct_answer: "The fish must account for refraction (Snell's Law). Because the fish is in the water and the prey is in the air, the light path bends at the water-air interface. This means the prey's apparent position differs from its actual physical position, requiring the fish to correct for this distortion in its aim."
+    reference: "Lecture 4, Slide 28"
+    reasoning: "Slide 28 highlights refraction and Snell's Law in the context of the Archerfish."
+
+  - id: 8
+    difficulty: "Hard"
+    type: "Open"
+    question: "How does the 'Deep Sea Sound Channel' (Slides 29-32) act as a waveguide for long-distance communication in whales, and what role does refraction play in its formation?"
+    correct_answer: "The channel is formed at a depth where the velocity of sound is minimal. Refraction causes sound waves to be bent back toward the region of lower velocity, effectively 'trapping' the sound in a horizontal layer. This creates a ~2D acoustic waveguide where geometric spreading is reduced (1/R instead of 1/R²), allowing sound to travel for thousands of kilometers."
+    reference: "Lecture 4, Slide 32"
+    reasoning: "Slides 29-32 detail the mechanism of the Deep Sea Sound Channel, including refraction and 1/R spreading."
+
+  - id: 9
+    difficulty: "Medium"
+    type: "MCQ"
+    question: "On Slide 33, a 'sound window' is described in the rainforest canopy. Which frequency range does this window utilize, and what ecological advantage does it provide to monkeys?"
+    options:
+      A: "20-50 kHz; for avoiding detection by bats."
+      B: "200-500 Hz; for long-distance vocalizations."
+      C: "5-10 kHz; for high-fidelity communication in dense brush."
+      D: "< 10 Hz; for infrasonic signaling between groups."
+    correct_answer: "B"
+    reference: "Lecture 4, Slide 33"
+    reasoning: "Slide 33 identifies the 'sound window' at 200-500 Hz and notes that many long-distance monkey vocalizations utilize it."
+
+  - id: 10
+    difficulty: "Hard"
+    type: "Open"
+    question: "Explain the physical basis of the 'polarization compass' in insects and identify the brain region where neurons tuned to light polarization are found."
+    correct_answer: "The polarization compass is based on the scattering of sunlight in the atmosphere (Rayleigh scattering), which polarizes light in a pattern perpendicular to the sun's direction. Even if only a patch of sky is visible, insects can compute the sun's direction. In locusts, neurons tuned to this polarization are found in the central complex."
+    reference: "Lecture 4, Slide 35"
+    reasoning: "Slide 35 explains scattering, polarization, and the role of the central complex."
+
+  - id: 11
+    difficulty: "Medium"
+    type: "MCQ"
+    question: "Why might an 'infotaxis' strategy be more effective than 'chemotaxis' for a moth searching for pheromones in a windy environment?"
+    options:
+      A: "Because wind creates a perfectly smooth gradient that chemotaxis can easily follow."
+      B: "Because wind creates turbulent flow, leading to intermittent and 'patchy' odor inputs rather than a continuous gradient."
+      C: "Because moths cannot detect odor concentrations accurately."
+      D: "Because pheromones are only detectable at distances of less than 1 meter."
+    correct_answer: "B"
+    reference: "Lecture 4, Slide 43"
+    reasoning: "Slide 43 explains that wind creates turbulent flow and intermittent input, making chemotaxis (gradient-following) difficult, whereas infotaxis is a strategy for olfactory search in such conditions."
+
+  - id: 12
+    difficulty: "Medium"
+    type: "Open"
+    question: "A major theme in the lecture is 'Natural Stimulus Statistics.' According to Slide 45, how successful are standard linear models (based on artificial stimuli) at predicting neuronal responses to natural sounds, and what does this imply for auditory neuroscience?"
+    correct_answer: "The prediction success is typically very low, around 10%. This implies that using only artificial sounds (like pure tones or white noise) has limited utility in understanding how the auditory system processes real-world, natural sounds. Neurons are non-linear and sensitive to history and spectral context, which are captured in natural stimulus statistics but not in simple artificial stimuli."
+    reference: "Lecture 4, Slide 45"
+    reasoning: "Slides 45 and 46 discuss the ~10% prediction success and the limitations of artificial stimuli."
+
+  - id: 13
+    difficulty: "Medium"
+    type: "MCQ"
+    question: "How does the concept of 'Active Sensing' challenge classical theories of vision?"
+    options:
+      A: "It suggests that vision is purely passive and happens only when the eyes are stationary."
+      B: "It proposes that eye movements like saccades and microsaccades are 'noise' that the brain must filter out."
+      C: "It suggests that vision actually works through eye movements, which are integral to perception rather than a problem to be solved."
+      D: "It claims that vision does not require light but is based on motor feedback."
+    correct_answer: "C"
+    reference: "Lecture 4, Slide 48"
+    reasoning: "Slide 48 states that saccades and microsaccades pose a problem for classical theories, while active-sensing theories suggest vision works through eye movements."
+
+  - id: 14
+    difficulty: "Hard"
+    type: "Open"
+    question: "Based on the experiments by Keller et al. (2012) described on Slide 51, what was the surprising finding regarding neurons in mouse primary visual cortex (V1) during locomotion in a virtual reality setup?"
+    correct_answer: "The surprising finding was that the majority of neurons in mouse V1 did not encode purely passive visual stimuli. Instead, many were 'Mismatch cells' that responded to congruence or incongruence (feedback-mismatch) between the visual input and the animal's own movements. This suggests V1 incorporates significant motor and non-visual information."
+    reference: "Lecture 4, Slide 51"
+    reasoning: "Slides 51-53 detail the Keller et al. finding about mismatch cells in V1."
+
+  - id: 15
+    difficulty: "Medium"
+    type: "MCQ"
+    question: "Analyze the diagram on Slide 57 regarding the 'Invariant Horizon Ratio.' If an object's top is cut by the horizon such that the ratio of the object above the horizon to below the horizon is 2:1, and your eye level is 1.6 meters, what is the estimated total height of the object?"
+    options:
+      A: "1.6 meters"
+      B: "3.2 meters"
+      C: "4.8 meters"
+      D: "5.0 meters"
+    correct_answer: "C"
+    reference: "Lecture 4, Slide 57"
+    reasoning: "The horizon cuts the object at the observer's eye height. If the ratio of above:below is 2:1, and the 'below' part (eye height) is 1.6m, then the 'above' part is 2 * 1.6 = 3.2m. Total height is 3.2 + 1.6 = 4.8m."

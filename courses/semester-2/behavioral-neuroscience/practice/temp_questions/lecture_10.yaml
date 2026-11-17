@@ -1,0 +1,161 @@
+lecture_name: "Lecture 10: Electric Fish"
+questions:
+  - id: 1
+    difficulty: "Medium"
+    type: "MCQ"
+    question: "What is the primary difference between active and passive electroreception as described in the lecture?"
+    options:
+      A: "Active electroreception is used for communication, while passive is used for navigation."
+      B: "Active electroreception involves sensing self-generated electric fields, while passive involves sensing external fields."
+      C: "Active electroreception is found only in invertebrates, while passive is found in vertebrates."
+      D: "Active electroreception uses ampullary receptors, while passive uses tuberous receptors."
+    correct_answer: "B"
+    reference: "Lecture 10, Slide 6"
+    reasoning: "Active electroreception requires the fish to generate its own electric organ discharge (EOD) to probe the environment, whereas passive electroreception detects electric fields produced by other sources (like prey)."
+
+  - id: 2
+    difficulty: "Hard"
+    type: "Open"
+    question: "Explain the concept of a 'Negative Image' in the context of reafference cancellation. How does the nervous system use this to distinguish between self-generated and externally-generated signals?"
+    correct_answer: "The 'Negative Image' is an internal representation of the self-generated (reafferent) sensory signal. The brain generates this image using an efference copy (corollary discharge) of the motor command. By subtracting this 'Negative Image' from the total sensory input, the system cancels out predictable self-generated noise, leaving only the exafferent (external) signals for further processing."
+    reference: "Lecture 10, Slide 11"
+    reasoning: "Slide 11 introduces Von Holst's 1954 proposal that the efference leaves an 'image' to which reafference is the negative, causing the predictable signal to disappear upon superimposition."
+
+  - id: 3
+    difficulty: "Easy"
+    type: "MCQ"
+    question: "Which two main geographical groups of weakly electric fish were contrasted in the lecture?"
+    options:
+      A: "North American Gymnotids and African Mormyrids"
+      B: "South American Mormyrids and African Gymnotids"
+      C: "South American Gymnotids and African Mormyrids"
+      D: "Australian Mormyrids and Asian Gymnotids"
+    correct_answer: "C"
+    reference: "Lecture 10, Slide 9"
+    reasoning: "Slide 9 explicitly contrasts Mormyrids from Africa and Gymnotids from South America."
+
+  - id: 4
+    difficulty: "Medium"
+    type: "Open"
+    question: "Based on the comparative diagram on Slide 8, how does the fish electrosensory pathway's organization parallel the mammalian auditory system? Identify at least two homologous or analogous structures."
+    correct_answer: "The pathway shows a hierarchical organization similar to the auditory system. For example, the Electrosensory Lobe (ELL) in fish is analogous to the Cochlear Nuclei in mammals. The Torus Semicircularis (TS) in the fish midbrain is homologous to the Inferior Colliculus (IC) in mammals. Both systems involve a progression from peripheral receptors to the medulla, then to the midbrain, thalamus, and finally higher telencephalic structures."
+    reference: "Lecture 10, Slide 8"
+    reasoning: "Slide 8 provides a direct comparison between the Ascending Electrosensory Pathway and the Mammalian Auditory System, highlighting these structural parallels."
+
+  - id: 5
+    difficulty: "Hard"
+    type: "MCQ"
+    question: "In the Jamming Avoidance Response (JAR), if a fish detects a phase lag during an amplitude rise, what does this indicate about the neighbor's EOD frequency (Δf)?"
+    options:
+      A: "Δf > 0 (neighbor's frequency is higher)"
+      B: "Δf < 0 (neighbor's frequency is lower)"
+      C: "Δf = 0 (frequencies are identical)"
+      D: "The sign of Δf cannot be determined from these parameters."
+    correct_answer: "A"
+    reference: "Lecture 10, Slide 28"
+    reasoning: "Slide 28 states that when Δf > 0, there is a phase lag during the amplitude rise and a phase lead during the amplitude fall."
+
+  - id: 6
+    difficulty: "Hard"
+    type: "Open"
+    question: "Describe the concept of 'Neural Democracy' in the JAR circuit. How does the population of neurons in the Torus Semicircularis (TS) and Nucleus Electrosensorius (nE) contribute to the final motor decision?"
+    correct_answer: "'Neural Democracy' refers to a population coding mechanism where individual neurons 'vote' on the sign of the frequency difference (Δf). Different regions of the fish's body experience different interference patterns. Neurons representing these different body parts contribute to a collective signal. The 'votes' are integrated such that the fish shifts its frequency in the direction favored by the population, with more strongly affected regions providing a 'stronger vote'."
+    reference: "Lecture 10, Slide 36"
+    reasoning: "Slide 36 defines Neural Democracy as a population code where neurons vote on the sign of Δf, and strongly affected regions get a stronger vote."
+
+  - id: 7
+    difficulty: "Medium"
+    type: "MCQ"
+    question: "Which cell type is responsible for allowing the fish to encode 'envelopes' (slow modulations of the beat) despite the fact that primary P-afferents do not respond to them?"
+    options:
+      A: "Spherical cells"
+      B: "Pyramidal cells"
+      C: "Ovoid cells"
+      D: "Giant cells"
+    correct_answer: "C"
+    reference: "Lecture 10, Slide 40"
+    reasoning: "Slide 40 explains that Ovoid cells have a high-frequency response and a slow GABAB output, which allows for the encoding of low-frequency envelopes."
+
+  - id: 8
+    difficulty: "Medium"
+    type: "Open"
+    question: "What are 'chirps' in the context of electric fish communication, and how do their functions differ based on the sex and social status of the fish?"
+    correct_answer: "Chirps are transient modulations of the EOD frequency and amplitude used as social signals. Small chirps can signal courtship (when a male echoes a female) or submission (when emitted by a retreating intruder in a same-sex encounter). Long chirps are specifically associated with female acceptance and spawning synchronization during courtship."
+    reference: "Lecture 10, Slide 38, 43"
+    reasoning: "Slides 38 and 43 describe chirps as 'communication tokens' and detail their roles in courtship, aggression, and submission."
+
+  - id: 9
+    difficulty: "Easy"
+    type: "MCQ"
+    question: "What is the role of the Pacemaker Nucleus (Pn) in the JAR circuit?"
+    options:
+      A: "It processes phase information from T-receptors."
+      B: "It directly controls the timing and frequency of the Electric Organ Discharge (EOD)."
+      C: "It acts as a coincidence detector for spatial interference."
+      D: "It generates the efference copy for reafference cancellation."
+    correct_answer: "B"
+    reference: "Lecture 10, Slide 30"
+    reasoning: "The circuit diagrams on Slides 30 and 37 show the Pacemaker Nucleus (Pn) as the final central structure that sends commands to the Electric Organ."
+
+  - id: 10
+    difficulty: "Hard"
+    type: "Open"
+    question: "Explain the mechanism of 'Hyperacuity by convergence' in the phase-coding pathway of the JAR. How does the convergence of T-receptor inputs onto Spherical and Giant cells improve timing precision?"
+    correct_answer: "Individual T-receptors have some jitter (spike latency standard deviation) in their response to zero-crossings. By converging many T-receptor inputs onto a single Spherical or Giant cell, the system averages out the random noise/jitter of individual receptors. This statistical averaging allows the post-synaptic neuron to achieve a timing precision (hyperacuity) that is much higher than that of any individual receptor."
+    reference: "Lecture 10, Slide 32"
+    reasoning: "Slide 32 illustrates hyperacuity by convergence, showing how convergence from T-receptors reduces the standard deviation of spike latency."
+
+  - id: 11
+    difficulty: "Medium"
+    type: "MCQ"
+    question: "Which of the following correctly pairs a fish type with its discharge characteristic?"
+    options:
+      A: "Pulse-type fish: Constant frequency wave like a hum."
+      B: "Wave-type fish: Discrete bursts of discharge separated by silent intervals."
+      C: "Pulse-type fish: High frequency (200-1200 Hz) continuous discharge."
+      D: "Wave-type fish: Quasi-sinusoidal discharge with a specific fundamental frequency."
+    correct_answer: "D"
+    reference: "Lecture 10, Slide 9, 23"
+    reasoning: "Slide 9 and 23 distinguish between pulse-type (discrete pulses) and wave-type (continuous, sinusoidal-like waves)."
+
+  - id: 12
+    difficulty: "Medium"
+    type: "Open"
+    question: "Analyze the Jamming Avoidance Response (JAR) data shown in the graph on Slide 24. Describe the fish's behavioral response when the frequency difference (Δf) is slightly positive versus slightly negative."
+    correct_answer: "When Δf is slightly positive (neighbor's frequency is slightly higher), the fish decreases its own EOD frequency to increase the difference. Conversely, when Δf is slightly negative (neighbor's frequency is slightly lower), the fish increases its EOD frequency. This behavior maximizes the frequency difference, pushing the 'beat' frequency out of the range that interferes with electrolocation."
+    reference: "Lecture 10, Slide 24"
+    reasoning: "Slide 24 shows the shift in EOD frequency (Δf_response) as a function of the stimulus Δf, demonstrating the increase for negative Δf and decrease for positive Δf."
+
+  - id: 13
+    difficulty: "Hard"
+    type: "MCQ"
+    question: "Reafference cancellation in the ELL relies on Anti-Hebbian Spike-Timing Dependent Plasticity (STDP). Which of the following describes the correct pairing for weakening the synapse (LTD)?"
+    options:
+      A: "Post-synaptic spike occurs before pre-synaptic input."
+      B: "Pre-synaptic input occurs before post-synaptic spike."
+      C: "Pre-synaptic and post-synaptic spikes occur simultaneously."
+      D: "Anti-Hebbian STDP only involves strengthening (LTP), not weakening."
+    correct_answer: "B"
+    reference: "Lecture 10, Slide 15"
+    reasoning: "Slide 15 explicitly states that in Anti-Hebbian STDP, 'Pre before post' leads to weakening (LTD), which is the opposite of the standard Hebbian rule."
+
+  - id: 14
+    difficulty: "Medium"
+    type: "Open"
+    question: "Discuss the pros and cons of using electric fish as an experimental system for neuroscience research, as outlined in the lecture summary."
+    correct_answer: "Pros include convergent evolution (parallels to other systems), relatively few ethical constraints compared to mammals, tractable neural circuitry, and behavior that is easy to model and mimic. Cons include the difficulty of captive breeding, the challenges of working in an underwater environment, and the fact that advanced genetic and imaging tools are currently less developed for these species compared to models like mice or zebrafish."
+    reference: "Lecture 10, Slide 48"
+    reasoning: "Slide 48 provides a dedicated 'Pros and Cons' list for electric fish as an experimental system."
+
+  - id: 15
+    difficulty: "Medium"
+    type: "MCQ"
+    question: "Which midbrain structure is the primary integration center for phase and amplitude information in the electrosensory system, serving as a homolog to the mammalian inferior colliculus?"
+    options:
+      A: "Electrosensory Lobe (ELL)"
+      B: "Torus Semicircularis (TS)"
+      C: "Nucleus Electrosensorius (nE)"
+      D: "Preglomerulus (PG)"
+    correct_answer: "B"
+    reference: "Lecture 10, Slide 8, 30"
+    reasoning: "Slide 8 identifies the Torus Semicircularis (TS) as homologous to the mammalian Inferior Colliculus, and Slide 30 shows it as the site where P and T receptor information is integrated."
