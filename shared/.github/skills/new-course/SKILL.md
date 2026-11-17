@@ -9,7 +9,19 @@ The repo root is the directory containing `.git` and `requirements.txt`. Follow 
 
 ## Step 1 — Gather required information
 
-You need the following. Ask for anything not provided:
+**Look up the course first.** Do not ask the user for a description. Find the course in the Weizmann catalog yourself and take the course name, description, lecturers, and syllabus from it. The user only needs to give the course name (and semester if it is ambiguous). Use the recipe in `/memories/weizmann-course-lookup.md` when available. Summary of the method:
+
+1. Query the catalog with `curl` (the browser cannot reach the site). Use the current academic year (end-year, so fall 2026 is `2027`) and field `40` (Mathematics and Computer Science) unless the course is in another field:
+   `https://erez.weizmann.ac.il/apx/f?p=186:20:0::::P20_YEAR,P20_FIELD,P20_SEMESTER,P20_DAY,P20_OBLIG_ELECT,P20_CORE_BASIC,P20_COURSE_TYPE,P20_LECT,P20_COURSE:2027,40,0,0,0,0,0,,<course name, URL-encoded>`
+2. Matching is partial and case-insensitive; every word typed must appear in the title. Use a distinctive part of the name if the full title fails.
+3. Each result title links to `javascript:det(...,<pid>,...)`. Take that `pid`.
+4. Fetch the course page: `https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=<pid>&pprev=15375`.
+5. Strip the HTML to text and keep the course details and syllabus. Save the text word for word as `materials/syllabus/syllabus.md` (see Step 2b).
+6. Write the course description for the instructions file (Step 5) from the syllabus text, in 2–4 sentences.
+
+If no result or several results appear, show the matches and ask the user to pick one. Ask only for values the catalog does not give.
+
+You need the following. Use the catalog values where they exist, and ask only for anything not found:
 
 | Field | Example | Notes |
 |-------|---------|-------|
@@ -33,6 +45,10 @@ This lists all open OneNote notebooks and sections without exporting anything. T
 mkdir -p courses/semester-<number>/<id>/materials/{lectures,assignments,syllabus}
 mkdir -p courses/semester-<number>/<id>/.github/instructions
 ```
+
+### Step 2b — Save the course page as the syllabus
+
+Write the course page text from Step 1 to `courses/semester-<number>/<id>/materials/syllabus/syllabus.md`. Keep the content word for word, under a heading with the course title and the source URL. Keep all catalog fields (code, lecturers, schedule, prerequisites, grading, syllabus text).
 
 ## Step 3 — Create `courses/semester-<number>/<id>/onenote_export_config.json`
 
